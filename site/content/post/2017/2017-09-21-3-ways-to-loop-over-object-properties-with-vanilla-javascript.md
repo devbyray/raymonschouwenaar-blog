@@ -46,7 +46,6 @@ let experienceObject = {
 }
 {{< /code >}}
 
-
 ## Object.keys(experienceObject).map()
 
 The first example is the Object.keys map method to loop over the properties of the Object it.
@@ -67,7 +66,6 @@ Object.entries(experienceObject).forEach(([key, value]) =&gt; {
 })
 {{< /code >}}
 
-
 ## For-in loop
 
 The last example is the For-in loop to loop over the properties of the Object it.
@@ -77,8 +75,3 @@ for (property in experienceObject) {
   console.log(`key= ${property} value = ${experienceObject[property]}`)
 }
 {{< /code >}}
-
-
-## Check the console output
-
-[JS Bin on jsbin.com](http://jsbin.com/qusaguf/1/embed?console)

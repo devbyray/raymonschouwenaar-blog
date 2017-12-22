@@ -25,11 +25,11 @@ So let’s create a splash screen for your React Native in Xcode, so your user d
 
   1. Open your project in Xcode.
   2. On the left sidebar, click the folder icon.
-  
+
     <img class="alignnone wp-image-2397 size-medium" src="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-project-bar.png?resize=300%2C33&#038;ssl=1" alt="" width="300" height="33" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-project-bar.png?resize=300%2C33&ssl=1 300w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-project-bar.png?w=450&ssl=1 450w" sizes="(max-width: 300px) 100vw, 300px" data-recalc-dims="1" />
   3. Open the dropdown
   4. Open the first folder
-  
+
     <img class="alignnone wp-image-2396 size-medium" src="https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen.png?resize=300%2C287&#038;ssl=1" alt="" width="300" height="287" srcset="https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen.png?resize=300%2C287&ssl=1 300w, https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen.png?w=450&ssl=1 450w" sizes="(max-width: 300px) 100vw, 300px" data-recalc-dims="1" />
   5. Click the file LaunchScreen.xib
 
@@ -39,7 +39,7 @@ There is the default launch screen. Here you can edit the text, change colors, a
 
 I’m not gonna teach you how to create a nice and fancy launch screen, but this is the spot to use your own imagination!<figure id="attachment_2395" style="width: 636px" class="wp-caption alignnone">
 
-<img class="wp-image-2395 size-large" src="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=636%2C1024&#038;ssl=1" alt="" width="636" height="1024" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=636%2C1024&ssl=1 636w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=186%2C300&ssl=1 186w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=768%2C1237&ssl=1 768w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?w=998&ssl=1 998w" sizes="(max-width: 636px) 100vw, 636px" data-recalc-dims="1" /><figcaption class="wp-caption-text">This one is from me!</figcaption></figure> 
+<img class="wp-image-2395 size-large" src="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=636%2C1024&#038;ssl=1" alt="" width="636" height="1024" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=636%2C1024&ssl=1 636w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=186%2C300&ssl=1 186w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?resize=768%2C1237&ssl=1 768w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2017/04/2017-04-launch-screen-xcode-react-native-launchScreen-custom.png?w=998&ssl=1 998w" sizes="(max-width: 636px) 100vw, 636px" data-recalc-dims="1" /><figcaption class="wp-caption-text">This one is from me!</figcaption></figure>
 
 Looking forwards to all the cool launch screens you will make 😀
 

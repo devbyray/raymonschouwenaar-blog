@@ -29,8 +29,8 @@ Search for `<key>NSAppTransportSecurity</key>`. If it&#8217;s there already you 
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
-    
-    
+
+
 
 Now close your simulator and kill the running process (if you already started it). Run react-native run-ios again, and now your iOS app will support HTTP calls.
 

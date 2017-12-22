@@ -2,5 +2,10 @@ baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Raymon Schouwenaar.nl"
-
+relativeURLs = true
 theme = "blank"
+DisqusShortname = "rsschouwenaar"
+
+[permalinks]
+post = "/:year/:month/:title/"
+page = "/:slug/"

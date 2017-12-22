@@ -34,7 +34,7 @@ The == operator will start with checking the type of the value. If the type is n
 ### How works == underwater
 
 The type or value needs to equal to get a result of true, otherwise, it will be false.
-  
+
 Here is an example of how the double equality operator works underwater:
 
 
@@ -50,7 +50,7 @@ The === starts with checking type equality, just like the == operator. If it is 
 ### How works === underwater
 
 The type and value need to equal to get a result of true, otherwise, it will be false.
-  
+
 Here is an example of how the triple equality operator works underwater:
 
 
