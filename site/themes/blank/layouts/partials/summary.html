@@ -1,0 +1,19 @@
+	<article class="post__item">
+		<header class="post__header">
+			<div class="post__date">
+				<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+			</div>
+			<h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			{{ range .Params.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+			{{ end }}
+		</header>
+		<section class="post__summary">
+			{{ .Summary }}
+			{{ if .Truncated }}
+			{{ end }}
+		</section>
+		<footer class="post__footer">
+			<a class="post__readmore" href="{{ .Permalink }}">Read more</a>
+		</footer>
+	</article>
