@@ -4,7 +4,7 @@ languageLang = "en"
 title = "Raymon Schouwenaar.nl"
 relativeURLs = true
 theme = "blank"
-DisqusShortname = "rsschouwenaar"
+DisqusShortname = "raymonschouwenaar"
 
 [permalinks]
 post = "/:year/:month/:title/"
