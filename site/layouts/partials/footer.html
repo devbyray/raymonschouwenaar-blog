@@ -1,4 +1,9 @@
-  <script src="app.js"></script>
+		<footer class="rss__footer">
+			<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+		</footer>
+	</div>
 
-  </body>
+	<script src="{{ .Site.BaseURL }}app.js"></script>
+	<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css"> -->
+</body>
 </html>

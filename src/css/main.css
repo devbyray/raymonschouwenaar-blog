@@ -2,13 +2,133 @@
   You can use import statements to include partials:
  */
 @import "imports/reset.css";
+@import "prismjs/themes/prism.css";
+@import "prismjs/themes/prism-okaidia.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700|Rubik:500,900');
 
 
 /*
   Or add your statements here:
  */
 body{
-  font-family: sans-serif;
-  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+body, a {
+  color: #000000;
+}
+pre, code {
+  font-size: 1rem;
+}
+
+pre {
+  margin-bottom: 1rem !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  font-weight: 900;
+}
+p, ol, ul {
+  margin: 0 0 1rem 0;
+}
+
+.rss__sitetitle {
+  font-size: 3rem;
+}
+
+.container  {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+  grid-gap: 2rem;
+}
+
+.rss__header {
+  grid-column: 1/6;
+  min-height: 100px;
   text-align: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.rss__footer,
+.post-single__header {
+  grid-column: 1/6;
+}
+.post-single__header {
+  text-align: center
+}
+.rss__sidebar {
+  grid-column: 4/6;
+}
+.rss__postslist {
+  grid-column: 1/4;
+}
+.homepage .rss__postslist,
+.rss__postcontent {
+  grid-column: 2/5;
+}
+.rss__pagination {
+  margin-top: 2rem;
+  background: #333;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+  justify-content: center
+}
+.rss__pagination a {
+  display: inline-block;
+  margin: 0 .5rem;
+  color: #fff;
+}
+.post__item {
+  margin-bottom: 3.5rem;
+}
+.post__title,
+.post-single__header {
+  font-size: 2rem;
+  padding: 1rem;
+  background: #fc452b;
+  font-weight: 900;
+}
+.post__content,
+.post__summary,
+.post__tags,
+.post__date {
+  font-weight: 300;
+}
+.post__title a {
+  text-decoration: none;
+}
+.post__date {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: color(#cccccc alpha(+20%));
+  font-size: 1rem;
+}
+.post__summary {
+  margin-bottom: 1rem;
+}
+.post__readmore {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: .5rem;
+  background: color(#333333 alpha(-40%));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+}
+.post__readmore:hover {
+  background: #fc452b;
 }

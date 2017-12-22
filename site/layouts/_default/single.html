@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+	<header class="post-single__header">
+		<h1 class="post-single__title">{{ .Title }}</h1>
+	</header>
+	<main class="rss__postcontent">
+		<article>
+			<header class="post__header">
+				<div class="post__date">
+					<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+				</div>
+				<nav class="post__tags">
+					<ul id="tags">
+						{{ range .Params.categories }}
+						<li><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+						{{ end }}
+					</ul>
+				</nav>
+			</header>
+			<section class="post__content">
+				{{ .Content }}
+			</section>
+			<footer class="post__comments">
+				{{ template "_internal/disqus.html" . }}
+			</footer>
+		</article>
+	</main>
+<!-- {{ partial "sidebar.html" . }} -->
+{{ partial "footer.html" . }}
