@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Raymon Schouwenaar.nl"
-relativeURLs = true
+
 theme = "blank"
 DisqusShortname = "raymonschouwenaar"
 

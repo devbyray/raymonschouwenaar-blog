@@ -147,3 +147,27 @@ p, ol, ul {
 .post__readmore:hover {
   background: #fc452b;
 }
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .post__sidebar,
+  .post-single__content,
+  .post__comments,
+  .rss__postslist,
+  .homepage .rss__postslist,
+  .post__list,
+  .rss__sidebar,
+  .rss__footer {
+    grid-column: 1/6;
+  }
+  .rss__sitetitle {
+    font-size: 2rem;
+  }
+  .rss__header {
+    padding: 1rem;
+  }
+  .post-single__header {
+    font-size: 1rem;
+  }
+}
