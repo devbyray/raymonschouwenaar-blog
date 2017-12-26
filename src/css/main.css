@@ -47,7 +47,7 @@ p, ol, ul {
 .container  {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   grid-gap: 2rem;
 }
@@ -88,8 +88,8 @@ p, ol, ul {
 .rss__postslist {
   grid-column: 1/4;
 }
-.homepage .rss__postslist{
-  grid-column: 2/5;
+.post__list {
+  grid-column: 1/4;
 }
 .rss__pagination {
   margin-top: 2rem;
@@ -147,7 +147,7 @@ p, ol, ul {
 .post__readmore:hover {
   background: #fc452b;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .container {
     padding: 0 1rem;
   }
@@ -169,5 +169,10 @@ p, ol, ul {
   }
   .post-single__header {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 1.1rem;
   }
 }
