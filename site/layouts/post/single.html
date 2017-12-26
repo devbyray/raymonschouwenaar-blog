@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+	<header class="post-single__header">
+		<h1 class="post-single__title">{{ .Title }}</h1>
+	</header>
+	<main class="rss__postcontent">
+		<article class="post__content-grid">
+			<aside class="post__sidebar black--light">
+				<div class="post__sidebar-content">
+					<div class="post__date">
+						<p>
+							This post is created on
+							<strong><time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time></strong>.<br />
+						</p>
+						<p>
+							It will take you <strong>~{{ .ReadingTime }} minutes</strong> to read.
+						</p>
+					</div>
+					<p class="post__tags">
+						<strong>Tags:</strong><br />
+						{{ range .Params.categories }}
+						<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
+					</p>
+				</div>
+			</aside>
+			<section class="post__content post-single__content">
+				{{ .Content }}
+			</section>
+			<footer class="post__comments post-single__comments">
+				{{ partial "disqus.html" . }}
+			</footer>
+		</article>
+	</main>
+<!-- {{ partial "sidebar.html" . }} -->
+{{ partial "footer.html" . }}

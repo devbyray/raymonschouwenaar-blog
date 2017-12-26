@@ -9,3 +9,15 @@ DisqusShortname = "raymonschouwenaar"
 [permalinks]
 post = "/:year/:month/:title/"
 page = "/:slug/"
+
+[[menu.main]]
+    name = "About Raymon"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -90
+    identifier = "about"
+    url = "/about/"
+[[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+    url = "/"

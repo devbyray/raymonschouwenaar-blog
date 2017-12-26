@@ -30,16 +30,23 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin: 0 0 1rem 0;
 }
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 img {
   max-width: 100%;
 }
-h1 {
-  font-weight: 900;
+.post__content {
+  h1 {
+    font-weight: 900;
+  }
+  p, ol, ul {
+    margin: 0 0 1rem 0;
+  }
 }
-p, ol, ul {
-  margin: 0 0 1rem 0;
-}
-
 .rss__sitetitle {
   font-size: 3rem;
 }
@@ -53,7 +60,7 @@ p, ol, ul {
 }
 .post__content-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
 .post__sidebar {
@@ -71,7 +78,7 @@ p, ol, ul {
   grid-column: 1/6;
   min-height: 100px;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
   margin-bottom: 4rem;
 }
 .rss__footer,
@@ -84,6 +91,23 @@ p, ol, ul {
 }
 .rss__sidebar {
   grid-column: 4/6;
+}
+.rss__nav {
+  background: #333;
+}
+.rss__nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.rss__nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  margin-right: .5rem;
+}
+.rss__nav a:hover {
+  background: #cccccc;
 }
 .rss__postslist {
   grid-column: 1/4;
@@ -124,11 +148,19 @@ p, ol, ul {
 .post__title a {
   text-decoration: none;
 }
-.post__date {
+.post__time {
+  font-style: italic;
+  font-size: .9rem;
+}
+.black--light {
+  color: color(#cccccc alpha(+40%));
+}
+.post__sidebar-content {
+  background: color(#cccccc alpha(-20%));
   margin-bottom: 1rem;
   font-style: italic;
-  color: color(#cccccc alpha(+20%));
-  font-size: 1rem;
+  font-size: .9rem;
+  padding: .5rem;
 }
 .post__summary {
   margin-bottom: 1rem;

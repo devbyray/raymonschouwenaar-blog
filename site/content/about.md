@@ -1,15 +1,20 @@
 +++
-title = "Hey, Friend"
-date = 2017-06-28T12:36:41-07:00
+title = "About Raymon"
+date = 2017-12-26T14:01:34+00:00
+update = 2017-12-26T15:01:34+00:00
 draft = false
 +++
 
-### I'm **Toma Nistor**, a **full stack web developer** and **UI/UX enthusiast** with a **digital marketing and SEO** background based in San Diego, California.
+Hi! I'm Raymon and I'm working as a Senior Frontend Developer.
 
-Since creating my first website at the age of twelve, my eyes have been glued to the web. **What was once only a long-time hobby, has now become my full-time career.**
+I love to work with HTML5, CSS3, NodeJS, NPM scripts, (Vanilla) JavaScript, GruntJS, GulpJS, Bower, Sass/SCSS/PostCSS,AngularJS 1.5 & 2, Typescript, Responsive, Git, Vue.js.
 
-After spending two years as a digital marketer and trying to teach myself web development in my spare time, I decided to dive into an intensive four-month Ruby on Rails coding bootcamp at [LEARN academy](https://www.learnacademy.org).
+Special message for recruiters: **Java is NOT JavaScript! I don’t do Java development but JavaScript Development!!!!**
 
-**Today I engineer and design apps and websites from the ground up using the technologies I've learned and the tools that make it easier.**
+I’m super passionated about helping others with getting better in Frontend Development. Helping them to get better tech & soft skills, to rock it on their job/project. That is the reason why I founded the [Mr Frontend Community](http://mrfrontend.org), everyone, young & old, black & white, male or female, religious or not, it doesn’t matter!
 
-View my code on [GitHub](https://github.com/tomanistor), connect with me on [LinkedIn](https://linkedin.com/in/tomanistor), follow me on [Twitter](https://twitter.com/tomanistor), and check out my work below.
+## Social links:
+
+- Twitter: [@rsschouwenaar](https://twitter.com/rsschouwenaar)
+- LinkedIn: [raymonschouwenaar](https://linkedin.com/raymonschouwenaar)
+- Github: [raymonschouwenaar](https://github.com/raymonschouwenaar)

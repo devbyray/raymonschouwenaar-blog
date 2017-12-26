@@ -6,22 +6,19 @@
 		<article class="post__content-grid">
 			<aside class="post__sidebar">
 				<div class="post__date">
-					<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+					<p>
+						<strong>Created: </strong>
+						<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+					</p>
+					<p>
+						<strong>Wordcount: </strong>
+						<span class="post__time">{{ .WordCount }}</span>
+					</p>
 				</div>
-				<p class="post__tags">
-					<strong>Tags: </strong>
-					{{ range .Params.categories }}
-					<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-					{{ end }}
-				</p>
 			</aside>
 			<section class="post__content post-single__content">
 				{{ .Content }}
 			</section>
-			<footer class="post__comments post-single__comments">
-				{{ partial "disqus.html" . }}
-			</footer>
 		</article>
 	</main>
-<!-- {{ partial "sidebar.html" . }} -->
 {{ partial "footer.html" . }}
