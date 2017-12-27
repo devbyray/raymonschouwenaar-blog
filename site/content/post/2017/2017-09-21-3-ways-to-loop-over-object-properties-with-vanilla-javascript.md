@@ -5,8 +5,6 @@ type: post
 date: 2017-09-21T18:59:43+00:00
 url: /3-ways-to-loop-over-object-properties-with-vanilla-javascript/
 featured_image: /wp-content/uploads/2017/06/love-javascript-shorthand-else-statement.jpg
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*W5ssxLrDoscNIwTcu_fDEA.jpeg";s:10:"author_url";s:33:"https://medium.com/@rsschouwenaar";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:3:"yes";s:2:"id";s:12:"940f7721a609";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:103:"https://medium.com/@byrayray/3-ways-to-loop-over-object-properties-with-vanilla-javascript-940f7721a609";}'
 dsq_thread_id:
   - 6160658068
 categories:
@@ -14,6 +12,9 @@ categories:
 
 ---
 It happens a lot that you need to loop over an Array with JavaScript Objects! But sometimes you just don’t know what kind of properties that Object has. Lucky we are that JavaScript offers a few ways of looping over JavaScript Object properties.
+
+<!--more-->
+
 
 I wanted to share 3 of them with you. So hopefully this will help you in the right direction.
 

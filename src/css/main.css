@@ -2,7 +2,7 @@
   You can use import statements to include partials:
  */
 @import "imports/reset.css";
-@import "prismjs/themes/prism.css";
+/* @import "prismjs/themes/prism.css"; */
 @import "prismjs/themes/prism-okaidia.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700|Rubik:500,900');
 
@@ -22,7 +22,9 @@ body, a {
 pre, code {
   font-size: 1rem;
 }
-
+pre[class*="language-"] {
+  padding: 0;
+}
 pre {
   margin-bottom: 1rem !important;
 }
@@ -55,7 +57,6 @@ img {
 .container  {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  max-width: 1100px;
   margin: 0 auto;
   grid-column-gap: 4rem;
 }
@@ -63,6 +64,19 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 4rem;
+}
+.readmore__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4rem;
+}
+.rss__readmore {
+  background: #333;
+  padding: 2rem;
+}
+.rss__readmore,
+.rss__readmore a {
+  color: #fff;
 }
 .post__sidebar {
   grid-column: 1/2;
@@ -83,17 +97,22 @@ img {
 .rss__intro {
   font-size: 3.5rem;
 }
-.rss__header,
-.rss__intro {
+.rss__header {
   grid-column: 1/6;
 }
 .rss__footer,
 .post-single__header,
-.rss__postcontent  {
+.rss__postcontent,
+.rss__readmore {
   grid-column: 1/6;
 }
-.post-single__header {
-  text-align: center
+.rss__footer {
+  padding: 0 2rem;
+}
+.post-single__container {
+  grid-column: 1/5;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
 }
 .rss__sidebar {
   grid-column: 4/6;
@@ -115,8 +134,22 @@ img {
 .rss__nav a:hover {
   background: #cccccc;
 }
+.rss__intro {
+  grid-column: 1/6;
+  padding: 0 2rem;
+}
 .rss__postslist {
-  grid-column: 1/4;
+  grid-column: 1/6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+}
+.post__item {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
 }
 .post__list {
   grid-column: 1/4;
@@ -135,16 +168,21 @@ img {
   margin: 0 .5rem;
   color: #fff;
 }
-.post__item {
-  margin-bottom: 3.5rem;
-  background: #fff;
+.post__header {
+  height: 200px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.post__title {
+  font-size: 2rem;
+  font-weight: 900;
 }
 .post__title,
+.post__title a {
+  color: #fc6621;
+}
 .post-single__header {
   font-size: 2rem;
-  padding: 1rem;
-  background: #fc452b;
-  font-weight: 900;
 }
 .post__content {
   padding-top: 1rem;
@@ -158,6 +196,7 @@ img {
 .post__summary {
   margin-bottom: 2rem
 }
+.post__header,
 .post__summary,
 .post__info {
   padding: 0 2rem;
@@ -194,9 +233,37 @@ img {
   transition: .3s ease-in-out;
 }
 .post__readmore:hover {
-  background: #fc452b;
+  background: #fc6621;
+}
+@media screen and (max-width: 1300px) {
+  .readmore__grid,
+  .rss__postslist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .post__header {
+    min-height: 200px;
+    height: auto;
+  }
+  .post__content-grid {
+    grid-column-gap: 2rem;
+  }
+  .post-single__container {
+    grid-column: 1/6;
+  }
 }
 @media screen and (max-width: 800px) {
+  .readmore__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .readmore__article {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1rem;
+  }
+  .readmore__article:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
   .rss__nav ul {
     flex-direction: column;
   }
@@ -220,8 +287,14 @@ img {
   .homepage .rss__postslist,
   .post__list,
   .rss__sidebar,
-  .rss__footer {
+  .rss__footer{
     grid-column: 1/6;
+  }
+  .post__header {
+    min-height: 1px;
+  }
+  .rss__postslist {
+    grid-template-columns: repeat(1, 1fr);
   }
   .post-single__content {
     grid-row: 1;
@@ -235,6 +308,10 @@ img {
   .post-single__header {
     font-size: 1rem;
   }
+  .post-single__container {
+    padding-left: 0;
+  }
+
 }
 @media screen and (max-width: 500px) {
   body {

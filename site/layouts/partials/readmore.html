@@ -1,0 +1,13 @@
+<section class="rss__readmore">
+    <h3>Readmore</h3>
+    <div class="readmore__grid">
+        {{ range first 4 .Site.Pages }}
+            {{if eq .Type "post" }}
+                <article class="readmore__article">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <p>{{ .Summary }}</p>
+                </article>
+            {{ end }}
+        {{ end }}
+    </div>
+</section>

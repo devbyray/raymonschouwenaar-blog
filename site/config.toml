@@ -6,6 +6,9 @@ title = "Raymon Schouwenaar.nl"
 theme = "blank"
 DisqusShortname = "raymonschouwenaar"
 
+contentdir = "content"
+publishdir = "dist"
+
 [permalinks]
 post = "/:year/:month/:title/"
 page = "/:slug/"
