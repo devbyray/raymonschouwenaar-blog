@@ -14,6 +14,7 @@ body{
   font-family: 'Roboto Mono', monospace;
   font-size: 1.2rem;
   line-height: 1.6;
+  background: #f1f1f1;
 }
 body, a {
   color: #000000;
@@ -25,7 +26,7 @@ pre, code {
 pre {
   margin-bottom: 1rem !important;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, blockquote {
   font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
   margin: 0 0 1rem 0;
@@ -56,12 +57,12 @@ img {
   grid-template-columns: repeat(5, 1fr);
   max-width: 1100px;
   margin: 0 auto;
-  grid-gap: 2rem;
+  grid-column-gap: 4rem;
 }
 .post__content-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-column-gap: 4rem;
 }
 .post__sidebar {
   grid-column: 1/2;
@@ -75,11 +76,16 @@ img {
   font-size: 120%;
 }
 .rss__header {
-  grid-column: 1/6;
-  min-height: 100px;
   text-align: center;
   padding: 2rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+.rss__intro {
+  font-size: 3.5rem;
+}
+.rss__header,
+.rss__intro {
+  grid-column: 1/6;
 }
 .rss__footer,
 .post-single__header,
@@ -131,6 +137,7 @@ img {
 }
 .post__item {
   margin-bottom: 3.5rem;
+  background: #fff;
 }
 .post__title,
 .post-single__header {
@@ -139,11 +146,21 @@ img {
   background: #fc452b;
   font-weight: 900;
 }
+.post__content {
+  padding-top: 1rem;
+}
 .post__content,
 .post__summary,
 .post__tags,
 .post__date {
   font-weight: 300;
+}
+.post__summary {
+  margin-bottom: 2rem
+}
+.post__summary,
+.post__info {
+  padding: 0 2rem;
 }
 .post__title a {
   text-decoration: none;
@@ -160,7 +177,7 @@ img {
   margin-bottom: 1rem;
   font-style: italic;
   font-size: .9rem;
-  padding: .5rem;
+  padding: 2rem;
 }
 .post__summary {
   margin-bottom: 1rem;
@@ -205,6 +222,9 @@ img {
   .rss__sidebar,
   .rss__footer {
     grid-column: 1/6;
+  }
+  .post-single__content {
+    grid-row: 1;
   }
   .rss__sitetitle {
     font-size: 2rem;

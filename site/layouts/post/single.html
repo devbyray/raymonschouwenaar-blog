@@ -4,23 +4,29 @@
 	</header>
 	<main class="rss__postcontent">
 		<article class="post__content-grid">
-			<aside class="post__sidebar black--light">
+			<aside class="post__sidebar">
 				<div class="post__sidebar-content">
+					<div class="post__author">
+						<p>
+							<strong>Author:</strong><br />
+							I'm Raymon a Dutch experience Front-end Developer. I love to teach and help other developers with getting better on HTML, CSS, JavaScript and Tooling!
+						</p>
+					</div>
+					<p class="post__tags">
+							<strong>Categories:</strong><br />
+							{{ range .Params.categories }}
+							<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+							{{ end }}
+					</p>
 					<div class="post__date">
 						<p>
 							This post is created on
 							<strong><time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time></strong>.<br />
 						</p>
 						<p>
-							It will take you <strong>~{{ .ReadingTime }} minutes</strong> to read.
+							It will take <strong>~{{ .ReadingTime }} minutes</strong> to read.
 						</p>
 					</div>
-					<p class="post__tags">
-						<strong>Tags:</strong><br />
-						{{ range .Params.categories }}
-						<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-						{{ end }}
-					</p>
 				</div>
 			</aside>
 			<section class="post__content post-single__content">

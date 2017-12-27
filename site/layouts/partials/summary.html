@@ -1,17 +1,18 @@
 	<article class="post__item">
 		<header class="post__header">
+			<h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		</header>
+		<section class="post__info">
 			<div class="post__date">
 				<time class="post__time black--light">{{ .Date.Format "02.01.2006 15:04" }}</time>
-            </div>
-
-			<h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			</div>
 			<p class="post__tags">
-                <strong>Tags: </strong>
-                {{ range .Params.categories }}
-                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-                {{ end }}
-            </p>
-		</header>
+				<strong>Tags: </strong>
+				{{ range .Params.categories }}
+				<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+				{{ end }}
+			</p>
+		</section>
 		<section class="post__summary">
 			{{ .Summary }}
 			{{ if .Truncated }}
