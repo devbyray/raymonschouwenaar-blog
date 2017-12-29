@@ -9,28 +9,43 @@
 				<div class="post__sidebar-content">
 					<div class="post__author">
 						<p>
-							<strong>Author:</strong><br />
-							I'm Raymon a Dutch experience Front-end Developer. I love to teach and help other developers with getting better on HTML, CSS, JavaScript and Tooling!
+							<strong>Author:</strong>
+							<br /> {{ partial "tagline.html" . }}
 						</p>
 					</div>
 					<p class="post__tags">
-							<strong>Categories:</strong><br />
-							{{ range .Params.categories }}
-							<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-							{{ end }}
+						<strong>Categories:</strong>
+						<br />
+						{{ range .Params.categories }}
+							<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
 					</p>
 					<div class="post__date">
 						<p>
 							This post is created on
-							<strong><time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time></strong>.<br />
+							<strong>
+								<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+							</strong>.
+							<br />
 						</p>
 						<p>
-							It will take <strong>~{{ .ReadingTime }} minutes</strong> to read.
+							It will take
+							<strong>~{{ .ReadingTime }} minutes</strong> to read.
 						</p>
 					</div>
 				</div>
 			</aside>
 			<section class="post__content post-single__content">
+				<div class="post-single__image">
+					{{if .Params.featured_image}}
+					<img src="{{ .Params.featured_image }}" alt="">
+					{{else}}
+						{{ range .Params.categories }}
+						<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
+						<img src="/images/{{ . | urlize }}.jpg" alt="">
+						{{ end }}
+					{{end}}
+				</div>
 				{{ .Content }}
 			</section>
 			<footer class="post__comments post-single__comments">
@@ -39,5 +54,4 @@
 		</article>
 	</main>
 </div>
-{{ partial "readmore.html" . }}
-{{ partial "footer.html" . }}
+{{ partial "readmore.html" . }} {{ partial "footer.html" . }}

@@ -1,0 +1,49 @@
+.rss__nav {
+  background: #fc6621;
+  margin-bottom: 1rem;
+}
+.rss__nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.rss__nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  margin-right: 0.5rem;
+}
+.rss__nav a:hover {
+  background: #cccccc;
+}
+@media screen and (max-width: 1300px) {
+  .readmore__grid,
+  .rss__postslist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .post__header {
+    /* min-height: 200px; */
+    height: auto;
+  }
+  .post__content-grid {
+    grid-column-gap: 2rem;
+  }
+  .post-single__container {
+    grid-column: 1/4;
+  }
+}
+@media screen and (max-width: 800px) {
+  .rss__nav ul {
+    flex-direction: column;
+  }
+  .rss__nav li {
+    border-bottom: 1px solid #fff;
+  }
+  .rss__nav li:last-child {
+    border-bottom: 0;
+  }
+  .rss__nav a {
+    margin-right: 0;
+    display: block;
+  }
+}

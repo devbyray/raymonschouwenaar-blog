@@ -15,7 +15,6 @@ It happens a lot that you need to loop over an Array with JavaScript Objects! Bu
 
 <!--more-->
 
-
 I wanted to share 3 of them with you. So hopefully this will help you in the right direction.
 
 ## The Object to loop over

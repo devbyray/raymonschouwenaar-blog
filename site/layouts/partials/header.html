@@ -18,7 +18,6 @@
 	<div class="container">
 	{{end}}
 		<header class="rss__header">
-			<h1 class="rss__sitetitle"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 			<nav class="rss__nav">
 				<ul>
 					{{ range .Site.Menus.main }}
@@ -26,13 +25,17 @@
 					{{ end }}
 				</ul>
 			</nav>
+			<h1 class="rss__sitetitle"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 		</header>
 		{{if .IsHome}}
 		<section class="rss__intro">
-			<article>
-				<blockquote>
-					Hi! I'm Raymon Schouwenaar an experienced Frontend Developer based in the Netherlands.
-				</blockquote>
+			<article class="introduction">
+				<div class="intro__image-wrapper">
+					<img class="intro__image" src="{{ .Site.BaseURL }}wp-content/ray-square.jpg" alt="">
+				</div>
+				<div class="intro__tagline rubik">
+					{{ partial "tagline.html" . }}
+				</div>
 			</article>
 		</section>
 		{{end}}

@@ -12,6 +12,7 @@ import webpackConfig from "./webpack.conf";
 
 const browserSync = BrowserSync.create();
 
+
 // Hugo arguments
 const hugoArgsDefault = ["-d", "../dist", "-s", "site", "-v"];
 const hugoArgsPreview = ["--buildDrafts", "--buildFuture"];
@@ -30,6 +31,15 @@ gulp.task("css", () => (
     .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext()]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
+));
+// Compile CSS with PostCSS
+gulp.task("images", () => (
+  gulp.src([
+    "./src/wp-content/**/*",
+    "./src/images/**/*"
+  ])
+    .pipe(gulp.dest("./dist/wp-content"))
+    .pipe(browserSync.reload())
 ));
 
 // Compile Javascript
@@ -52,7 +62,8 @@ gulp.task("server", ["hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
-    }
+    },
+    open: false
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });

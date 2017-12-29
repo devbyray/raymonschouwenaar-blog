@@ -1,0 +1,50 @@
+/*
+  Define your resets here or use something like Normalize.css if you like
+ */
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: #f1f1f1;
+}
+.rubik {
+  font-family: 'Rubik', sans-serif;
+}
+body, a {
+  color: #000000;
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+pre, code {
+  font-size: 1rem;
+}
+pre[class*="language-"] {
+  padding: 0;
+}
+pre {
+  margin-bottom: 1rem !important;
+}
+h1, h2, h3, h4, h5, h6, blockquote {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}

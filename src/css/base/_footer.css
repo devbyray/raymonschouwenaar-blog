@@ -1,0 +1,9 @@
+.rss__footer,
+.post-single__header,
+.rss__postcontent,
+.rss__readmore {
+  grid-column: 1/4;
+}
+.rss__footer {
+  padding: 0 2rem;
+}

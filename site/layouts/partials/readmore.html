@@ -4,7 +4,7 @@
         {{ range first 4 .Site.Pages }}
             {{if eq .Type "post" }}
                 <article class="readmore__article">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong>
                     <p>{{ .Summary }}</p>
                 </article>
             {{ end }}
