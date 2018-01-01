@@ -37,6 +37,7 @@
     "imports-loader": "^0.7.1",
     "normalize.css": "^7.0.0",
     "postcss-cssnext": "^2.7.0",
+    "postcss-custom-properties": "^6.2.0",
     "postcss-import": "^11.0.0",
     "prismjs": "^1.9.0",
     "url-loader": "^0.5.7",

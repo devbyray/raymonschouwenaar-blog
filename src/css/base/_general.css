@@ -1,4 +1,29 @@
+:root {
+  --container: {
+  };
+}
+
 .container {
+  grid-template-areas:
+    "rssHeader rssHeader rssHeader"
+    "postSingleContainer postSingleContainer postSingleContainer"
+    "rssReadmore rssReadmore rssReadmore"
+    "rssFooter rssFooter rssFooter"
+  ;
+  display: grid;
+  grid-template-columns: 1fr 70vw 1fr;
+  grid-column-gap: 4rem;
+  width: calc(100vw - 4rem);
+  height: 100vh;
+  padding: 0 2rem;
+}
+.container--homepage {
+  grid-template-areas:
+    "rssHeader rssHeader rssHeader"
+    "rssIntro rssIntro rssIntro"
+    "rssPostList rssPostList rssPostList"
+    "rssFooter rssFooter rssFooter"
+  ;
   display: grid;
   grid-template-columns: 1fr 70vw 1fr;
   grid-column-gap: 4rem;
@@ -9,4 +34,23 @@
 
 .rss__sitetitle {
   display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    grid-template-areas:
+      "rssHeader rssHeader rssHeader"
+      "postSingleContainer postSingleContainer . "
+      "rssReadmore rssReadmore rssReadmore"
+      "rssFooter rssFooter rssFooter"
+    ;
+  }
+  .container--homepage {
+    grid-template-areas:
+      "rssHeader rssHeader rssHeader"
+      " . rssIntro . "
+      "rssPostList rssPostList rssPostList"
+      "rssFooter rssFooter rssFooter"
+    ;
+  }
 }

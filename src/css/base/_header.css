@@ -4,5 +4,5 @@
   margin-bottom: 2rem;
 }
 .rss__header {
-  grid-column: 1/4;
+  grid-area: rssHeader;
 }

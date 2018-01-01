@@ -1,0 +1,36 @@
+.post__item {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+.post__header {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.post__title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.post-single__title,
+.post__title,
+.post__title a {
+  color: #000000;
+}
+.post__summary {
+  margin-bottom: 1rem;
+}
+.post__readmore {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5rem;
+  background: color(#333333 alpha(-40%));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.post__readmore:hover {
+  background: #fc6621;
+}

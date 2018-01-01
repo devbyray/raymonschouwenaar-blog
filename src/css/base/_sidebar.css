@@ -8,12 +8,8 @@
   font-size: 0.9rem;
   padding: 2rem;
 }
-.post__sidebar {
-  grid-column: 1/2;
-}
 @media screen and (max-width: 800px) {
-  .post__sidebar,
   .rss__sidebar {
-    grid-column: 1/4;
+    grid-column: 1/3;
   }
 }

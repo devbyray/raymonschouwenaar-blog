@@ -13,6 +13,8 @@
 @import "base/_intro.css";
 @import "post-single/_post-single.css";
 @import "post-list/_post-list.css";
+@import "post-list/_pagination.css";
+@import "post-list/_post-item.css";
 @import "readmore/_readmore.css";
 
 .black--light {

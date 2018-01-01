@@ -1,0 +1,14 @@
+.rss__pagination {
+    margin-top: 2rem;
+    background: #333;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+  }
+  .rss__pagination a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: #fff;
+  }
