@@ -32,6 +32,12 @@ gulp.task("css", () => (
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
+// htaccess
+gulp.task("htaccess", () => (
+  gulp.src("./site/.htaccess")
+    .pipe(gulp.dest("./dist/"))
+    .pipe(browserSync.stream())
+));
 // Compile CSS with PostCSS
 gulp.task("images", () => (
   gulp.src([
@@ -58,7 +64,7 @@ gulp.task("js", (cb) => {
 });
 
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js"], () => {
+gulp.task("server", ["hugo", "css", "js", "htaccess"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -67,7 +73,7 @@ gulp.task("server", ["hugo", "css", "js"], () => {
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });
-  watch("./site/**/*", () => { gulp.start(["hugo"]) });
+  watch("./site/**/*", () => { gulp.start(["hugo", "htaccess"]) });
 });
 
 /**

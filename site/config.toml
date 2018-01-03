@@ -10,8 +10,9 @@ contentdir = "content"
 publishdir = "dist"
 
 [permalinks]
-post = "/:year/:month/:title/"
+post = "/:title/"
 page = "/:slug/"
+category = "category/:slug"
 
 [[menu.main]]
     name = "About Raymon"
