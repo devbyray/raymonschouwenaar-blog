@@ -33,8 +33,11 @@ gulp.task("css", () => (
     .pipe(browserSync.stream())
 ));
 // htaccess
-gulp.task("htaccess", () => (
-  gulp.src("./site/.htaccess")
+gulp.task("other", () => (
+  gulp.src([
+    "./site/.htaccess",
+    "./site/_redirects"
+  ])
     .pipe(gulp.dest("./dist/"))
     .pipe(browserSync.stream())
 ));
@@ -64,7 +67,7 @@ gulp.task("js", (cb) => {
 });
 
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js", "htaccess"], () => {
+gulp.task("server", ["hugo", "css", "js", "other"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -73,7 +76,7 @@ gulp.task("server", ["hugo", "css", "js", "htaccess"], () => {
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });
-  watch("./site/**/*", () => { gulp.start(["hugo", "htaccess"]) });
+  watch("./site/**/*", () => { gulp.start(["hugo", "other"]) });
 });
 
 /**
