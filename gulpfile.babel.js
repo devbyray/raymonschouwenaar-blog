@@ -9,6 +9,7 @@ import BrowserSync from "browser-sync";
 import watch from "gulp-watch";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
+import workbox from 'workbox-build';
 
 const browserSync = BrowserSync.create();
 
@@ -33,14 +34,14 @@ gulp.task("css", () => (
     .pipe(browserSync.stream())
 ));
 // htaccess
-gulp.task("other", () => (
-  gulp.src([
-    "./site/.htaccess",
-    "./site/_redirects"
-  ])
-    .pipe(gulp.dest("./dist/"))
-    .pipe(browserSync.stream())
-));
+// gulp.task("other", () => (
+//   gulp.src([
+//     "./site/.htaccess",
+//     "./site/_redirects"
+//   ])
+//     .pipe(gulp.dest("./dist/"))
+//     .pipe(browserSync.stream())
+// ));
 // Compile CSS with PostCSS
 gulp.task("images", () => (
   gulp.src([
@@ -66,8 +67,33 @@ gulp.task("js", (cb) => {
   });
 });
 
+gulp.task('generate-service-worker', () => {
+  const dist = './dist';
+  return workbox.generateSW({
+    globDirectory: dist,
+    globPatterns: ['**\/*.{html,js,jpg,gif,png,ico,css}'],
+    swDest: `${dist}/sw.js`,
+    clientsClaim: true,
+    skipWaiting: true,
+    runtimeCaching: [
+      {
+        urlPattern: new RegExp('https://fonts.googleapis.com/(.*)'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://fonts.gstatic.com/(.*)'),
+        handler: 'staleWhileRevalidate'
+      }
+    ]
+  }).then(() => {
+    console.info('Service worker generation completed.');
+  }).catch((error) => {
+    console.warn('Service worker generation failed: ' + error);
+  });
+});
+
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js", "other"], () => {
+gulp.task("server", ["hugo", "css", "js", "generate-service-worker"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -76,7 +102,7 @@ gulp.task("server", ["hugo", "css", "js", "other"], () => {
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });
-  watch("./site/**/*", () => { gulp.start(["hugo", "other"]) });
+  watch("./site/**/*", () => { gulp.start(["hugo", "generate-service-worker"]) });
 });
 
 /**

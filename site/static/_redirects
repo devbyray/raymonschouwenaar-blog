@@ -12,4 +12,3 @@
 /feed/*  /index.xml 301
 /tag/*  /tags/:splat 301
 /category/*  /categories/:splat 301
-/google            https://www.google.com
