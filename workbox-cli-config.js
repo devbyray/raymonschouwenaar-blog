@@ -1,9 +1,15 @@
 module.exports = {
-  "globDirectory": "./dist/",
+  "globDirectory": ".",
   "globPatterns": [
-    "**\/*.{html,js,jpg,gif,png,ico,css}",
+    "dist/**/*.html",
+    "dist/**/*.js",
+    "dist/**/*.jpg",
+    "dist/**/*.png",
+    "dist/**/*.gif",
+    "dist/**/*.css",
+    "dist/**/*.ico"
   ],
-  "swDest": "dist/sw.js",
+  "swDest": "./dist/sw.js",
   "clientsClaim": true,
   "skipWaiting": true,
   runtimeCaching: [
