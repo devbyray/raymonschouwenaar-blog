@@ -1,17 +1,17 @@
 {
-  "name": "victor-hugo",
+  "name": "raymonschouwenaar-blog",
   "version": "1.0.0",
   "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
   "repository": "netlify/victor-hugo",
   "main": "index.js",
   "scripts": {
-    "hugo": "workbox generate:sw && gulp hugo",
-    "build": "workbox generate:sw && gulp build",
-    "build-preview": "workbox generate:sw && gulp build-preview",
-    "start": "workbox generate:sw && gulp server",
+    "hugo": "gulp hugo",
+    "build": "gulp build",
+    "build-preview": "gulp build-preview",
+    "start": "gulp server",
     "lint": "eslint src"
   },
-  "author": "",
+  "author": "Raymon Schouwenaar",
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^6.1.2",
@@ -43,7 +43,6 @@
     "url-loader": "^0.5.7",
     "webpack": "3.6.0",
     "whatwg-fetch": "^1.0.0",
-    "workbox-build": "^2.1.2",
-    "workbox-cli": "^2.1.2"
+    "workbox-build": "^2.1.2"
   }
 }
