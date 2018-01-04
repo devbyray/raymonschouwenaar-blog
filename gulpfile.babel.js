@@ -10,6 +10,7 @@ import watch from "gulp-watch";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
 import workbox from 'workbox-build';
+import path from 'path';
 
 const browserSync = BrowserSync.create();
 
@@ -68,10 +69,10 @@ gulp.task("js", ['generate-service-worker'], (cb) => {
 });
 
 gulp.task('generate-service-worker', () => {
-  console.log('dist: ', gulp.src('./dist'))
+  console.log('dist: ', path.join(__dirname, 'dist'))
   const dist = gulp.src('./dist');
   return workbox.generateSW({
-    globDirectory: dist,
+    globDirectory: path.join(__dirname, 'dist'),
     globPatterns: ['**\/*.{html,js,jpg,gif,png,ico,css}'],
     swDest: `${dist}/sw.js`,
     clientsClaim: true,
