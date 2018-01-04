@@ -1,10 +1,24 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Raymon Schouwenaar.nl"
+title = "Raymon Schouwenaar"
+description = "Blog about HTML, CSS, JavaScript and Frontend Tools"
+author = "Raymon Schouwenaar"
+githubName = "rsschouwenaar"
+twitterName = "rsschouwenaar"
 
 theme = "blank"
 DisqusShortname = "raymonschouwenaar"
+
+googleAnalytics = "UA-37807942-1"
+
+[twitter]
+    card = "summary_large_image"
+    site = "@rsschouwenaar"
+    creator = "@rsschouwenaar"
+    title = "Special Title for the Card"
+    description = "Special Description for the card max. 200 characters"
+    image = "https://example.com/great-picture.jpg"
 
 contentdir = "content"
 publishdir = "dist"

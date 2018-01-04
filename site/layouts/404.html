@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+<div class="post-single__container">
+	<header class="post-single__header">
+		<h1 class="post-single__title">{{ .Title }}</h1>
+	</header>
+	<main class="rss__postcontent">
+		<article class="post__content-grid">
+			<section class="post__content post-single__content">
+				{{ .Content }}
+			</section>
+		</article>
+	</main>
+</div>
+{{ partial "readmore.html" . }}
+{{ partial "footer.html" . }}
