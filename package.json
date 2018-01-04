@@ -43,6 +43,7 @@
     "url-loader": "^0.5.7",
     "webpack": "3.6.0",
     "whatwg-fetch": "^1.0.0",
-    "workbox-build": "^2.1.2"
+    "workbox-build": "^2.1.2",
+    "workbox-cli": "^2.1.2"
   }
 }
