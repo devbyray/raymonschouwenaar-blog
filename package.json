@@ -5,10 +5,10 @@
   "repository": "netlify/victor-hugo",
   "main": "index.js",
   "scripts": {
-    "hugo": "gulp hugo",
-    "build": "gulp build",
-    "build-preview": "gulp build-preview",
-    "start": "gulp server",
+    "hugo": "gulp hugo && workbox generate:sw",
+    "build": "gulp build && workbox generate:sw",
+    "build-preview": "gulp build-preview && workbox generate:sw",
+    "start": "gulp server && workbox generate:sw",
     "lint": "eslint src"
   },
   "author": "",

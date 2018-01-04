@@ -54,7 +54,7 @@ gulp.task("images", () => (
 ));
 
 // Compile Javascript
-gulp.task("js", ['generate-service-worker'], (cb) => {
+gulp.task("js", (cb) => {
   const myConfig = Object.assign({}, webpackConfig);
 
   webpack(myConfig, (err, stats) => {
@@ -65,30 +65,6 @@ gulp.task("js", ['generate-service-worker'], (cb) => {
     }));
     browserSync.reload();
     cb();
-  });
-});
-
-gulp.task('generate-service-worker', () => {
-  return workbox.generateSW({
-    globDirectory: './dist/',
-    globPatterns: ['**\/*.{html,js,jpg,gif,png,ico,css}'],
-    swDest: './dist/sw.js',
-    clientsClaim: true,
-    skipWaiting: true,
-    runtimeCaching: [
-      {
-        urlPattern: new RegExp('https://fonts.googleapis.com/(.*)'),
-        handler: 'staleWhileRevalidate'
-      },
-      {
-        urlPattern: new RegExp('https://fonts.gstatic.com/(.*)'),
-        handler: 'staleWhileRevalidate'
-      }
-    ]
-  }).then(() => {
-    console.info('Service worker generation completed.');
-  }).catch((error) => {
-    console.warn('Service worker generation failed: ' + error);
   });
 });
 
