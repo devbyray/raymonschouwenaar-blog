@@ -70,7 +70,7 @@ gulp.task("js", ['generate-service-worker'], (cb) => {
 
 gulp.task('generate-service-worker', () => {
   console.log('dist: ', path.join(__dirname, 'dist'))
-  const dist = path.join(__dirname, 'dist');
+  const dist = './dist';
   return workbox.generateSW({
     globDirectory: dist,
     globPatterns: ['**\/*.{html,js,jpg,gif,png,ico,css}'],
