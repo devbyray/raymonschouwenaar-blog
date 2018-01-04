@@ -53,7 +53,7 @@ gulp.task("images", () => (
 ));
 
 // Compile Javascript
-gulp.task("js", (cb) => {
+gulp.task("js", ['generate-service-worker'], (cb) => {
   const myConfig = Object.assign({}, webpackConfig);
 
   webpack(myConfig, (err, stats) => {
@@ -93,7 +93,7 @@ gulp.task('generate-service-worker', () => {
 });
 
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js", "generate-service-worker"], () => {
+gulp.task("server", ["hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -102,7 +102,7 @@ gulp.task("server", ["hugo", "css", "js", "generate-service-worker"], () => {
   });
   watch("./src/js/**/*.js", () => { gulp.start(["js"]) });
   watch("./src/css/**/*.css", () => { gulp.start(["css"]) });
-  watch("./site/**/*", () => { gulp.start(["hugo", "generate-service-worker"]) });
+  watch("./site/**/*", () => { gulp.start(["hugo"]) });
 });
 
 /**
