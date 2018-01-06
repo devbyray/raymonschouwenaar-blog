@@ -5,6 +5,7 @@
 @import "prismjs/themes/prism-okaidia.css";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700|Rubik:500,900");
 @import "base/_base.css";
+@import "justlazy/src/justlazy.css";
 @import "base/_general.css";
 @import "base/_header.css";
 @import "base/_nav.css";

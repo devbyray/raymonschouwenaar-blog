@@ -2,26 +2,20 @@ baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Raymon Schouwenaar"
-description = "Blog about HTML, CSS, JavaScript and Frontend Tools"
-author = "Raymon Schouwenaar"
-githubName = "rsschouwenaar"
-twitterName = "rsschouwenaar"
-
 theme = "blank"
 DisqusShortname = "raymonschouwenaar"
 
 googleAnalytics = "UA-37807942-1"
 
-[twitter]
-    card = "summary_large_image"
-    site = "@rsschouwenaar"
-    creator = "@rsschouwenaar"
-    title = "Special Title for the Card"
-    description = "Special Description for the card max. 200 characters"
-    image = "https://example.com/great-picture.jpg"
 
 contentdir = "content"
 publishdir = "dist"
+
+[params]
+author = "Raymon Schouwenaar"
+githubName = "rsschouwenaar"
+twitterName = "rsschouwenaar"
+description = "I'm Ray a Dutch Front-end Developer. I share my passion about HTML, CSS, JavaScript and Tooling!"
 
 [permalinks]
 post = "/:title/"
@@ -39,3 +33,8 @@ category = "category/:slug"
     pre = "<i class='fa fa-road'></i>"
     weight = -100
     url = "/"
+[[menu.main]]
+    name = "Developer Webhosting"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -80
+    url = "https://www.webfaction.com/?aid=73781"
