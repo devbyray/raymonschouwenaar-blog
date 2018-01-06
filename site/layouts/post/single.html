@@ -38,11 +38,13 @@
 			<section class="post__content post-single__content">
 				<div class="post-single__image">
 					{{if .Params.featured_image}}
-					<img src="{{ .Params.featured_image }}" alt="">
+						<span data-src="{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
+						class="justlazy"></span>
 					{{else}}
 						{{ range .Params.categories }}
 						<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-						<img src="/images/{{ . | urlize }}.jpg" alt="">
+							<span data-src="/images/{{ . | urlize }}.jpg" data-alt="Image {{ . }}"
+							class="justlazy"></span>
 						{{ end }}
 					{{end}}
 				</div>

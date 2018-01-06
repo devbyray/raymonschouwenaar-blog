@@ -4,12 +4,12 @@
 		</header>
 		<div class="post__image">
 			{{if .Params.featured_image}}
-				<span data-src="{{ .Params.featured_image }}" data-alt="some alt text"
+				<span data-src="{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
 				class="justlazy"></span>
 			{{else}}
 				{{ range .Params.categories }}
 				<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-				<span data-src="/images/{{ . | urlize }}.jpg" data-alt="some alt text"
+				<span data-src="/images/{{ . | urlize }}.jpg" data-alt="Image {{ . }}"
 				class="justlazy"></span>
 				{{ end }}
 			{{end}}

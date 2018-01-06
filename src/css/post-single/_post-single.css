@@ -8,6 +8,9 @@
     margin: 0 0 1rem 0;
   }
 }
+.post-single__title {
+  font-size: 2rem;
+}
 .post__content-grid {
   display: grid;
   grid-column-gap: 4rem;
@@ -18,7 +21,7 @@
     "postComment postComment"
   ;
 }
-.post-single__content p:first-of-type {
+.post-single__content > p:first-of-type {
   font-weight: 500;
   font-size: 120%;
 }
@@ -34,6 +37,7 @@
 .post-single__container {
   grid-area: postSingleContainer;
   margin-bottom: 2rem;
+  padding: 0 1.5rem;
 }
 .post-single__header {
   font-size: 2rem;
@@ -60,6 +64,14 @@
   font-size: 0.9rem;
 }
 @media screen and (min-width: 900px) {
+  .post-single__title {
+    font-size: 3rem;
+  }
+  .post-single__container {
+    grid-area: postSingleContainer;
+    margin-bottom: 2rem;
+    padding: 0 0 0 1.5rem;
+  }
   .post__content-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
