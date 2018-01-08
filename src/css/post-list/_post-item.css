@@ -1,11 +1,12 @@
 .post__item {
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   flex-direction: column;
   align-content: stretch;
 }
 .post__header {
-  padding: 1rem;
+  border-top: 1px solid #fff;
+  padding: 2rem 1rem 1rem;
   margin-top: 1rem;
 }
 .post__title {
@@ -15,17 +16,16 @@
 .post-single__title,
 .post__title,
 .post__title a {
-  color: #000000;
+  /* color: #000000; */
 }
 .post__summary {
   margin-bottom: 1rem;
 }
 .post__readmore {
-  font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   display: inline-block;
   padding: 0.5rem;
-  background: color(#333333 alpha(-40%));
+  background: color(#333333 lightness(50%));
   color: #fff;
   text-decoration: none;
   font-weight: 500;

@@ -2,7 +2,7 @@
   grid-column: 4;
 }
 .post__sidebar-content {
-  background: color(#cccccc alpha(-20%));
+  background: color(#333333 lightness(50%));
   margin-bottom: 1rem;
   font-style: italic;
   font-size: 0.9rem;

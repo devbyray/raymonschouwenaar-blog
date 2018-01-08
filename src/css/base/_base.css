@@ -9,19 +9,17 @@ body{
 }
 body{
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  background: #f1f1f1;
-}
-.rubik {
-  font-family: 'Rubik', sans-serif;
+  color: #ffffff;
+  background: #262626;
 }
 body, a {
-  color: #000000;
+  color: #ffffff;
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -30,13 +28,12 @@ pre, code {
 }
 pre[class*="language-"] {
   padding: 0;
+  background: #000000;
 }
 pre {
   margin-bottom: 1rem !important;
 }
 h1, h2, h3, h4, h5, h6, blockquote {
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
   margin: 0 0 1rem 0;
 }
 ol, ul {

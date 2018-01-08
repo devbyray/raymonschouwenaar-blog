@@ -43,6 +43,10 @@
   font-size: 2rem;
 }
 .post__content,
+.post__summary {
+  word-wrap: break-word;
+}
+.post__content,
 .post__summary,
 .post__tags,
 .post__date {
