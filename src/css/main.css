@@ -1,9 +1,10 @@
 /*
   You can use import statements to include partials:
  */
+
 @import "normalize.css";
 @import "prismjs/themes/prism-okaidia.css";
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700");
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:300,300i,700,700i');
 @import "base/_base.css";
 @import "justlazy/src/justlazy.css";
 @import "base/_general.css";

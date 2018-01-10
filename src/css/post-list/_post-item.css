@@ -21,16 +21,8 @@
 .post__summary {
   margin-bottom: 1rem;
 }
-.post__readmore {
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 0.5rem;
-  background: color(#333333 lightness(50%));
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-}
-.post__readmore:hover {
-  background: #fc6621;
+.post__info,
+.post__header,
+.post__summary {
+  padding: 0 2rem;
 }

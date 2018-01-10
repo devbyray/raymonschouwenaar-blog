@@ -1,8 +1,3 @@
-:root {
-  --container: {
-  };
-}
-
 .container {
   grid-template-areas:
     "rssHeader rssHeader rssHeader"
@@ -14,6 +9,22 @@
   grid-template-columns: 1fr 70vw 1fr;
   grid-column-gap: 4rem;
   min-height: 100vh;
+  :root {
+    --button: {
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 0.5rem;
+      background: color(#333333 lightness(50%));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease-in-out;
+    };
+    --button-hover: {
+      background: #fc6621;
+    }
+  }
+
 }
 .container--homepage {
   grid-template-areas:
@@ -32,11 +43,13 @@
   display: none;
 }
 
+
+
 @media screen and (min-width: 900px) {
   .container {
     grid-template-areas:
       "rssHeader rssHeader rssHeader"
-      "postSingleContainer postSingleContainer . "
+      ". postSingleContainer . "
       "rssReadmore rssReadmore rssReadmore"
       "rssFooter rssFooter rssFooter"
     ;
@@ -50,3 +63,17 @@
     ;
   }
 }
+
+.button {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5rem;
+  background: color(#333333 lightness(50%));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+};
+.button:hover {
+  background: #fc6621;
+};

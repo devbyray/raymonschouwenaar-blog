@@ -1,40 +1,15 @@
 {{ partial "header.html" . }}
 <div class="post-single__container">
-	<header class="post-single__header">
-		<h1 class="post-single__title">{{ .Title }}</h1>
-	</header>
 	<main class="rss__postcontent">
 		<article class="post__content-grid">
-			<aside class="post__sidebar">
-				<div class="post__sidebar-content">
-					<div class="post__author">
-						<p>
-							<strong>Author:</strong>
-							<br /> {{ partial "tagline.html" . }}
-						</p>
-					</div>
-					<p class="post__tags">
-						<strong>Categories:</strong>
-						<br />
-						{{ range .Params.categories }}
-							<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-						{{ end }}
-					</p>
-					<div class="post__date">
-						<p>
-							This post is created on
-							<strong>
-								<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-							</strong>.
-							<br />
-						</p>
-						<p>
-							It will take
-							<strong>~{{ .ReadingTime }} minutes</strong> to read.
-						</p>
-					</div>
-				</div>
-			</aside>
+			<header class="post-single__header">
+				<h1 class="post-single__title">{{ .Title }}</h1>
+				<nav class="categories__nav">
+					{{ range .Params.categories }}
+						<a class="categories__link button" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+					{{ end }}
+				</nav>
+				</header>
 			<section class="post__content post-single__content">
 				<div class="post-single__image">
 					{{if .Params.featured_image}}
@@ -48,7 +23,14 @@
 						{{ end }}
 					{{end}}
 				</div>
-				{{ .Content }}
+				<div class="post-single__author	">
+					Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+					It will take
+					<strong>~{{ .ReadingTime }} minutes</strong> to read.
+				</div>
+				<div class="content">
+					{{ .Content }}
+				</div>
 			</section>
 			<footer class="post__comments post-single__comments">
 				{{ partial "disqus.html" . }}

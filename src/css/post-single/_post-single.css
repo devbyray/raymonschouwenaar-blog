@@ -16,14 +16,15 @@
   grid-column-gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    "postContent postContent"
     "postSidebar postSidebar"
+    "postTitle postTitle"
+    "postContent postContent"
     "postComment postComment"
   ;
 }
 .post-single__content > p:first-of-type {
-  font-weight: 500;
-  font-size: 120%;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 .post-single__content {
   grid-area: postContent;
@@ -34,38 +35,37 @@
 .post__sidebar {
   grid-area: postSidebar;
 }
+.post-single__header {
+  grid-area: postTitle;
+}
 .post-single__container {
   grid-area: postSingleContainer;
   margin-bottom: 2rem;
-  padding: 0 1.5rem;
-}
-.post-single__header {
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 .post__content,
 .post__summary {
   word-wrap: break-word;
 }
-.post__content,
-.post__summary,
-.post__tags,
-.post__date {
-  font-weight: 300;
-}
 .post__summary {
   margin-bottom: 2rem;
 }
-.post__header,
-.post__summary,
-.post__info {
-  padding: 0 2rem;
+
+.post-single__image img {
+  display: block;
+}
+.post-single__author {
+  background: color(#333333 lightness(30%));
+  margin-bottom: 1rem;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.categories__nav {
+  margin-bottom: 1rem;
 }
 .post__title a {
   text-decoration: none;
-}
-.post__time {
-  font-style: italic;
-  font-size: 0.9rem;
 }
 @media screen and (min-width: 900px) {
   .post-single__title {
@@ -74,28 +74,6 @@
   .post-single__container {
     grid-area: postSingleContainer;
     margin-bottom: 2rem;
-    padding: 0 0 0 1.5rem;
+    /* padding: 0 0 0 1.5rem; */
   }
-  .post__content-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "postSidebar postContent postContent"
-      "postSidebar postComment postComment"
-    ;
-  }
-
 }
-/* @media screen and (max-width: 900px) {
-  .post-single__content {
-    grid-column: 1/5;
-  }
-  .post-single__content {
-    grid-row: 1;
-  }
-  .post-single__header {
-    font-size: 1rem;
-  }
-  .post-single__container {
-    padding-left: 0;
-  }
-} */

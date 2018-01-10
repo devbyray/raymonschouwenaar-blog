@@ -1,6 +1,11 @@
 	<article class="post__item">
 		<header class="post__header">
 			<h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			<nav class="categories__nav">
+				{{ range .Params.categories }}
+					<a class="categories__link button" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+				{{ end }}
+			</nav>
 		</header>
 		<div class="post__image">
 			{{if .Params.featured_image}}
@@ -16,15 +21,9 @@
 		</div>
 
 		<section class="post__info">
-			<div class="post__date">
-				<time class="post__time black--light">{{ .Date.Format "02.01.2006 15:04" }}</time>
+			<div class="post__author">
+				Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
 			</div>
-			<p class="post__tags">
-				<strong>Tags: </strong>
-				{{ range .Params.categories }}
-				<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-				{{ end }}
-			</p>
 		</section>
 		<section class="post__summary">
 			{{ .Summary }}
@@ -32,6 +31,6 @@
 			{{ end }}
 		</section>
 		<footer class="post__footer">
-			<a class="post__readmore" href="{{ .Permalink }}">Read more</a>
+			<a class="post__readmore button" href="{{ .Permalink }}">Read more</a>
 		</footer>
 	</article>
