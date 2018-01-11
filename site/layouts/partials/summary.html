@@ -1,36 +1,33 @@
-	<article class="post__item">
-		<header class="post__header">
-			<h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-			<nav class="categories__nav">
-				{{ range .Params.categories }}
-					<a class="categories__link button" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-				{{ end }}
-			</nav>
-		</header>
-		<div class="post__image">
-			{{if .Params.featured_image}}
-				<span data-src="{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
-				class="justlazy"></span>
-			{{else}}
-				{{ range .Params.categories }}
-				<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-				<span data-src="/images/{{ . | urlize }}.jpg" data-alt="Image {{ . }}"
-				class="justlazy"></span>
-				{{ end }}
-			{{end}}
-		</div>
-
-		<section class="post__info">
-			<div class="post__author">
-				Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-			</div>
-		</section>
-		<section class="post__summary">
-			{{ .Summary }}
-			{{ if .Truncated }}
+<article class="post__item">
+	<header class="post__header">
+		<h2 class="post__title">
+			<a href="{{ .Permalink }}">{{ .Title }}</a>
+		</h2>
+		<nav class="categories__nav">
+			{{ range .Params.categories }}
+			<a class="categories__link button" href="{{" /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 			{{ end }}
-		</section>
-		<footer class="post__footer">
-			<a class="post__readmore button" href="{{ .Permalink }}">Read more</a>
-		</footer>
-	</article>
+		</nav>
+	</header>
+	<div class="post__image">
+		{{if .Params.featured_image}}
+		<span data-src="{{ .Params.featured_image }}" data-alt="Image {{ .Title }}" class="justlazy"></span>
+		{{else}} {{ range .Params.categories }}
+		<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
+		<span data-src="http://res.cloudinary.com/raymons/image/upload/w_1366/{{ . | urlize }}.jpg" data-alt="Image {{ . }}" class="justlazy"></span>
+		{{ end }} {{end}}
+	</div>
+
+	<section class="post__info">
+		<div class="post__author">
+			Written by Raymon on
+			<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+		</div>
+	</section>
+	<section class="post__summary">
+		{{ .Summary }} {{ if .Truncated }} {{ end }}
+	</section>
+	<footer class="post__footer">
+		<a class="post__readmore button" href="{{ .Permalink }}">Read more</a>
+	</footer>
+</article>
