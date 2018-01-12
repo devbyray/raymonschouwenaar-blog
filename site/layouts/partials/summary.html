@@ -6,10 +6,10 @@
 	</header>
 	<div class="post__image">
 		{{if .Params.featured_image}}
-		<span data-src="http://res.cloudinary.com/raymons/image/upload/w_1366/{{ .Params.featured_image }}" data-alt="Image {{ .Title }}" class="justlazy"></span>
+		<span data-src="http://res.cloudinary.com/raymons/image/upload/w_800/q_auto,f_auto/{{ .Params.featured_image }}" data-alt="Image {{ .Title }}" class="justlazy"></span>
 		{{else}} {{ range .Params.categories }}
 		<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-		<span data-src="http://res.cloudinary.com/raymons/image/upload/w_1366/{{ . | urlize }}.jpg" data-alt="Image {{ . }}" class="justlazy"></span>
+		<span data-src="http://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ . | urlize }}.jpg" data-alt="Image {{ . }}" class="justlazy"></span>
 		{{ end }} {{end}}
 	</div>
 
