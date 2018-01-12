@@ -1,0 +1,11 @@
+/*
+  You can use import statements to include partials:
+ */
+
+@import "normalize.css";
+@import "prismjs/themes/prism-okaidia.css";
+@import "justlazy/src/justlazy.css";
+
+.black--light {
+  color: color(#cccccc alpha(+40%));
+}
