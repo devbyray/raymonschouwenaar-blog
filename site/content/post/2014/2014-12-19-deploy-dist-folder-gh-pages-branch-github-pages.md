@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-12-19T13:53:43+00:00
 url: /deploy-dist-folder-gh-pages-branch-github-pages/
-featured_image: /wp-content/uploads/2014/12/githubpages-825x347.jpg
+featured_image: githubpages-825x347.jpg
 dsq_thread_id:
   - 3366876800
 categories:

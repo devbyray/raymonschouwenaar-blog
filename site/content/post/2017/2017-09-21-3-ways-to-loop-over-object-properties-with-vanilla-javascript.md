@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2017-09-21T18:59:43+00:00
 url: /3-ways-to-loop-over-object-properties-with-vanilla-javascript/
-featured_image: /wp-content/uploads/2017/06/love-javascript-shorthand-else-statement.jpg
+featured_image: love-javascript-shorthand-else-statement.jpg
 dsq_thread_id:
   - 6160658068
 categories:

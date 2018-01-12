@@ -11,9 +11,14 @@
 				</nav>
 				</header>
 			<section class="post__content post-single__content">
+				<div class="post-single__author	">
+					Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
+					, time to read
+					<strong>~{{ .ReadingTime }} minutes</strong>.
+				</div>
 				<div class="post-single__image">
 					{{if .Params.featured_image}}
-						<span data-src="{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
+						<span data-src="http://res.cloudinary.com/raymons/image/upload/w_1366/{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
 						class="justlazy"></span>
 					{{else}}
 						{{ range .Params.categories }}
@@ -22,11 +27,6 @@
 							class="justlazy"></span>
 						{{ end }}
 					{{end}}
-				</div>
-				<div class="post-single__author	">
-					Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-					It will take
-					<strong>~{{ .ReadingTime }} minutes</strong> to read.
 				</div>
 				<div class="content">
 					{{ .Content }}

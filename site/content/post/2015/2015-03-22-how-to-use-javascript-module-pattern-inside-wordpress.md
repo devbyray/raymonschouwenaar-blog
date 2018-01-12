@@ -5,7 +5,7 @@ type: post
 date: 2015-03-22T18:23:45+00:00
 excerpt: Since I discovered that it is better to avoid to put everything in your global scope with JavaScript I love to use the Module Pattern. This is how you can use the JavaScript Module Pattern inside WordPress
 url: /how-to-use-javascript-module-pattern-inside-wordpress/
-featured_image: /wp-content/uploads/2015/03/wordpress-javascript-module-pattern-825x510.jpg
+featured_image: wordpress-javascript-module-pattern-825x510.jpg
 dsq_thread_id:
   - 3617498858
 categories:

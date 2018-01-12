@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-02-03T14:14:04+00:00
 url: /deploy-website-git-webhosting-webfaction-github-bitbucket/
-featured_image: /wp-content/uploads/2015/02/continuous-deployment-825x510.jpg
+featured_image: continuous-deployment-825x510.jpg
 dsq_thread_id:
   - 3481483161
 categories:

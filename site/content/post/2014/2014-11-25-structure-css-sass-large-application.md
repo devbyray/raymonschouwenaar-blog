@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-11-25T20:00:38+00:00
 url: /structure-css-sass-large-application/
-featured_image: /wp-content/uploads/2014/11/how-to-structure-css-or-sass-for-an-large-application-825x347.jpg
+featured_image: how-to-structure-css-or-sass-for-an-large-application-825x347.jpg
 dsq_thread_id:
   - 3367616582
 categories:

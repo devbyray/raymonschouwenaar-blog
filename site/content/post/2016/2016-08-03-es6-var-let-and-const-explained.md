@@ -4,9 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-08-03T14:58:44+00:00
 url: /es6-var-let-and-const-explained/
-featured_image: /wp-content/uploads/2016/08/es6-var-let-and-const-explained-1200x750.jpg
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*W5ssxLrDoscNIwTcu_fDEA.jpeg";s:10:"author_url";s:33:"https://medium.com/@rsschouwenaar";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:3:"yes";s:2:"id";s:12:"e4c6ad14c195";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:78:"https://medium.com/@rsschouwenaar/es6-var-let-and-const-explained-e4c6ad14c195";}'
+featured_image: es6-var-let-and-const-explained-1200x750.jpg
 dsq_thread_id:
   - 5037139521
 categories:
@@ -35,22 +33,22 @@ A `var` is or can be globally scoped. Cool to access everything from inside anyt
 A variable can be defined with a string, later on, reassigned to an integer and later it could be a function. That is a power but also a weakness.
 
     var globalVariable;
-    
+
     globalVariable = 'I Love Pizza!';
-    
+
     console.log(globalVariable); // Will be 'I Love Pizza!'
-    
+
 
 Now I defined a global variable (_yes I do love pizza_ :-)), right after it I added a string to it. So you can see, you can define it and later on change it to the other value.
 
     function iChangeTheVariable() {
         globalVariable = [59, 600, 843];
     }
-    
+
     iChangeTheVariable();
-    
+
     console.log(globalVariable); // Will be [59, 600, 843]
-    
+
 
 So guess what, the globalVariable is change. Sounds cool right! Well If it was your intention to change it, yes! But if you didn&#8217;t know that you already used that variable, then it is a problem! There is the weakness!!
 
@@ -60,24 +58,24 @@ Now you can see the danger of globally scoped variables. So if I may advise you,
 
     (function() {
         var var1 = 'variable 1 value in parent scope';
-    
+
         (function() {
             // Scope 1
             var1 = 'variable 1 value in scope 1';
             console.log('scope 1: ', var1); // Is 'variable 1 value in scope 1'
         }());
-    
+
         (function() {
             // Scope 2
             var1 = 'variable 1 value in scope 2';
             console.log('scope 2: ', var1); // Is 'variable 1 value in scope 2'
         }());
-    
+
         console.log('Parent scope: ', var1); // Is 'variable 1 value in parent scope'
-    
+
     }());
     console.log('Global scope: ', var1); // Is undefined
-    
+
 
 You can make the variable locally scoped, by putting it inside a function. Like the example here, if you execute the function in your console, the last `console.log()` with &#8220;Parent scope:&#8221; in it, will be changed by the one before it!
 
@@ -86,15 +84,15 @@ You can make the variable locally scoped, by putting it inside a function. Like 
 Variables can be hoisted. Hoisted means, declare them all on top of the function (_I hope you don&#8217;t put everything in the global scope!_).
 
     (function() {
-    
+
         var localVar1, localVar2, localVar3;
-    
+
         localVar1 = 'Variable value 1';
         localVar2 = [74, 88, 97, 112];
         localVar3 = {name: 'Ray', website: 'http://personaldomain.com'};
-    
+
     }());
-    
+
 
 This how most developer usally hoist their variables. This is to make sure that they declared the variables before the got a value. But also to prevent the variables be globally accessible.
 
@@ -114,25 +112,25 @@ _This example will run in the latest version of Google Chrome (not in Safari)_
 
     (function() {
         let letVar1 = 'Let variable 1 value in parent scope';
-    
+
         (function() {
             // Scope 1
             let letVar1 = 'Let variable 1 value in scope 1';
             console.log('scope 1: ', letVar1); // Is 'Let variable 1 value in scope 1'
         }());
-    
+
         (function() {
             // Scope 2
             let letVar1 = 'Let variable 1 value in scope 2';
             console.log('scope 2: ', letVar1); // Is 'Let variable 1 value in scope 2'
         }());
-    
+
         console.log('Parent scope: ', letVar1); // Is 'Let variable 1 value in parent scope'
-    
+
     }());
     console.log('Global scope: ', letVar1); // Is undefined
-    
-    
+
+
 
 If you tried to paste this snippet into the devtools console you will see that the parent scope, scope 1 & 2 give different values. That is because it is block scoped. The global scope will give an error that it is undefined.
 
@@ -154,20 +152,20 @@ A `const` is block scoped, the same as the `let` variable. In the other scope, y
 
     (function() {
         const constVar1 = 'const variable 1 value in parent scope';
-    
+
         (function() {
             // Scope 1
             const constVar1 = 'const variable 1 value in scope 1';
             console.log('scope 1: ', constVar1);
             // scope 1:  const variable 1 value in scope 1
         }());
-    
+
         console.log('Parent scope: ', constVar1);
         // Parent scope:  const variable 1 value in parent scope
-    
+
     }());
-    
-    
+
+
 
 In this example, you can see that it is possible to assign a constant with the same name in a different scope with the other value.
 
@@ -175,7 +173,7 @@ In this example, you can see that it is possible to assign a constant with the s
 
     (function() {
         const constVar1 = 'const variable 1 value in parent scope';
-    
+
         (function() {
             // Scope 1
             console.log('scope 1: ', constVar1);
@@ -183,10 +181,10 @@ In this example, you can see that it is possible to assign a constant with the s
             constVar1 = 'const variable 1 value in scope 1';
             // Is Identifier 'constVar1' has already been declared
             console.log('scope 1: ', constVar1);    }());
-    
+
     }());
-    
-    
+
+
 
 In this example, you can see that it is not possible to re-assign the same constant with a different value.
 

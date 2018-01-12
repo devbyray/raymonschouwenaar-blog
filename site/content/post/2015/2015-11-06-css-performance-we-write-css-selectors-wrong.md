@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-11-06T10:59:52+00:00
 url: /css-performance-we-write-css-selectors-wrong/
-featured_image: /wp-content/uploads/2015/11/css-performance-writing-css-selectors-wrong-825x510.jpg
+featured_image: css-performance-writing-css-selectors-wrong-825x510.jpg
 dsq_thread_id:
   - 4294764219
 categories:

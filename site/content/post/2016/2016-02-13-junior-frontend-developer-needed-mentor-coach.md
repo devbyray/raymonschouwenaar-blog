@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-02-13T21:49:55+00:00
 url: /junior-frontend-developer-needed-mentor-coach/
-featured_image: /wp-content/uploads/2016/02/when-i-was-a-junior-frontend-developer-i-needed-a-mentor-or-coach.jpg
+featured_image: when-i-was-a-junior-frontend-developer-i-needed-a-mentor-or-coach.jpg
 dsq_thread_id:
   - 4577084919
 categories:

@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-10-16T08:15:50+00:00
 url: /frontend-speed-performance-testing/
-featured_image: /wp-content/uploads/2014/10/frontend-speed-performance-testing-825x480.jpg
+featured_image: frontend-speed-performance-testing-825x480.jpg
 dsq_thread_id:
   - 3401810320
 categories:

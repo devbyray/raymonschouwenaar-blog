@@ -1,5 +1,7 @@
 import webpack from "webpack";
 import path from "path";
+import MinifyPlugin from 'babel-minify-webpack-plugin';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 export default {
   module: {
@@ -21,6 +23,16 @@ export default {
   plugins: [
     new webpack.ProvidePlugin({
       "fetch": "imports-loader?this=>global!exports?global.fetch!whatwg-fetch"
+    }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        ecma: 5,
+        output: {
+          comments: false,
+          beautify: false,
+        },
+        warnings: false
+      }
     })
   ],
 

@@ -5,7 +5,7 @@ type: post
 date: 2015-05-13T15:25:47+00:00
 excerpt: In jQuery, developers are used to the $(document).ready(); function. This is just a check if your document is completely loaded, and all needed stuff is on your page. But since I left jQuery in my work, I wanted to have the same check but with Vanilla JavaScript.
 url: /cross-browser-document-ready-with-vanilla-javascript-ie8-included/
-featured_image: /wp-content/uploads/2015/02/snippets-of-vanilla-javascript-you-dont-need-jquery-for-this-825x510.jpg
+featured_image: snippets-of-vanilla-javascript-you-dont-need-jquery-for-this-825x510.jpg
 dsq_thread_id:
   - 3760738825
 categories:

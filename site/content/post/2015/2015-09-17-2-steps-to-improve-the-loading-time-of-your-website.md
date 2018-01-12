@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-09-17T11:00:52+00:00
 url: /2-steps-to-improve-the-loading-time-of-your-website/
-featured_image: /wp-content/uploads/2015/09/2-steps-to-improve-the-loading-time-of-your-website-825x510.jpg
+featured_image: 2-steps-to-improve-the-loading-time-of-your-website-825x510.jpg
 dsq_thread_id:
   - 4137884733
 categories:

@@ -5,7 +5,7 @@ type: post
 date: 2015-08-12T12:01:15+00:00
 excerpt: Searching for a solution for an empty space below your IMG (image) in a DIV html tag. But have no margins in the CSS? Check these 2 solutions!
 url: /2-solutions-for-empty-spaces-below-an-img-html-element-no-margins-used/
-featured_image: /wp-content/uploads/2015/08/empty-space-below-image-html-css-825x510.jpg
+featured_image: empty-space-below-image-html-css-825x510.jpg
 dsq_thread_id:
   - 4025739711
 categories:

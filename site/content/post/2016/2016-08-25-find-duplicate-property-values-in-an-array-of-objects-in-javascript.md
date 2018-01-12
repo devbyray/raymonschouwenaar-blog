@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-08-25T10:56:15+00:00
 url: /find-duplicate-property-values-in-an-array-of-objects-in-javascript/
-featured_image: /wp-content/uploads/2016/08/finding-duplicate-property-values-in-an-array-of-objects-in-javascript-1200x750.jpg
+featured_image: finding-duplicate-property-values-in-an-array-of-objects-in-javascript-1200x750.jpg
 medium_post:
   - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*W5ssxLrDoscNIwTcu_fDEA.jpeg";s:10:"author_url";s:33:"https://medium.com/@rsschouwenaar";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:3:"yes";s:2:"id";s:12:"d4bab4fa613e";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:114:"https://medium.com/@rsschouwenaar/find-duplicate-property-values-in-an-array-of-objects-in-javascript-d4bab4fa613e";}'
 dsq_thread_id:
@@ -27,7 +27,7 @@ Let&#8217;s define an example Array of Objects, where each Object is a user:
       {id: 3, name: 'Joe Ocean', email: 'joe@ocean.com'},
       {id: 3, name: 'Jenny Block', email: 'foo@bar.com'},
     ];
-    
+
 
 You can see that there are a few property value&#8217;s that are duplicated. The `id` and the `email` property. But if you can imagine in a real application you don&#8217;t know if someone else has used an email address before. So you need to check it before you can save it.
 
@@ -38,9 +38,9 @@ I&#8217;m not gonna discuss a process how you should do this in an application. 
     function checkDuplicateInObject(propertyName, inputArray) {
       var seenDuplicate = false,
           testObject = {};
-    
+
       inputArray.map(function(item) {
-        var itemPropertyName = item[propertyName];    
+        var itemPropertyName = item[propertyName];
         if (itemPropertyName in testObject) {
           testObject[itemPropertyName].duplicate = true;
           item.duplicate = true;
@@ -51,10 +51,10 @@ I&#8217;m not gonna discuss a process how you should do this in an application. 
           delete item.duplicate;
         }
       });
-    
+
       return seenDuplicate;
     }
-    
+
 
 Let&#8217;s create a function with 2 parameters. I will explain everything from the function, so everyone could follow this :-).
 

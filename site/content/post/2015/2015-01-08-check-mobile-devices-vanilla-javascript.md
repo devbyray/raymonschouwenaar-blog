@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-01-08T19:26:35+00:00
 url: /check-mobile-devices-vanilla-javascript/
-featured_image: /wp-content/uploads/2015/01/official-javascript-logo-e1420744637190-825x510.jpg
+featured_image: official-javascript-logo-e1420744637190-825x510.jpg
 dsq_thread_id:
   - 3402577425
 categories:
@@ -24,13 +24,13 @@ For checking this, you don&#8217;t need jQuery for that. First of all, with jQue
 
     // type this in your console of the development tools in Chrome or other browser
     navigator.userAgent
-    
-    
+
+
 
 If you change to useragent in Chrome, and set it to the iPhone. If you type `navigator.userAgent` in your console, the response will be:
 
     "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5"
-    
+
 
 So you see that your using an iPhone (okay we fake it!).
 
@@ -38,7 +38,7 @@ So you see that your using an iPhone (okay we fake it!).
 
     // type this in your console of the development tools in Chrome or other browser
     navigator.userAgent.match(/iPhone/i);
-    
+
 
 The response will be `["iPhone"]` (if it is an iPhone). If you replace &#8220;iPhone&#8221; for &#8220;iPad&#8221;, the response will be `null`. With this you can build a check.
 
@@ -46,7 +46,7 @@ The response will be `["iPhone"]` (if it is an iPhone). If you replace &#8220;iP
 
     function deviceOS() {
     var useragent = navigator.userAgent;
-    
+
     if(useragent.match(/Android/i)) {
     return 'android';
     } else if(useragent.match(/webOS/i)) {
@@ -67,8 +67,8 @@ The response will be `["iPhone"]` (if it is an iPhone). If you replace &#8220;iP
     return false;
     }
     }
-    
-    
+
+
 
 Use this script in your JavaScript and you have an nice simple Mobile Device check for Android, iPhone, iPod, iPad, Windows Phone, Symbian and RIM. Enjoy using Vanilla JavaScript!
 

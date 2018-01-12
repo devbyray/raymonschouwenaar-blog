@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-08-18T08:09:07+00:00
 url: /create-css-responsive-image-grid-ratio-scaling/
-featured_image: /wp-content/uploads/2014/08/Create-an-CSS-only-Responsive-Image-Grid-with-ratio-scaling-825x510.jpg
+featured_image: Create-an-CSS-only-Responsive-Image-Grid-with-ratio-scaling-825x510.jpg
 dsq_thread_id:
   - 2936662351
 categories:

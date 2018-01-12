@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-01-22T22:15:24+00:00
 url: /my-frontend-toolbox-review-of-2015/
-featured_image: /wp-content/uploads/2016/01/frontend-toolbox-review-of-2015.jpg
+featured_image: frontend-toolbox-review-of-2015.jpg
 dsq_thread_id:
   - 4514883901
 categories:
@@ -59,7 +59,7 @@ One of my biggest conclusions of the CSS Selectors was, I&#8217;VE WRITTEN MY SE
 On one of my biggest projects in 2015 was building a huge platform for a big company, with a big team of Developers. There was a big codebase full of CSS. When I started to make changes on it, it seemed it was in a really bad shape. A lot off !important where inside it, or selectors like div#thisId ul li a .tab .readmore-link. Really in bad shape! So every time I had to change something, I had to overrule it. I even end up with writing selectors with the same length, !important and ID&#8217;s. So that was really frustrated me.
 
 I found CSSLint, man that is a really helpful tool! I started to use [CSSLint in the browser][2], but that was not really productive. Until I found out that [Grunt][3] and [Gulp][4] also had a plugin for it. So with the GulpJS plugin for CSSLint, I found out that we needed a whole lot more time to fix it all! Thanks, CSSlint 🙂
-  
+
 JavaScript
 
 ## Javascript

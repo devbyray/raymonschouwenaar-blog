@@ -5,7 +5,7 @@ type: post
 date: 2014-09-21T13:30:01+00:00
 excerpt: "I found an new passion, i was thinking about it for an couple of years now. But i finaly set an step forward! For years i wanted to learn to mix some music, just like all the top DJ's like Armin van Buuren, Hardwell and Dannic do. I used the free version of Virtual DJ, and followed some youtube movie's to practive with beatsyncing/beatmatching."
 url: /best-top-30-trance-progressive-house-dance-times/
-featured_image: /wp-content/uploads/2014/09/front-800x510.jpg
+featured_image: front-800x510.jpg
 dsq_thread_id:
   - 3435897194
 categories:

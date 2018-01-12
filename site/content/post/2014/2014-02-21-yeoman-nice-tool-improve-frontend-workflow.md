@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-02-21T17:24:09+00:00
 url: /yeoman-nice-tool-improve-frontend-workflow/
-featured_image: /wp-content/uploads/2014/02/Yeoman-THE-WEBS-SCAFFOLDING-TOOL-FOR-MODERN-WEBAPPS-825x392.jpg
+featured_image: Yeoman-THE-WEBS-SCAFFOLDING-TOOL-FOR-MODERN-WEBAPPS-825x392.jpg
 dsq_thread_id:
   - 2299189198
 categories:

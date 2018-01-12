@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-08-01T19:40:43+00:00
 url: /remotely-debug-your-responsive-website-with-chrome/
-featured_image: /wp-content/uploads/2014/08/chrome_debug-825x510.jpg
+featured_image: chrome_debug-825x510.jpg
 dsq_thread_id:
   - 2892781482
 categories:

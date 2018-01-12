@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-02-10T20:13:08+00:00
 url: /simple-name-filter-angularjs/
-featured_image: /wp-content/uploads/2014/02/AngularJS-name-filter-825x510.jpg
+featured_image: AngularJS-name-filter-825x510.jpg
 dsq_thread_id:
   - 2248370099
 categories:

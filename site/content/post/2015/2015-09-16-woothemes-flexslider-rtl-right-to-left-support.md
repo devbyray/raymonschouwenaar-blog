@@ -5,7 +5,7 @@ type: post
 date: 2015-09-16T09:19:19+00:00
 excerpt: How to support RTL (right-to-left) in the Woothemes Flexslider of Woocommerce ? Pretty easy to fix with CSS! Check it out here!
 url: /woothemes-flexslider-rtl-right-to-left-support/
-featured_image: /wp-content/uploads/2015/09/woocommerce-flexslider-support-rtl-right-to-left-css-825x450.jpg
+featured_image: woocommerce-flexslider-support-rtl-right-to-left-css-825x450.jpg
 dsq_thread_id:
   - 4134620829
 categories:

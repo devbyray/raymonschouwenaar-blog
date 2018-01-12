@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-02-03T12:39:24+00:00
 url: /5-css-tips-junior-frontend-developers/
-featured_image: /wp-content/uploads/2016/02/5-CSS-tips-for-junior-frontend-developers.jpg
+featured_image: 5-CSS-tips-for-junior-frontend-developers.jpg
 dsq_thread_id:
   - 4547944765
 categories:

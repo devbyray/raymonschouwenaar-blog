@@ -5,7 +5,7 @@ type: post
 date: 2014-10-08T07:55:33+00:00
 excerpt: As an Frontend Developer you got a lot of work to do. You have to create and build fast, but without tools thats not easy. So "Use good tools"! Like an carpenter use good tools to craft his home or table, as an Frontend Developer you also have to invest time/money to find good tools to "Work Faster and Play Harder" and have a lot of fun!
 url: /work-faster-play-harder-frontend-developer/
-featured_image: /wp-content/uploads/2014/10/grunt-vs-gulp-825x400.jpg
+featured_image: grunt-vs-gulp-825x400.jpg
 dsq_thread_id:
   - 3463307789
 categories:

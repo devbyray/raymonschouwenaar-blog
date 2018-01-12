@@ -5,7 +5,7 @@ type: post
 date: 2014-12-05T09:36:23+00:00
 excerpt: 'Frontend Developers 35+ tools, libraries & resource of November'
 url: /frontend-developers-35-tools-libraries-resource-november/
-featured_image: /wp-content/uploads/2014/12/Frontend-Developers-35-tools-libraries-resource-of-November-825x347.jpg
+featured_image: Frontend-Developers-35-tools-libraries-resource-of-November-825x347.jpg
 dsq_thread_id:
   - 3366888731
 categories:
@@ -41,17 +41,17 @@ tags:
 
 **[List of Frontend Tools][5]**
 
-**[Gulp Chrome DevTools: Chrome Extention][6]** 
+**[Gulp Chrome DevTools: Chrome Extention][6]**
 
 **[Gulp Chrome DevTools: NPM package][7]**
 
-**[Grunt Chrome DevTools: Chrome Extention][8]** 
+**[Grunt Chrome DevTools: Chrome Extention][8]**
 
 **[Grunt Chrome DevTools: NPM package][9]**
 
 **[Emmet Re:view][10]**
 
-**[Grunt CSS Metrics][11]** 
+**[Grunt CSS Metrics][11]**
 
 **[PageSpeed Insights for Node &#8211; with reporting][12]**
 

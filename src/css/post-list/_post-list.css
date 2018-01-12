@@ -1,6 +1,8 @@
 .rss__postslist,
 .post__list {
   grid-column: 1/4;
+  max-width: 750px;
+  margin: 0 auto 2rem auto;
 }
 .rss__postList {
   grid-area: rssPostList;

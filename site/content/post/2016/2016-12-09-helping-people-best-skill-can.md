@@ -4,9 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-12-09T21:34:44+00:00
 url: /helping-people-best-skill-can/
-featured_image: /wp-content/uploads/2016/12/raymonschouwenaar-helping-others.jpg
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*W5ssxLrDoscNIwTcu_fDEA.jpeg";s:10:"author_url";s:33:"https://medium.com/@rsschouwenaar";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:3:"yes";s:2:"id";s:11:"4125ca132a2";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:97:"https://medium.com/@rsschouwenaar/helping-other-people-is-the-best-skill-you-can-have-4125ca132a2";}'
+featured_image: raymonschouwenaar-helping-others.jpg
 dsq_thread_id:
   - 5368615188
 categories:

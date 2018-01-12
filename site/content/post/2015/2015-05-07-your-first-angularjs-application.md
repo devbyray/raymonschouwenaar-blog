@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-05-07T06:42:32+00:00
 url: /your-first-angularjs-application/
-featured_image: /wp-content/uploads/2015/05/Your-first-AngularJS-Application-825x510.jpg
+featured_image: Your-first-AngularJS-Application-825x510.jpg
 dsq_thread_id:
   - 3743372146
 categories:

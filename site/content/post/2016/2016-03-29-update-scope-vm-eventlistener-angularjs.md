@@ -3,8 +3,8 @@ title: How to update $scope or vm with an eventlistener in AngularJS
 author: Raymon Schouwenaar
 type: post
 date: 2016-03-29T07:30:26+00:00
-draft: true
-url: /?p=2260
+draft: false
+url: /how-to-update-the-scope-with-an-eventlistener-in-angularjs/
 categories:
   - Webdevelopment
 

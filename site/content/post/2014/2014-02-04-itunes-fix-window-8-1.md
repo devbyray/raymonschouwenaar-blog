@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-02-04T11:32:43+00:00
 url: /itunes-fix-window-8-1/
-featured_image: /wp-content/uploads/2014/02/Windows-8-1.jpg
+featured_image: Windows-8-1.jpg
 dsq_thread_id:
   - 2240329283
 categories:

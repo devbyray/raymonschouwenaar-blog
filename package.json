@@ -16,6 +16,7 @@
   "dependencies": {
     "babel-eslint": "^6.1.2",
     "babel-loader": "^7.0.0",
+    "babel-minify-webpack-plugin": "^0.2.0",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -46,6 +47,7 @@
     "postcss-custom-properties": "^6.2.0",
     "postcss-import": "^11.0.0",
     "prismjs": "^1.9.0",
+    "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.5.7",
     "webpack": "3.6.0",
     "whatwg-fetch": "^1.0.0",

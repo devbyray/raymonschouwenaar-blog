@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-02-11T09:55:15+00:00
 url: /javascript-addeventlistener-onblur-doesnt-work-firefox-fix/
-featured_image: /wp-content/uploads/2015/02/firefox-onblur-event-doesnt-work-825x510.jpg
+featured_image: firefox-onblur-event-doesnt-work-825x510.jpg
 dsq_thread_id:
   - 3505655570
 categories:
@@ -23,30 +23,30 @@ For a cool project is was building an Email validation script. But Firefox got s
 
     // HTML
     Enter your name: <input type="text" id="fname">
-    
+
     <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
-    
-    
+
+
     // JavaScript
     document.getElementById('fname').addEventListener('onblur', function() {
     input.value = input.value.toUpperCase();
     });
-    
+
 
 **Example 2: Does work:**
 
     // HTML
     Enter your name: <input type="text" id="fname" onblur="myFunction()">
-    
+
     <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
-    
-    
+
+
     // JavaScript
     function myFunction() {
         var x = document.getElementById("fname");
         x.value = x.value.toUpperCase();
     }
-    
+
 
 The &#8220;onblur&#8221; event worked on every other browser, except Firefox. Even on the website of [W3schools][1] the report that the onblur event should work in Firefox, but it doesn&#8217;t. After a lot of testing and searching i saw there was also the &#8220;blur&#8221; event.
 
@@ -57,7 +57,7 @@ So i thought, I could try the &#8220;blur&#8221; event. And magically it works!!
     document.getElementById('fname').addEventListener('onblur', function() {
     input.value = input.value.toUpperCase();
     });
-    
+
 
 If you have any comments on this solution, check the comment field below 🙂
 

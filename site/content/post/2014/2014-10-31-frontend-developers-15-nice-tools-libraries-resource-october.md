@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-10-31T20:21:48+00:00
 url: /frontend-developers-15-nice-tools-libraries-resource-october/
-featured_image: /wp-content/uploads/2014/10/frontend-developers-newest-tools-libraries-resource-october-825x374.jpg
+featured_image: frontend-developers-newest-tools-libraries-resource-october-825x374.jpg
 dsq_thread_id:
   - 3366919634
 categories:

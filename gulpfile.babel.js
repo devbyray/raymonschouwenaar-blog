@@ -17,27 +17,6 @@ import filenames from "gulp-filenames";
 import gulpCloudinary from "./custom-gulp-cloudinary";
 import cssnano from "gulp-cssnano";
 
-const config = {
-  cloud_name: "raymons",
-  api_key: "919626525222298",
-  api_secret: "zabj_4PHNAwy6a9azLgEvsLY--M"
-};
-
-var defaultTags = ["raymons-blog"];
-
-var builderDefault = new gulpCloudinary(config, defaultTags);
-
-gulp.task("clean", function() {
-  builderDefault.deleteOldByTag();
-});
-
-gulp.task("upload_images", function() {
-  return (gulp
-      // .src(["./site/static/wp-content/ray.jpg"])
-      .src(["./site/static/wp-content/**/*.{jpg,png,gif}"])
-      .pipe(builderDefault.uploader())
-      .pipe(gulp.dest("./dist/wp-content")));
-});
 
 const browserSync = BrowserSync.create();
 
@@ -58,27 +37,12 @@ gulp.task("css", () =>
   gulp
     .src("./src/css/*.css")
     .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext()]))
-    .pipe(cssnano())
+    .pipe(cssnano({
+      minifyFontWeight: false
+    }))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 );
-// htaccess
-// gulp.task("other", () => (
-//   gulp.src([
-//     "./site/.htaccess",
-//     "./site/_redirects"
-//   ])
-//     .pipe(gulp.dest("./dist/"))
-//     .pipe(browserSync.stream())
-// ));
-// Compile CSS with PostCSS
-var uploadToCloudinary = function(files) {
-  console.log("files: ", files);
-  // return files.map(function(file, cb) {
-  //   console.log(file.path);
-  //   return cb();
-  // });
-};
 
 gulp.task("images", () =>
   gulp

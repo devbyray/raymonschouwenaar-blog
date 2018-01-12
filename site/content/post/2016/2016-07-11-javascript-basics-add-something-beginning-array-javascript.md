@@ -5,8 +5,6 @@ type: post
 date: 2016-07-11T09:04:12+00:00
 excerpt: How to add something (Object, Array, String, Number) to an Array in JavaScript. Well that is simply done with the `Array.push()` method.
 url: /javascript-basics-add-something-beginning-array-javascript/
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*W5ssxLrDoscNIwTcu_fDEA.jpeg";s:10:"author_url";s:33:"https://medium.com/@rsschouwenaar";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:3:"yes";s:2:"id";s:12:"78c03e3accdf";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:121:"https://medium.com/@rsschouwenaar/javascript-basics-add-something-to-the-beginning-of-an-array-in-javascript-78c03e3accdf";}'
 dsq_thread_id:
   - 4976416011
 categories:

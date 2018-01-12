@@ -5,7 +5,7 @@ type: post
 date: 2015-02-18T09:10:59+00:00
 excerpt: Writing a lot of Jasmine tests for each email I wanted to test, is a waste of time! You can loop trough an array of all emails. So for each email there will be an test! Find out how I did it! (included Jasmine code and code of my Email Validation JavaScript Module)
 url: /let-jasmine-loop-array-data-validate-email-validation-javascript-example/
-featured_image: /wp-content/uploads/2015/02/jasmine-loop-data-array-validate-825x510.jpg
+featured_image: jasmine-loop-data-array-validate-825x510.jpg
 dsq_thread_id:
   - 3525898061
 categories:

@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2014-03-12T13:08:33+00:00
 url: /github-beginners-push-files-local-project-new-github-repository-console/
-featured_image: /wp-content/uploads/2014/03/create-account-at-github-825x510.jpg
+featured_image: create-account-at-github-825x510.jpg
 dsq_thread_id:
   - 2413950736
 categories:
@@ -42,7 +42,7 @@ If you allready install Git, go to the next step.
 <img class="alignnone size-full wp-image-1715" alt="Open console/terminal and go to your local development project" src="https://i2.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/open-console-terminal-go-to-local-project-github.jpg?resize=700%2C265" width="700" height="265" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/open-console-terminal-go-to-local-project-github.jpg?w=788&ssl=1 788w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/open-console-terminal-go-to-local-project-github.jpg?resize=300%2C113&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
 
 **Typ in your console:**
-  
+
 `git init`
 
 <img class="alignnone size-full wp-image-1717" alt="Type git init in your console for Github" src="https://i2.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/type-git-init-in-your-console-for-github.jpg?resize=700%2C265" width="700" height="265" srcset="https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/type-git-init-in-your-console-for-github.jpg?w=788&ssl=1 788w, https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/type-git-init-in-your-console-for-github.jpg?resize=300%2C113&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
@@ -50,17 +50,17 @@ If you allready install Git, go to the next step.
 Now your local development folder is initialized with git we can take the next step.
 
 **Add all the folders and files to git
-  
+
 ** Typ in your console:
-  
+
 `git add -A`
 
 <img class="alignnone size-full wp-image-1719" alt="Add all files and folders to git for Github" src="https://i0.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/add-all-files-and-folders-to-git-for-github.jpg?resize=700%2C312" width="700" height="312" srcset="https://i1.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/add-all-files-and-folders-to-git-for-github.jpg?w=788&ssl=1 788w, https://i1.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/add-all-files-and-folders-to-git-for-github.jpg?resize=300%2C134&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
 
 **Commit the folders and files to git
-  
+
 ** Type in your console:
-  
+
 `git commit -m "Upload all new files"`
 
 <img class="alignnone size-full wp-image-1720" alt="Commit all files and folders to git for Github" src="https://i1.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/commit-all-files-and-folders-to-git-for-github.jpg?resize=700%2C385" width="700" height="385" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/commit-all-files-and-folders-to-git-for-github.jpg?w=788&ssl=1 788w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/commit-all-files-and-folders-to-git-for-github.jpg?resize=300%2C165&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
@@ -70,19 +70,19 @@ Now your local development folder is initialized with git we can take the next s
 <img class="alignnone size-full wp-image-1721" alt="Get the Github repository url of your project" src="https://i0.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/get-the-github-repository-url.jpg?resize=700%2C216" width="700" height="216" srcset="https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/get-the-github-repository-url.jpg?w=788&ssl=1 788w, https://i0.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/get-the-github-repository-url.jpg?resize=300%2C93&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
 
 **Add the url where the files must be uploaded/pushed
-  
+
 ** Type in your console:
-  
+
 `git remote add origin https://github.com/raymonschouwenaar/sample-repo.git`
-  
+
 _replace the url with your repository url_
 
 <img class="alignnone size-full wp-image-1722" alt="Add remote url of Github repository" src="https://i0.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/add-remote-url-github-repository.jpg?resize=700%2C395" width="700" height="395" srcset="https://i1.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/add-remote-url-github-repository.jpg?w=788&ssl=1 788w, https://i1.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/add-remote-url-github-repository.jpg?resize=300%2C169&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />
 
 **Push all it all to your Github repository
-  
+
 ** Type in your console:
-  
+
 `git push -u origin master`
 
 <img class="alignnone size-full wp-image-1723" alt="Push your project to Github" src="https://i0.wp.com/raymonschouwenaar.raymons.webfactional.com/wp-content/uploads/2014/03/push-your-project-to-github-repository.jpg?resize=700%2C414" width="700" height="414" srcset="https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/push-your-project-to-github-repository.jpg?w=788&ssl=1 788w, https://i2.wp.com/www.raymonschouwenaar.nl/wp-content/uploads/2014/03/push-your-project-to-github-repository.jpg?resize=300%2C177&ssl=1 300w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-recalc-dims="1" />

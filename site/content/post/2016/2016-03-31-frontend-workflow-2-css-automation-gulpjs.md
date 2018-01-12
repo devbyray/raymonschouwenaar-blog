@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-03-31T07:30:26+00:00
 url: /frontend-workflow-2-css-automation-gulpjs/
-featured_image: /wp-content/uploads/2016/03/Frontend-Workflow-2-CSS-automation-with-GulpJS-1200x750.jpg
+featured_image: Frontend-Workflow-2-CSS-automation-with-GulpJS-1200x750.jpg
 dsq_thread_id:
   - 4708029816
 categories:

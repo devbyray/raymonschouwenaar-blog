@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-02-04T10:00:02+00:00
 url: /combine-multiple-gulp-tasks-add-multiple-destination-locations/
-featured_image: /wp-content/uploads/2015/02/combine-gulp-tasks-825x510.jpg
+featured_image: combine-gulp-tasks-825x510.jpg
 dsq_thread_id:
   - 3484580423
 categories:

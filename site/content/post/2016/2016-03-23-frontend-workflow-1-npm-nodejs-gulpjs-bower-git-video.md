@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2016-03-23T21:35:22+00:00
 url: /frontend-workflow-1-npm-nodejs-gulpjs-bower-git-video/
-featured_image: /wp-content/uploads/2016/03/Frontend-Workflow-1-NPM-NodeJS-GulpJS-Bower-Git-1-1200x750.jpg
+featured_image: Frontend-Workflow-1-NPM-NodeJS-GulpJS-Bower-Git-1-1200x750.jpg
 dsq_thread_id:
   - 4687772717
 categories:

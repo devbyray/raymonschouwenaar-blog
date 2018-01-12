@@ -4,7 +4,7 @@ author: Raymon Schouwenaar
 type: post
 date: 2015-11-25T19:55:38+00:00
 url: /practical-example-of-how-to-use-bem-with-sass/
-featured_image: /wp-content/uploads/2015/11/practical-example-of-how-to-use-bem-with-sass-825x510.jpg
+featured_image: practical-example-of-how-to-use-bem-with-sass-825x510.jpg
 dsq_thread_id:
   - 4350721236
 categories:
@@ -44,17 +44,17 @@ In the example below you can define the name of your Block (the B of BEM) inside
 
     $module: 'navigation';
     .#{$module} {
-    
+
       // By default, our note has a white background…
       &__item {
         border-top: 1px solid #ccc;
       }
-    
+
       // But “featured” notes have an offwhite background
       &__link {
         color: blue;
       }
-    
+
       &--sub {
         margin-left: 15px;
         .#{$module}__link {
