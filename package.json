@@ -7,6 +7,7 @@
   "scripts": {
     "hugo": "gulp hugo",
     "build": "gulp build",
+    "postbuild": "gulp generate-service-worker",
     "build-preview": "gulp build-preview",
     "start": "gulp server",
     "lint": "eslint src"
