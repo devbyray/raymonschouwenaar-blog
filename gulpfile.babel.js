@@ -44,6 +44,42 @@ gulp.task("css", () =>
     .pipe(browserSync.stream())
 );
 
+gulp.task('generate-service-worker', () => {
+  return workbox.generateSW({
+    globDirectory: './dist',
+    globPatterns: ['**\/*.{css,js}'],
+    swDest: './site/static/sw.js',
+    clientsClaim: true,
+    skipWaiting: true,
+    runtimeCaching: [
+      {
+        urlPattern: new RegExp('https://fonts.googleapis.com'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://ajax.googleapis.com'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://www.google-analytics.com'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://www.googletagmanager.com'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://fonts.gstatic.com'),
+        handler: 'staleWhileRevalidate'
+      }
+    ]
+  }).then(() => {
+    console.info('Service worker generation completed.');
+  }).catch((error) => {
+    console.warn('Service worker generation failed: ' + error);
+  });
+});
+
 gulp.task("images", () =>
   gulp
     .src(["./src/wp-content/**/*", "./src/images/**/*"])
