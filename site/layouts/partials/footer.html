@@ -3,7 +3,7 @@
 		</footer>
 	</div>
 
-	<script>
+	<script async>
 		WebFontConfig = {
 			google: {
 			  families: ['Ubuntu Condensed', 'Ubuntu:300,300i,700']
@@ -17,7 +17,13 @@
 		   s.parentNode.insertBefore(wf, s);
 		})(document);
 	 </script>
-	<script async src="{{ .Site.BaseURL }}app.js"></script>
+	{{if .IsHome}}
+		<script async src="{{ .Site.BaseURL }}app.js"></script>
+	{{else}}
+		<script async src="{{ .Site.BaseURL }}app.js"></script>
+		<script async src="{{ .Site.BaseURL }}singlePost.js"></script>
+	{{end}}
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37807942-1"></script>
 	<script>

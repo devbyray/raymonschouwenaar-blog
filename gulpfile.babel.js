@@ -47,13 +47,19 @@ gulp.task("css", () =>
 gulp.task('generate-service-worker', () => {
   return workbox.generateSW({
     globDirectory: './dist',
-    globPatterns: ['**\/*.{css,js}'],
+    globPatterns: [
+      '**\/*.{css,js}'
+    ],
     swDest: './site/static/sw.js',
     clientsClaim: true,
     skipWaiting: true,
     runtimeCaching: [
       {
         urlPattern: new RegExp('https://fonts.googleapis.com'),
+        handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: new RegExp('https://res.cloudinary.com'),
         handler: 'staleWhileRevalidate'
       },
       {

@@ -20,7 +20,7 @@ importScripts('workbox-sw.prod.v2.1.2.js');
 const fileManifest = [
   {
     "url": "app.js",
-    "revision": "135aca91e47880fd7d59331dc4047475"
+    "revision": "68fc708f84fa07f28830d42fe8e07d63"
   },
   {
     "url": "css/critical.css",
@@ -35,8 +35,12 @@ const fileManifest = [
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
+    "url": "singlePost.js",
+    "revision": "bef9fefa35c8903c9674910d3b226f82"
+  },
+  {
     "url": "sw.js",
-    "revision": "b0898929afcc20da36208bbc7e324610"
+    "revision": "ad17f1db33e5de1a799c5992e10c26bb"
   },
   {
     "url": "workbox-sw.prod.v2.1.2.js",
@@ -50,4 +54,8 @@ const workboxSW = new self.WorkboxSW({
 });
 workboxSW.precache(fileManifest);
 workboxSW.router.registerRoute(/https:\/\/fonts.googleapis.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
+workboxSW.router.registerRoute(/https:\/\/res.cloudinary.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
+workboxSW.router.registerRoute(/https:\/\/ajax.googleapis.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
+workboxSW.router.registerRoute(/https:\/\/www.google-analytics.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
+workboxSW.router.registerRoute(/https:\/\/www.googletagmanager.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
 workboxSW.router.registerRoute(/https:\/\/fonts.gstatic.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
