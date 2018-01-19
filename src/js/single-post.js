@@ -11,13 +11,15 @@ import 'prismjs';
     console.log('tocNavTextElement: ', tocNavTextElement);
     let tocToggle = false;
 
-    tocButtonElement.addEventListener('click', function (event) {
-        if(!tocToggle) {
-            tocNavTextElement.innerHTML = 'Hide table of contents';
-        } else {
-            tocNavTextElement.innerHTML = 'Show table of contents';
-        }
-        tocToggle = !tocToggle;
-        tocWrapperElement.classList.toggle('toc--show');
-    });
+    if(tocButtonElement) {
+        tocButtonElement.addEventListener('click', function (event) {
+            if(!tocToggle) {
+                tocNavTextElement.innerHTML = 'Hide table of contents';
+            } else {
+                tocNavTextElement.innerHTML = 'Show table of contents';
+            }
+            tocToggle = !tocToggle;
+            tocWrapperElement.classList.toggle('toc--show');
+        });
+    }
 })();
