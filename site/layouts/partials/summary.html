@@ -4,6 +4,16 @@
 			<a href="{{ .Permalink }}">{{ .Title }}</a>
 		</h2>
 	</header>
+	<section class="post__info">
+		<div class="post__author">
+				<div class="post-single__author	">
+
+				</div>
+				<p>
+					<em>Written by Raymon Schouwenaar on <strong><time class="post__time">{{ .Date.Format "02.01.2006" }}</time></strong></em>
+				</p>
+		</div>
+	</section>
 	<div class="post__image">
 		{{if .Params.featured_image}}
 		<span
@@ -20,12 +30,6 @@
 		{{ end }} {{end}}
 	</div>
 
-	<section class="post__info">
-		<div class="post__author">
-			Written by Raymon on
-			<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-		</div>
-	</section>
 	<section class="post__summary">
 		{{ .Summary }} {{ if .Truncated }} {{ end }}
 	</section>

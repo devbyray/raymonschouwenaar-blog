@@ -1,44 +1,19 @@
 .rss__intro {
   grid-column: 2;
-  padding: 0 2rem;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem;
+  font-size: 1.3rem;
   grid-area: rssIntro;
-  font-family: "Verdana", sans-serif;
+  font-family: "Delius Unicase", sans-serif;
+  background: #fc6621;
+  color: #fff;
 }
 .introduction {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.intro__tagline {
-  text-transform: uppercase;
-  padding-left: 2rem;
-}
-.intro__image {
-  min-width: 150px;
-  max-width: 200px;
-}
-@media screen and (max-width: 1100px) {
-  .intro__tagline br {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  .rss__intro {
-    padding: 0;
-  }
-  .intro__image-wrapper {
-    text-align: center
-  }
-  .intro__image {
-    max-width: 100%;
-  }
+@media screen and (min-width: 900px) {
   .introduction {
-    flex-direction: column;
-    padding: 0 2rem;
-  }
-  .intro__tagline {
-    font-size: 1.5rem;
-    padding-left: 0;
+    max-width: 70vw;
+    margin: 0 auto;
   }
 }

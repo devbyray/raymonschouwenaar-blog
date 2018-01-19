@@ -1,7 +1,6 @@
 .rss__header {
   text-align: center;
-  padding: 0 0 2rem 0;
-  margin-bottom: 2rem;
+  grid-area: rssHeader;
 }
 .site__logo {
   margin: 1rem 0;

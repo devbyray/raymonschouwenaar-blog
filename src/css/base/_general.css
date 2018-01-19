@@ -1,41 +1,17 @@
-.container {
-  grid-template-areas:
-    "rssHeader rssHeader rssHeader"
-    "postSingleContainer postSingleContainer postSingleContainer"
-    "rssReadmore rssReadmore rssReadmore"
-    "rssFooter rssFooter rssFooter"
-  ;
-  display: grid;
-  grid-template-columns: 1fr 70vw 1fr;
-  grid-column-gap: 4rem;
-  min-height: 100vh;
-}
-.container--homepage {
-  grid-template-areas:
-    "rssHeader rssHeader rssHeader"
-    "rssIntro rssIntro rssIntro"
-    "rssPostList rssPostList rssPostList"
-    "rssFooter rssFooter rssFooter"
-  ;
-  display: grid;
-  grid-template-columns: 1fr 70vw 1fr;
-  grid-column-gap: 4rem;
-  min-height: 100vh;
-}
-
 .rss__sitetitle {
   display: none;
-}
-.rss__header {
-  text-align: center;
-  padding: 0 0 2rem 0;
-  margin-bottom: 2rem;
-  grid-area: rssHeader;
 }
 
 
 @media screen and (min-width: 900px) {
-  .container {
+  .container,
+  .container--homepage {
+    grid-template-columns: 1fr 70vw 1fr;
+    display: grid;
+    grid-column-gap: 4rem;
+    min-height: 100vh;
+  }
+    .container {
     grid-template-areas:
       "rssHeader rssHeader rssHeader"
       ". postSingleContainer . "
@@ -46,7 +22,7 @@
   .container--homepage {
     grid-template-areas:
       "rssHeader rssHeader rssHeader"
-      " . rssIntro . "
+      "rssIntro rssIntro rssIntro"
       "rssPostList rssPostList rssPostList"
       "rssFooter rssFooter rssFooter"
     ;
