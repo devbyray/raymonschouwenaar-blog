@@ -4,6 +4,7 @@
   font-size: 2rem;
   margin-bottom: 2rem;
   grid-area: rssIntro;
+  font-family: "Verdana", sans-serif;
 }
 .introduction {
   display: flex;

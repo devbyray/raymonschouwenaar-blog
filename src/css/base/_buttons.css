@@ -1,0 +1,33 @@
+.button {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5rem;
+  background: color(#333333 lightness(50%));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.button:hover {
+  background: #fc6621;
+}
+
+.button--hamburger {
+    width: 50px;
+    cursor: pointer;
+    height: 38px;
+}
+.hamburger-btn__item {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+}
+.hamburger-btn__item:last-child {
+    margin-bottom: 0;
+}
+.button--hamburger:hover .hamburger-btn__item {
+    background: #fff;
+}

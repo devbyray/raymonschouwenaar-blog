@@ -1,12 +1,16 @@
 .rss__nav {
-  background: #fc6621;
+  border-bottom: 1px solid #fc6621;
   margin-bottom: 1rem;
+  font-family: "Verdana", sans-serif;
 }
 .rss__nav ul {
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .rss__nav li {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fc6621;
 }
 .rss__nav li:last-child {
   border-bottom: 0;
@@ -15,6 +19,8 @@
   margin-right: 0;
   display: block;
   text-transform: uppercase;
+  font-size: 80%;
+  text-decoration: none;
   padding:.5rem;
 }
 
@@ -28,8 +34,7 @@
   .rss__nav li {
     border-bottom: 0;
   }
-    .rss__nav a {
-    color: #fff;
+  .rss__nav a {
     display: inline-block;
     padding: 1rem;
     margin-right: 0.5rem;

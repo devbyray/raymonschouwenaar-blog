@@ -1,6 +1,22 @@
 /*
   Define your resets here or use something like Normalize.css if you like
  */
+/* latin */
+@font-face {
+  font-family: 'Delius Unicase';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Delius Unicase'), local('DeliusUnicase-Regular'), url(https://fonts.gstatic.com/s/deliusunicase/v10/b2sKujV3Q48RV2PQ0k1vqv98_kAUwJGj6teDConhbbU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Delius Unicase';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Delius Unicase Bold'), local('DeliusUnicase-Bold'), url(https://fonts.gstatic.com/s/deliusunicase/v10/7FTMTITcb4dxUp99FAdTqO0uhk-CS6w391fecjzIklY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
 
 html,
 body{
@@ -8,15 +24,16 @@ body{
   padding: 0;
 }
 body{
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Verdana", sans-serif;
   /* font-weight: 300; */
   font-size: 1rem;
   line-height: 1.8;
-  color: #ffffff;
-  background: #262626;
+  color: #262626;
+  background: rgb(237, 237, 237);
+  border: .5rem solid #fc6621;
 }
 body, a {
-  color: #ffffff;
+  color: #262626;
 }
 @media screen and (min-width: 500px) {
   body {
@@ -30,22 +47,35 @@ pre, code {
 pre[class*="language-"] {
   padding: 0;
   background: #000000;
+  font-size: 90%;
 }
 pre {
   margin-bottom: 1rem !important;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu Condensed', sans-serif;
+h1, h2, h3, h4, h5, h6, .site__logo {
+  font-family: "Delius Unicase", sans-serif;
+  font-weight: 700;
 }
 h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0 0 1rem 0;
 }
-ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+blockquote {
+  padding: .5rem 0 .5rem 2rem;
+  border-left: .5rem #fc6621 solid;
+  font-style: italic;
+  font-family: "Verdana", sans-serif;
+  background: #ccc;
+}
+.content h2 {
+  margin-top: 3rem;
+  border-bottom: .5rem solid #f98f5f;
 }
 
 img {
   max-width: 100%;
+}
+p code {
+  background: #ccc;
+  padding: .3rem .4rem;
+  font-weight: 600;
 }

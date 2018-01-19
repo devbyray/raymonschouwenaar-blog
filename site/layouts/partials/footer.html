@@ -4,18 +4,22 @@
 	</div>
 
 	<script async>
-		WebFontConfig = {
-			google: {
-			  families: ['Ubuntu Condensed', 'Ubuntu:300,300i,700']
-			}
-		};
+		(function(H){
+			console.log('H: ', H);
+			H.className=H.className.replace(/\bno-js\b/,'true-js')})
+		(document.querySelector('body'))
+		// WebFontConfig = {
+		// 	google: {
+		// 	  families: ['Ubuntu Condensed', 'Ubuntu:300,300i,700']
+		// 	}
+		// };
 
-		(function(d) {
-		   var wf = d.createElement('script'), s = d.scripts[0];
-		   wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-		   wf.async = true;
-		   s.parentNode.insertBefore(wf, s);
-		})(document);
+		// (function(d) {
+		//    var wf = d.createElement('script'), s = d.scripts[0];
+		//    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+		//    wf.async = true;
+		//    s.parentNode.insertBefore(wf, s);
+		// })(document);
 	 </script>
 	{{if .IsHome}}
 		<script async src="{{ .Site.BaseURL }}app.js"></script>
@@ -33,6 +37,19 @@
 
 	gtag('config', 'UA-37807942-1');
 	</script>
+
+	<script>
+	// https://github.com/filamentgroup/loadCSS
+	!function(e){"use strict"
+	var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+	return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+	setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
+	"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+	</script>
+	<script>
+	loadCSS("{{ .Site.BaseURL }}css/main.css");
+	</script>
+
 
 
 </body>

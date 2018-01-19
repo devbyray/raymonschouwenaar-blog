@@ -1,0 +1,27 @@
+.post-single__tableofcontents {
+  background: #ccc;
+  grid-area: postSingleTableContents;
+}
+.toc__nav {
+    text-align: right;
+}
+.toc__wrapper {
+    height: 0;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+}
+.toc--show {
+    height: auto;
+}
+.toc__nav,
+.toc__nav em {
+    height: 38px;
+  line-height: 38px;
+}
+.toc__nav em,
+.table-of-contents {
+    font-size: 90%;
+}
+.table-of-contents {
+  padding: 1rem;
+}

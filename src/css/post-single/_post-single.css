@@ -1,4 +1,4 @@
-.post__content {
+.content {
   h1 {
     font-weight: 900;
   }
@@ -18,6 +18,7 @@
   grid-template-areas:
     "postSidebar postSidebar"
     "postTitle postTitle"
+    "postSingleTableContents postSingleTableContents"
     "postContent postContent"
     "postComment postComment"
   ;
@@ -59,6 +60,7 @@
   font-style: italic;
   font-size: 95%;
   padding: .5rem 1rem;
+  color: #fff;
 }
 
 .categories__nav {
@@ -67,13 +69,16 @@
 .post__title a {
   text-decoration: none;
 }
+.post-single__container {
+  padding: 0 2rem;
+}
 @media screen and (min-width: 900px) {
   .post-single__title {
     font-size: 2.5rem;
   }
   .post-single__container {
     grid-area: postSingleContainer;
-    max-width: 750px;
+    max-width: 900px;
     margin: 0 auto 2rem auto;
   }
 }

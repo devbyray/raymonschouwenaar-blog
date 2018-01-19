@@ -6,10 +6,17 @@
 	</header>
 	<div class="post__image">
 		{{if .Params.featured_image}}
-		<span data-src="https://res.cloudinary.com/raymons/image/upload/w_800/q_auto,f_auto/{{ .Params.featured_image }}" data-alt="Image {{ .Title }}" class="justlazy"></span>
+		<span
+		data-srcset="http://res.cloudinary.com/raymons/image/upload/w_400/{{ .Params.featured_image }} 400w, http://res.cloudinary.com/raymons/image/upload/w_600/{{ .Params.featured_image }} 600w"
+		data-src="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ .Params.featured_image }}"
+		data-alt="Image {{ .Title }}" class="justlazy"></span>
 		{{else}} {{ range .Params.categories }}
 		<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-		<span data-src="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ . | urlize }}.jpg" data-alt="Image {{ . }}" class="justlazy"></span>
+		<span
+		data-srcset="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/{{ . | urlize }} 400w, https://res.cloudinary.com/raymons/image/upload/w_600/q_auto,f_auto/{{ . | urlize }} 600w"
+		data-src="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ . | urlize }}"
+		data-alt="Image {{ . }}" class="justlazy"></span>
+
 		{{ end }} {{end}}
 	</div>
 

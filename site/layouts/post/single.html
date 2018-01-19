@@ -4,33 +4,56 @@
 		<article class="post__content-grid">
 			<header class="post-single__header">
 				<h1 class="post-single__title">{{ .Title }}</h1>
+				<div class="post-single__author	">
+
+										</div>
+										<p>
+					<em>Written by Raymon Schouwenaar on <strong><time class="post__time">{{ .Date.Format "02.01.2006" }}</time></strong></em>
+				</p>
+			</header>
+			<section class="post__content post-single__content">
+				<div class="post-single__image">
+					{{if .Params.featured_image}}
+						<span
+						data-srcset="http://res.cloudinary.com/raymons/image/upload/w_400/{{ .Params.featured_image }} 400w, http://res.cloudinary.com/raymons/image/upload/w_600/{{ .Params.featured_image }} 600w"
+						data-src="http://res.cloudinary.com/raymons/image/upload/w_750/{{ .Params.featured_image }}"
+						data-alt="Image {{ .Title }}"
+						class="justlazy"></span>
+					{{else}}
+						{{ range .Params.categories }}
+						<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
+							<span
+							data-srcset="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/{{ . | urlize }} 400w, https://res.cloudinary.com/raymons/image/upload/w_600/q_auto,f_auto/{{ . | urlize }} 600w"
+							data-src="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ . | urlize }}" data-alt="Image {{ . }}"
+							class="justlazy"></span>
+						{{ end }}
+					{{end}}
+				</div>
+				{{ if and (gt .WordCount 400 ) (ne .Params.toc "false") }}
+				<section class="post-single__tableofcontents">
+					<nav class="toc__nav">
+						<em data-element="tocNavText">Show/Hide table of contents </em>
+						<button class="button button--hamburger" data-element="tocButton">
+							<span class="hamburger-btn__item"></span>
+							<span class="hamburger-btn__item"></span>
+							<span class="hamburger-btn__item"></span>
+						</button>
+					</nav>
+					<section data-element="tocWrapper" class="toc__wrapper">
+						{{ partial "toc.html" . }}
+					</section>
+				</section>
+				{{ end }}
+
+				<main class="content">
+					{{ .Content }}
+				</main>
+				<hr>
 				<nav class="categories__nav">
 					{{ range .Params.categories }}
 						<a class="categories__link button" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 					{{ end }}
 				</nav>
-				</header>
-			<section class="post__content post-single__content">
-				<div class="post-single__author	">
-					Written by Raymon on <time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-					, time to read
-					<strong>~{{ .ReadingTime }} minutes</strong>.
-				</div>
-				<div class="post-single__image">
-					{{if .Params.featured_image}}
-						<span data-src="http://res.cloudinary.com/raymons/image/upload/w_1366/{{ .Params.featured_image }}" data-alt="Image {{ .Title }}"
-						class="justlazy"></span>
-					{{else}}
-						{{ range .Params.categories }}
-						<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-							<span data-src="/images/{{ . | urlize }}.jpg" data-alt="Image {{ . }}"
-							class="justlazy"></span>
-						{{ end }}
-					{{end}}
-				</div>
-				<div class="content">
-					{{ .Content }}
-				</div>
 			</section>
 			<footer class="post__comments post-single__comments">
 				{{ partial "disqus.html" . }}
