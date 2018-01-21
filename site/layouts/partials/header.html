@@ -15,8 +15,20 @@
 
 	{{ template "_internal/opengraph.html" . }}
 	{{ template "_internal/schema.html" . }}
-	{{ template "_internal/twitter_cards.html" . }}
-	<meta name="twitter:creator" content="{{ .Site.Params.twitterName}}">
+	<!-- {{ template "_internal/twitter_cards.html" . }} -->
+	<meta name="twitter:site" content="@{{ .Site.Params.twitterName}}">
+	<meta name="twitter:creator" content="@{{ .Site.Params.twitterName}}">
+	{{ if .IsPage }}
+		<meta name="twitter:description" content="{{ .Summary }}" />
+		<meta name="twitter:title" content="{{ .Title }}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ .Params.featured_image }}" />
+	{{ else }}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="hhttps://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/rays-frontend-bytes" />
+		<meta name="twitter:title" content="{{ .Site.Title }}" />
+		<meta name="twitter:description" content="{{ .Description }}" />
+	{{ end }}
 	{{ .Hugo.Generator }}
 </head>
 <body class="no-js fade-html">
