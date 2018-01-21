@@ -2,8 +2,9 @@
 title: What is the JavaScript Set in ES2015 and when should you use it?
 author: Raymon Schouwenaar
 type: post
-date: 2018-01-16T12:40:43+00:00
+date: 2018-01-21T12:40:43+00:00
 url: /what-is-set-javascript-es2015-es6-when-use-it/
+featured_image: ES2015-set.jpg
 categories:
   - Javascript
 ---
@@ -32,7 +33,7 @@ Filtering duplicate values out of a JavaScript Array, was always a hassle, you n
 
 There are a few ways to add data to a `Set` collection.
 
-### Pass as paremeter
+### Pass as parameter
 
 This is an example of adding data as a parameter to a `Set` collection.
 
