@@ -1,13 +1,22 @@
+.button,
+.button--small {
+    display: inline-block;
+    background: color(#333333 lightness(50%));
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
 .button {
   text-transform: uppercase;
-  display: inline-block;
-  padding: 0.5rem;
-  background: color(#333333 lightness(50%));
-  color: #fff;
-  text-decoration: none;
+  padding: .5rem;
   font-weight: 500;
-  transition: 0.3s ease-in-out;
 }
+.button--small {
+    padding: .2rem .5rem;
+    font-size: 70%;
+    text-transform: lowercase;
+}
+.button--small:hover,
 .button:hover {
   background: #fc6621;
 }

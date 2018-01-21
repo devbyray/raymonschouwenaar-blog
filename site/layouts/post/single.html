@@ -51,7 +51,7 @@
 				<hr>
 				<nav class="categories__nav">
 					{{ range .Params.categories }}
-						<a class="categories__link button" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+						<a class="categories__link button--small" href="{{"/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 					{{ end }}
 				</nav>
 			</section>

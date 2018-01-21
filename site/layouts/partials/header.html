@@ -40,7 +40,7 @@
 		<header class="rss__header">
 			<span class="site__logo">
 				<h1 style="display:none;"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-				<a href="{{ .Site.BaseURL }}"><span data-src="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" data-alt="Raymon photo"
+				<a href="{{ .Site.BaseURL }}"><span data-src="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" data-alt="RAYs{FRONTEND}BYTES"
 				class="justlazy"></span></a>
 			</span>
 			<nav class="rss__nav">
@@ -54,8 +54,11 @@
 		{{if .IsHome}}
 		<section class="rss__intro">
 			<article class="introduction">
+				<div class="intro__photo" style="background-image: url('https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/ray');">
+
+				</div>
 				<div class="intro__tagline">
-					{{ partial "tagline.html" . }}
+					<p>{{ partial "tagline.html" . }}</p>
 				</div>
 			</article>
 		</section>

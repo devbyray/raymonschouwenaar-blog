@@ -1,0 +1,5 @@
+<nav class="rss__categories-list">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <a class="button--small" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+    {{ end }}
+</nav>

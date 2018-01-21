@@ -4,6 +4,22 @@
   grid-column: 1/3;
 } */
 .rss__footer {
-  padding: 0 2rem;
   grid-area: rssFooter;
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (min-width: 900px) {
+  .rss__footer {
+    flex-flow: row;
+  }
+}
+.categories__list,
+.footer__copyright {
+  padding: 2rem;
+}
+.footer__copyright {
+  background: #fc6621;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
 }

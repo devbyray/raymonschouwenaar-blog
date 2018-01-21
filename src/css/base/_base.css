@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0 0 1rem 0;
 }
 blockquote {
-  padding: .5rem 0 .5rem 2rem;
+  padding: .5rem 1rem .5rem 2rem;
   border-left: .5rem #fc6621 solid;
   font-style: italic;
   font-family: "Verdana", sans-serif;

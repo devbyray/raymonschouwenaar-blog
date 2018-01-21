@@ -1,5 +1,16 @@
 		<footer class="rss__footer">
-			<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> | Last updated on <strong>{{ .Site.LastChange.Format "02.01.2006" }}</strong></p>
+			<section class="categories__list">
+				<h3>Categories</h3>
+				{{ partial "categories.html" . }}
+			</section>
+			<section class="footer__copyright">
+				<div class="footer__right">
+					&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+				</div>
+				<div class="footer__updated">
+					Last updated on <strong>{{ .Site.LastChange.Format "02.01.2006" }}</strong>
+				</div>
+			</section>
 		</footer>
 	</div>
 
@@ -8,18 +19,6 @@
 			console.log('H: ', H);
 			H.className=H.className.replace(/\bno-js\b/,'true-js')})
 		(document.querySelector('body'))
-		// WebFontConfig = {
-		// 	google: {
-		// 	  families: ['Ubuntu Condensed', 'Ubuntu:300,300i,700']
-		// 	}
-		// };
-
-		// (function(d) {
-		//    var wf = d.createElement('script'), s = d.scripts[0];
-		//    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-		//    wf.async = true;
-		//    s.parentNode.insertBefore(wf, s);
-		// })(document);
 	 </script>
 	{{if .IsHome}}
 		<script async src="{{ .Site.BaseURL }}app.js"></script>
