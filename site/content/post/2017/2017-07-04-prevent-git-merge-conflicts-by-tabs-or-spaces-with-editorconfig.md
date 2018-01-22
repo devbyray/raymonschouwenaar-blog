@@ -27,5 +27,3 @@ The editorconfig is supported across multiple editors and platforms.
 By putting this file in your project, most editors will change the config by default.
 
 There is a great introduction playlist on youtube you should definitely watch if you want to see how it works.
-
-<span class="embed-youtube" style="text-align:center; display: block;"></span>

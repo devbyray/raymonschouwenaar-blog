@@ -22,12 +22,12 @@ But after some digging, I figured iOS was only supporting HTTPS.
 To change this, open the &#8220;info.plist&#8221;. You can find this at &#8216;ios/ProjectName&#8217;.
 
 Search for `<key>NSAppTransportSecurity</key>`. If it&#8217;s there already you only need to this code below it:
-
-    <br /><dict>
+```xml
+    <dict>
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
-
+```
 
 
 Now close your simulator and kill the running process (if you already started it). Run react-native run-ios again, and now your iOS app will support HTTP calls.

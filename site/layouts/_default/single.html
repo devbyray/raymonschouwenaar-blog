@@ -1,24 +1,20 @@
 {{ partial "header.html" . }}
-	<header class="post-single__header">
-		<h1 class="post-single__title">{{ .Title }}</h1>
-	</header>
+<div class="post-single__container">
 	<main class="rss__postcontent">
 		<article class="post__content-grid">
-			<aside class="post__sidebar">
-				<div class="post__date">
-					<p>
-						<strong>Created: </strong>
-						<time class="post__time">{{ .Date.Format "02.01.2006 15:04" }}</time>
-					</p>
-					<p>
-						<strong>Wordcount: </strong>
-						<span class="post__time">{{ .WordCount }}</span>
-					</p>
+			<header class="post-single__header">
+				<h1 class="post-single__title">{{ .Title }}</h1>
+				<div class="post-single__author	">
+
 				</div>
-			</aside>
+			</header>
 			<section class="post__content post-single__content">
-				{{ .Content }}
+
+				<main class="content">
+					{{ .Content }}
+				</main>
 			</section>
 		</article>
 	</main>
-{{ partial "footer.html" . }}
+</div>
+{{ partial "readmore.html" . }} {{ partial "footer.html" . }}

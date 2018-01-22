@@ -21,7 +21,7 @@ In this tutorial, I want to show you CSS Grid by building a Metro design inspire
 
 The HTML will have 1 container div and 9 child div's in it.
 
-{{< code type="html" >}}
+```html
     &lt;div class="grid"&gt;
         &lt;div class="blocks"&gt;&lt;/div&gt;
         &lt;div class="blocks"&gt;&lt;/div&gt;
@@ -34,13 +34,13 @@ The HTML will have 1 container div and 9 child div's in it.
         &lt;div class="blocks"&gt;&lt;/div&gt;
         &lt;div class="blocks"&gt;&lt;/div&gt;
     &lt;/div&gt;
-{{< /code >}}
+```
 
 
 ## The CSS Grid magic
 Let's start with styling the grid container.
 
-{{< code type="css" >}}
+```css
     .grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -49,7 +49,7 @@ Let's start with styling the grid container.
         grid-auto-rows: minmax(100px, auto);
         min-height: calc(100vh - 1rem);
     }
-{{< /code >}}
+```
 
 I will walk through every grid CSS property to tell you what it does:
 
@@ -81,7 +81,7 @@ With CSS Grid Layout, we get a new flexible unit: the Fr unit. Fr is a fractiona
 
 Because the Metro design style we have to make a few divs bigger. Let's do the first and last div.
 
-{{< code type="css" >}}
+```css
     .blocks:first-child{
         grid-column: 1/3;
         grid-row: 1/4;
@@ -90,7 +90,7 @@ Because the Metro design style we have to make a few divs bigger. Let's do the f
         grid-column: 4/6;
         grid-row: 2/5;
     }
-{{< /code >}}
+```
 
 With grid-column and grid-row we can decide where the position of the element should be and how big it is on the grid.
 

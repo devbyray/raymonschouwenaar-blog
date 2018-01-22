@@ -21,57 +21,57 @@ I wanted to share 3 of them with you. So hopefully this will help you in the rig
 
 First, we need an example object to loop over. So I put some of my experience in it 😉 (hahaha)! Keep the fun in it!
 
-{{< code type="javascript" >}}
-let experienceObject = {
-    name: 'Raymon',
-    title: 'Lead Frontend/JavaScript Developer',
-    yearsExperience: 8,
-    projects: [
-        {
-            name: 'ANWB',
-            title: 'Senior JavaScript Developer',
-            techniques: ['Angular', 'ES6', 'Vanilla JavaScript', 'Less', 'CSS']
-        },
-        {
-            name: 'NATO',
-            title: 'Lead JavaScript Developer',
-            techniques: ['Angular 2', 'AngularJS', 'ES6', 'Vanilla JavaScript', 'Web Sockets', 'D3']
-        },
-        {
-            name: 'Rabobank',
-            title: 'Senior Frontend Developer',
-            techniques: ['Vanilla JavaScript', 'CSS', 'Responsive Webdesign']
-        }
-    ]
-}
-{{< /code >}}
+```javascript
+    let experienceObject = {
+        name: 'Raymon',
+        title: 'Lead Frontend/JavaScript Developer',
+        yearsExperience: 8,
+        projects: [
+            {
+                name: 'ANWB',
+                title: 'Senior JavaScript Developer',
+                techniques: ['Angular', 'ES6', 'Vanilla JavaScript', 'Less', 'CSS']
+            },
+            {
+                name: 'NATO',
+                title: 'Lead JavaScript Developer',
+                techniques: ['Angular 2', 'AngularJS', 'ES6', 'Vanilla JavaScript', 'Web Sockets', 'D3']
+            },
+            {
+                name: 'Rabobank',
+                title: 'Senior Frontend Developer',
+                techniques: ['Vanilla JavaScript', 'CSS', 'Responsive Webdesign']
+            }
+        ]
+    }
+```
 
 ## Object.keys(experienceObject).map()
 
 The first example is the Object.keys map method to loop over the properties of the Object it.
 
-{{< code type="javascript" >}}
-Object.keys(experienceObject).map(e =&gt; {
-    console.log(`key= ${e} value = ${experienceObject[e]}`)
-});
-{{< /code >}}
+```javascript
+    Object.keys(experienceObject).map(e =&gt; {
+        console.log(`key= ${e} value = ${experienceObject[e]}`)
+    });
+```
 
 ## Object.entries(experienceObject).forEach()
 
 The second example is the Object.keys with the forEach method over the properties of the Object it.
 
-{{< code type="javascript" >}}
-Object.entries(experienceObject).forEach(([key, value]) =&gt; {
-    console.log(`key= ${key} value = ${value}`)
-})
-{{< /code >}}
+```javascript
+    Object.entries(experienceObject).forEach(([key, value]) =&gt; {
+        console.log(`key= ${key} value = ${value}`)
+    })
+```
 
 ## For-in loop
 
 The last example is the For-in loop to loop over the properties of the Object it.
 
-{{< code type="javascript" >}}
-for (property in experienceObject) {
-  console.log(`key= ${property} value = ${experienceObject[property]}`)
-}
-{{< /code >}}
+```javascript
+    for (property in experienceObject) {
+    console.log(`key= ${property} value = ${experienceObject[property]}`)
+    }
+```

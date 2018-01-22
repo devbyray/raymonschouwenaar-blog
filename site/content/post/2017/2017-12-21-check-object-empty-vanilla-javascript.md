@@ -12,14 +12,14 @@ Well I can make a very long description about how to check if a object is empty,
 
 <!--more-->
 
-{{< code type="javascript" >}}
+```javascript
     function isEmptyObject(objectInput) {
         for ( name in objectInput) {
             return false;
         }
         return true;
     }
-{{< /code >}}
+```
 
 Simply, if the for-in loop is finding any property, it will start to iterate over the first property, but after this it will return false. But when it won't loop it directly returns true.
 
