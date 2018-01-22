@@ -44,13 +44,17 @@ body, a {
 pre, code {
   font-size: 1rem;
 }
-pre[class*="language-"] {
-  padding: 0;
-  background: #000000;
-  font-size: 90%;
+.highlight code {
+  padding-right: 1rem;
 }
 pre {
-  margin-bottom: 1rem !important;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.highlight {
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 1rem 1rem 1rem 0;
 }
 h1, h2, h3, h4, h5, h6, .site__logo {
   font-family: "Delius Unicase", sans-serif;
