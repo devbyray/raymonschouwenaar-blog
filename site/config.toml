@@ -7,15 +7,24 @@ DisqusShortname = "raymonschouwenaar"
 
 googleAnalytics = "UA-37807942-1"
 
+pygmentsStyle = "monokai"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentOptions = "linenos=table"
 
 contentdir = "content"
 publishdir = "dist"
+
+[blackfriday]
+hrefTargetBlank = true
 
 [params]
 author = "Raymon Schouwenaar"
 githubName = "rsschouwenaar"
 twitterName = "rsschouwenaar"
 description = "I'm Ray a Dutch Front-end Developer. I share my passion about HTML, CSS, JavaScript and Tooling!"
+UseChroma = true
 
 [permalinks]
 post = "/:title/"

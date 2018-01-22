@@ -1,6 +1,4 @@
 // JS Goes here - ES6 supported
-import 'prismjs';
-
 (function () {
     console.log('🚀');
     const tocButtonElement = document.querySelector('[data-element="tocButton"]');

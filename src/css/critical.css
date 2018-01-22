@@ -3,7 +3,7 @@
  */
 
 @import "normalize.css";
-@import "prismjs/themes/prism-okaidia.css";
+@import "base/syntax.css";
 @import "justlazy/src/justlazy.css";
 
 .black--light {
