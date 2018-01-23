@@ -1,4 +1,6 @@
 // JS Goes here - ES6 supported
+import 'intersection-observer';
+
 (() => {
     window.onload = function() {
         console.log('onload');
