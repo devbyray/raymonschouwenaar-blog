@@ -14,6 +14,33 @@
 .post__footer {
   padding: 0 2rem;
 }
+.post__image {
+  min-height: 300px;
+  overflow: hidden;
+  /* background: #333; */
+}
+.post__image img.large-loaded {
+  width: 100%; height: 300px;
+  object-fit: contain;
+  display: block
+}
+
+@media screen and (min-width: 600px) {
+  .post__image {
+    max-height: 350px;
+  }
+  .post__image img.large-loaded {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .post__image {
+    max-height: 450px;
+  }
+  .post__image img.large-loaded {
+    height: 450px;
+  }
+}
 .post__footer {
   margin-bottom: 2rem;
 }

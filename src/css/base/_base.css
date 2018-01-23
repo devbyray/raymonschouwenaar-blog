@@ -78,6 +78,46 @@ blockquote {
 img {
   max-width: 100%;
 }
+.image.placeholder img {
+  width: 100%;
+}
+.placeholder {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+
+.placeholder img.small-loaded,
+.placeholder img.large-loaded {
+  opacity: 1;
+}
+.placeholder img.large-loaded {
+  position: static;
+  top: auto; left: auto;
+  width: auto;
+  max-width: 100%;
+}
+.placeholder .spacer {
+  padding-bottom: 66.6%;
+  display: block;
+}
+
+.img-small {
+  filter: blur(50px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
+}
 p code {
   background: #ccc;
   padding: .3rem .4rem;

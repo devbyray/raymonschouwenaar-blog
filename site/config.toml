@@ -12,6 +12,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentOptions = "linenos=table"
+paginate = "5"
 
 contentdir = "content"
 publishdir = "dist"

@@ -20,4 +20,6 @@
             tocWrapperElement.classList.toggle('toc--show');
         });
     }
+
+
 })();
