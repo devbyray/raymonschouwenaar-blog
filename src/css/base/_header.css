@@ -8,4 +8,5 @@
   display: inline-block;
   width: 100%;
   max-width: 400px;
+  max-height: 64px;
 }

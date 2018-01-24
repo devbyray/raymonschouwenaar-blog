@@ -25,12 +25,20 @@
 			<div class="spacer"></div>
 		</div>
 
+		<noscript>
+			<img src="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ .Params.featured_image }}" alt="">
+		</noscript>
+
 		{{else}} {{ range .Params.categories }}
 		<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
 
 		<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ . | urlize }}" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/{{ . | urlize }}">
 			<div class="spacer"></div>
 		</div>
+
+		<noscript>
+			<img src="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ . | urlize }}" alt="">
+		</noscript>
 
 		{{ end }} {{end}}
 	</div>
