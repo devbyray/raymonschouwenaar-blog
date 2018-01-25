@@ -1,8 +1,10 @@
 /*
   You can use import statements to include partials:
  */
-
-@import "base/_base.css";
+ @import "normalize.css";
+ @import "base/syntax.css";
+ @import "justlazy/src/justlazy.css";
+ @import "base/_base.css";
 @import "base/_general.css";
 @import "base/_buttons.css";
 @import "base/_header.css";

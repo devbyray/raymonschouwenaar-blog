@@ -100,6 +100,16 @@ gulp.task("images", () =>
     .pipe(console.log("images: ", filenames.get("images")))
 );
 
+var critical = require('critical').stream;
+
+// Generate & Inline Critical-path CSS
+gulp.task('critical', function () {
+    return gulp.src('./dist/*.html')
+        .pipe(critical({base: 'dist/', inline: true, css: ['./dist/css/main.css']}))
+        .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
+        .pipe(gulp.dest('dist'));
+});
+
 // Compile Javascript
 gulp.task("js", (cb) => {
   const myConfig = Object.assign({}, webpackConfig);

@@ -7,7 +7,7 @@
   "scripts": {
     "hugo": "gulp hugo",
     "build": "gulp build",
-    "postbuild": "gulp generate-service-worker",
+    "postbuild": "gulp generate-service-worker && gulp critical",
     "build-preview": "gulp build-preview",
     "start": "gulp server",
     "lint": "eslint src"
@@ -26,6 +26,7 @@
     "babel-register": "^6.11.6",
     "browser-sync": "^2.13.0",
     "cloudinary": "^1.9.1",
+    "critical": "^1.1.0",
     "css-loader": "^0.28.2",
     "eslint": "^3.1.1",
     "eslint-plugin-import": "^1.11.1",
@@ -52,6 +53,7 @@
     "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.5.7",
     "webpack": "3.6.0",
+    "webpack-plugin-critical": "^1.0.0",
     "whatwg-fetch": "^1.0.0",
     "workbox-build": "^2.1.2"
   }

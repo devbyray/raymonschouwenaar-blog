@@ -16,6 +16,7 @@ import 'intersection-observer';
                 if (entry.intersectionRatio > 0) {
                   console.log('in the view: ', entry);
                   progressiveImageLoading(entry.target);
+                  io.unobserve(entry.target);
                 } else {
                   console.log('out of view: ', entry);
                 }
