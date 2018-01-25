@@ -6,9 +6,6 @@
     const disqusCommentsButtonElement = document.querySelector('[data-element="disqusCommentsButton"]');
     const disqusShowCommentsElement = document.querySelector('[data-element="disqusShowComments"]');
     const disqusCommentsElement = document.querySelector('[data-element="disqusComments"]');
-    console.log('tocButtonElement: ', tocButtonElement);
-    console.log('tocWrapperElement: ', tocWrapperElement);
-    console.log('tocNavTextElement: ', tocNavTextElement);
     let tocToggle = false;
 
     if(tocButtonElement) {

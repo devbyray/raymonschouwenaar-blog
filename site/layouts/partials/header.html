@@ -7,7 +7,12 @@
 	<title>{{ .Title }} by Raymon Schouwenaar</title>
 	<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}" property="og:description">	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
-	<link rel="dns-prefetch" href="//fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//res.cloudinary.com">
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<link rel="dns-prefetch" href="//www.googletagmanager.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
 
 	{{ template "_internal/opengraph.html" . }}
