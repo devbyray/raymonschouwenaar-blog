@@ -8,8 +8,12 @@
     window.DisqusShortname = {{ .Site.DisqusShortname }};
 </script>
 <script id="dsq-count-scr" src="//{{.Site.DisqusShortname}}.disqus.com/count.js" async></script>
-<div class="disqus-comments">
-    <button id="show-comments" data-element="disqusShowComments" class="btn btn-default" type="button">Show <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">comments</span></button>
+<div class="disqus-comments" data-element="disqusComments">
+    <div class="disqus-button" data-element="disqusShowComments">
+        <button id="show-comments" data-element="disqusCommentsButton" class="button" type="button">
+            Show <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">comments</span>
+        </button>
+    </div>
     <div id="disqus_thread"></div>
 </div>
 

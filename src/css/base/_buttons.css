@@ -1,3 +1,6 @@
+button {
+    cursor: pointer;
+}
 .button,
 .button--small {
     display: inline-block;
