@@ -36,12 +36,14 @@ gulp.task("build-preview", ["css", "js"], (cb) => buildSite(cb, hugoArgsPreview,
 gulp.task("css", () =>
   gulp
     .src("./src/css/*.css")
-    .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext({
-      browsers: ['last 2 versions'],
-      features: {
-        rem: false
-      }
-    })]))
+    .pipe(postcss([
+      cssImport({from: "./src/css/main.css"}),
+      cssnext({
+        features: {
+          rem: false,
+        }
+      }),
+    ]))
     .pipe(cssnano({
       minifyFontWeight: false
     }))
