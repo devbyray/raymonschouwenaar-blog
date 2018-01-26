@@ -13,7 +13,16 @@
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 	<link rel="dns-prefetch" href="//www.googletagmanager.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="manifest" href="{{ .Site.BaseURL }}manifest.json"></link>
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon-16x16.png">
+	<link rel="mask-icon" href="{{ .Site.BaseURL }}images/safari-pinned-tab.svg" color="#333333">
+	<link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+	<meta name="msapplication-config" content="{{ .Site.BaseURL }}images/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
 	{{ template "_internal/opengraph.html" . }}
 	{{ template "_internal/schema.html" . }}
@@ -33,7 +42,7 @@
 	{{ end }}
 	{{ .Hugo.Generator }}
 </head>
-<body class="no-js fade-html">
+<body>
 	{{if .IsHome}}
 	<div class="container--homepage">
 	{{else}}

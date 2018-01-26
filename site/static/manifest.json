@@ -1,0 +1,101 @@
+{
+    "dir": "ltr",
+    "name": "RAYs{FRONTEND}BYTES",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://raymonschouwenaar.nl/",
+    "short_name": "RAYs{FRONTEND}B",
+    "theme_color": "transparent",
+    "description": "I'm Ray a Dutch Front-end Developer. I share my passion about HTML, CSS, JavaScript and Tooling!",
+    "orientation": "any",
+    "background_color": "#fc6621",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/ebffcddc-cf6d-1159-8631-86abb7eb1dff.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/33c9f0a7-9758-9c4b-e4af-9b0073857356.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/00829146-d9bb-2eff-2968-4027bb1af9f7.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/b28a8da1-1296-569f-19f7-510952955354.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/e271648b-5cc7-2ceb-1f32-84b96ea61d2c.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/4ca9c590-8865-d7d9-7968-a4ab725c058e.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/75679de4-e137-df17-3eb8-58f3159ff626.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/b9e8a430-f5c7-7fd0-2b58-b105e6bdcd1e.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/f0f4ac9e-c84a-a627-599d-41ddecc9b8a6.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/8520be27-87ce-70dc-8f60-50c2d2ec9740.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/88abd946-7a78-5dc4-0a5b-aed3f81915eb.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/d6e246df-b37a-97a2-1a21-923fc6bbe8a4.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/a92d595b-33f0-6cc2-33f7-b7d7f70c3172.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9aa51e3f-2b08-db17-37cd-389fdf8858a3.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bf055f45-f6e0-a610-42e4-24212431566c.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/be12c291-617a-23e1-b6af-8224490fffcf.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/c5baac51-6ae6-7110-c153-91799eb6be6d.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}

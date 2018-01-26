@@ -1,5 +1,4 @@
 (function () {
-    console.log('🚀');
     const tocButtonElement = document.querySelector('[data-element="tocButton"]');
     const tocWrapperElement = document.querySelector('[data-element="tocWrapper"]');
     const tocNavTextElement = document.querySelector('[data-element="tocNavText"]');

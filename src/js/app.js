@@ -2,16 +2,22 @@
 import 'intersection-observer';
 
 (() => {
-    if ('serviceWorker' in navigator) {
-        // window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js').then(registration => {
-                console.log('SW registered: ', registration);
-            }).catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        // });
-    }
+    console.log('Welcome to RAYs{FRONTEND}BYTES! Hopefully you like the 🚀 loading! If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
 
+//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+    if (navigator.serviceWorker.controller) {
+
+        console.log('[PWA Builder] active service worker found, no need to register')
+
+    } else {
+
+        //Register the ServiceWorker
+        navigator.serviceWorker.register('sw-custom.js', {
+            scope: './'
+        }).then(function(reg) {
+            console.log('Service worker has been registered for scope:'+ reg.scope);
+        });
+    }
     window.onload = function() {
         console.log('onload');
 
