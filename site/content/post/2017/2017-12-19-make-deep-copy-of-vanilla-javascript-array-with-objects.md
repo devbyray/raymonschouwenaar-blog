@@ -51,3 +51,16 @@ Check it via the console to log the `originalObject` and `duplicateObject`;
 
 <p data-height="265" data-theme-id="dark" data-slug-hash="QQdoxo" data-default-tab="result" data-user="rsschouwenaar" data-embed-version="2" data-pen-title="JavaScript Copy of Array with Objects (ES5)" class="codepen">See the Pen <a href="https://codepen.io/rsschouwenaar/pen/QQdoxo/">JavaScript Copy of Array with Objects (ES5)</a> by Raymon Schouwenaar (<a href="https://codepen.io/rsschouwenaar">@rsschouwenaar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+**Update 6 Feb 2018**
+
+In ES6 (ES2015) there is an other way of making a copy of a Array, sadly enough not an Array with Objects. Still I want to share  "[Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)" can do the much simpler!
+
+```javascript
+	// code of originalObject
+	var duplicateObject = [... originalObject];
+```
+
+Check the result in the demo:
+
+<a class="jsbin-embed" href="https://jsbin.com/noyetuz/embed?js,console">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?4.1.2"></script>
