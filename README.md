@@ -1,4 +1,4 @@
-# Victor Hugo
+# Raymonschouwenaar.nl, powered by Victor Hugo
 
 **A Hugo boilerplate for creating truly epic websites**
 
