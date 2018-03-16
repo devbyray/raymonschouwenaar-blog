@@ -5,6 +5,7 @@ type: post
 date: 2018-02-10T22:16:21+00:00
 url: /how-to-use-the-ES2015-spread-syntax-in-JavaScript/
 featured_image: ES2015-set.jpg
+draft: true
 categories:
   - Javascript
 ---
