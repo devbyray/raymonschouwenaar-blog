@@ -49,11 +49,18 @@
 	<div class="container">
 	{{end}}
 		<header class="rss__header">
+			<button class="nav__button">
+				<span class="nav__icon-wrapper">
+					{{ partial "nav-icon.svg" . }}
+				</span>
+			</button>
 			<span class="site__logo">
 				<h1 style="display:none;"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 				<a href="{{ .Site.BaseURL }}">
 					<!-- <img src="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" alt="RAYs{FRONTEND}BYTES" /> -->
-					<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/rays-frontend-bytes">
+					<div class="progressive-loader placeholder"
+						data-large="https://res.cloudinary.com/raymons/image/upload/w_400/e_colorize,co_white,q_auto,f_auto/rays-frontend-bytes"
+						data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/rays-frontend-bytes">
 						<div class="spacer"></div>
 					</div>
 				</a>
@@ -67,7 +74,7 @@
 			</nav>
 		</header>
 		{{if .IsHome}}
-		<section class="rss__intro">
+		<!-- <section class="rss__intro">
 			<article class="introduction">
 				<div class="intro__photo">
 					<span class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_800,h_800,c_crop,c_lfill,g_north,r_max/w_400/q_auto,f_auto/ray.png" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/ray">
@@ -78,5 +85,5 @@
 					<p>{{ partial "tagline.html" . }}</p>
 				</div>
 			</article>
-		</section>
+		</section> -->
 		{{end}}

@@ -16,6 +16,7 @@ import es from "event-stream";
 import filenames from "gulp-filenames";
 import gulpCloudinary from "./custom-gulp-cloudinary";
 import cssnano from "gulp-cssnano";
+import cssvariables from "postcss-css-variables";
 
 
 const browserSync = BrowserSync.create();
@@ -37,10 +38,15 @@ gulp.task("css", () =>
   gulp
     .src("./src/css/*.css")
     .pipe(postcss([
+      cssvariables(),
       cssImport({from: "./src/css/main.css"}),
       cssnext({
         features: {
           rem: false,
+          customProperties: {
+            preserve: true,
+            appendVariables: true
+          }
         }
       }),
     ]))

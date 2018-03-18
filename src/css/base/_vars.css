@@ -1,0 +1,12 @@
+:root {
+  /* Colors */
+  --blackish: #1c1b1b;
+  --white: #fff;
+  --orange: #FF9900;
+
+  /* Sizes */
+  --nav-icon-size: 60px;
+  --max-content-witdth: 650px;
+  --max-single-content-width: 850px;
+  --max-header-image-height: 800px;
+}
