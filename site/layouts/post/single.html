@@ -24,8 +24,21 @@
 		{{ end }}
 	{{end}}
 </div>
-<main class="post-single__content">
-	<header class="post-single__header">
+
+<main class="post-single__content" id="mainContent">
+	{{ if and (gt .WordCount 400 ) (ne .Params.toc "false") }}
+	<section class="post-single__tableofcontents">
+		<nav class="toc__nav">
+			<em data-element="tocNavText">Show/Hide table of contents </em>
+			<button class="button toc__button" data-element="tocButton">
+				{{ partial "nav-icon.svg" . }}
+			</button>
+		</nav>
+		<section data-element="tocWrapper" class="toc__wrapper">
+			{{ partial "toc.html" . }}
+		</section>
+	</section>
+	{{ end }}	<header class="post-single__header">
 		<h1 class="post-single__title">{{ .Title }}</h1>
 		<p class="post__item-meta">
 			<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time> <span class="meta__divider">-</span>
@@ -34,21 +47,6 @@
 			{{end}}
 		</p>
 	</header>
-	{{ if and (gt .WordCount 400 ) (ne .Params.toc "false") }}
-	<section class="post-single__tableofcontents">
-		<nav class="toc__nav">
-			<em data-element="tocNavText">Show/Hide table of contents </em>
-			<button class="button button--hamburger" data-element="tocButton">
-				<span class="hamburger-btn__item"></span>
-				<span class="hamburger-btn__item"></span>
-				<span class="hamburger-btn__item"></span>
-			</button>
-		</nav>
-		<section data-element="tocWrapper" class="toc__wrapper">
-			{{ partial "toc.html" . }}
-		</section>
-	</section>
-	{{ end }}
 	<section class="post__content post-single__content">
 
 		<div class="content">
@@ -61,8 +59,8 @@
 			{{ end }}
 		</nav>
 	</section>
-	<footer class="post__comments post-single__comments">
+	<!-- <footer class="post__comments post-single__comments">
 		{{ partial "disqus.html" . }}
-	</footer>
+	</footer> -->
 </main>
 {{ partial "readmore.html" . }} {{ partial "footer.html" . }}

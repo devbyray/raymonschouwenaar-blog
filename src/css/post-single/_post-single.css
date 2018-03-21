@@ -1,17 +1,50 @@
 .post-single__content {
   margin: 0 auto;
   max-width: calc(var(--max-single-content-width) - 4rem);
-  padding: 3rem 2rem 0;
+  padding: 0 1rem;
 }
-
-
-.content {
-  h1 {
-    font-weight: 900;
+@media screen and (min-width: 50em) {
+  .post-single__content {
+    padding: 0 0;
   }
-  p,
-  ol,
-  ul {
-    margin: 0 0 1rem 0;
+}
+.post-single__header {
+  text-align: center;
+}
+@media screen and (min-width: 50em) {
+  .post-single__title {
+    font-size: 5.5rem;
+    line-height: 1.2;
   }
+}
+.content h1 {
+  font-weight: 900;
+}
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  .content:first-child::first-letter {
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+    font-family: "Abhaya Libre", serif;
+    margin-right: 1em;
+  }
+}
+.content p,
+.content ol,
+.content ul {
+  margin: 0 0 1rem 0;
+}
+.content h2 {
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.content h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+  margin-bottom: 0.5rem;
 }

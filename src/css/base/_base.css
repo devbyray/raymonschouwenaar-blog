@@ -60,11 +60,14 @@ body{
   font-family: "Verdana", sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--blackish);
-  background: rgb(255, 255, 255);
 }
-body, a {
-  color: #262626;
+body, a,
+.post-single__content,
+.rss__postslist {
+  color: var(--blackish);
+}
+.container {
+  background: var(--white)
 }
 pre, code {
   font-size: 1rem;
@@ -84,6 +87,7 @@ pre {
 h1, h2, h3, h4, h5, h6, .site__logo {
   font-family: 'Abhaya Libre', serif;
   font-weight: 700;
+  line-height: 1.2;
 }
 h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0 0 1rem 0;
@@ -135,6 +139,7 @@ img {
   max-width: 100%;
   max-height: var(--max-header-image-height);
   object-fit: cover;
+  display: block
 }
 .placeholder .spacer {
   padding-bottom: 66.6%;
