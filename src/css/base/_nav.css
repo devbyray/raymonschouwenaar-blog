@@ -1,53 +1,107 @@
 .rss__nav {
-  border-bottom: 1px solid #fc6621;
-  font-family: "Verdana", sans-serif;
+  display: none;
 }
-.rss__nav ul {
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.rss__nav li {
-  border-bottom: 1px solid #fc6621;
-}
-.rss__nav li:last-child {
-  border-bottom: 0;
-}
-.rss__nav a {
-  margin-right: 0;
+.nav__button {
+  background: none;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
   display: block;
-  text-transform: uppercase;
-  font-size: 80%;
-  text-decoration: none;
-  padding:.5rem;
+  padding: 0;
+  outline: 0;
+  &:focus {
+    border-color: var(--orange);
+  }
+}
+.color__switch {
+  background: none;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
+  display: block;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+  &:focus {
+    border-color: var(--orange);
+  }
+}
+.nav__icon-wrapper {
+  display: block;
+  width: var(--nav-icon-size);
+  height: var(--nav-icon-size);
+
+  svg {
+    width: var(--nav-icon-size);
+    height: var(--nav-icon-size);
+  }
 }
 
-@media screen and (min-width: 800px) {
-  .rss__nav ul {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .rss__nav li {
-    border-bottom: 0;
-  }
-  .rss__nav a {
-    display: inline-block;
-    padding: 1rem;
-    margin-right: 0.5rem;
-  }
-  .rss__nav a:hover {
-    background: #cccccc;
-  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
-@media screen and (min-width: 1300px) {
-  .post__header {
-    /* min-height: 200px; */
-    height: auto;
-  }
-  .post__content-grid {
-    grid-column-gap: 2rem;
-  }
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: transparent;
+  background-image: url('../images/moon-icon.svg');
+  background-size: 300%;
+  background-position: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-image: url('../images/moon-icon--white.svg');
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

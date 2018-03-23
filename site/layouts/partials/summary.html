@@ -1,52 +1,11 @@
 <article class="post__item">
-	<header class="post__header">
-		<h2 class="post__title">
-			<a href="{{ .Permalink }}">{{ .Title }}</a>
-		</h2>
-	</header>
-	<section class="post__info">
-		<div class="post__author">
-				<div class="post-single__author	">
-
-				</div>
-				<p>
-					<em>Written by Raymon Schouwenaar on <strong><time class="post__time">{{ .Date.Format "02.01.2006" }}</time></strong></em>
-				</p>
-		</div>
-	</section>
-	<div class="post__image">
-		{{if .Params.featured_image}}
-		<!-- <span
-		data-srcset="https://res.cloudinary.com/raymons/image/upload/w_400/{{ .Params.featured_image }} 400w, https://res.cloudinary.com/raymons/image/upload/w_600/{{ .Params.featured_image }} 600w"
-		data-src="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ .Params.featured_image }}"
-		data-alt="Image {{ .Title }}" class="justlazy"></span> -->
-
-		<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ .Params.featured_image }}" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/{{ .Params.featured_image }}">
-			<div class="spacer"></div>
-		</div>
-
-		<noscript>
-			<img src="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ .Params.featured_image }}" alt="">
-		</noscript>
-
-		{{else}} {{ range .Params.categories }}
-		<!-- <a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a> -->
-
-		<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ . | urlize }}" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/{{ . | urlize }}">
-			<div class="spacer"></div>
-		</div>
-
-		<noscript>
-			<img src="https://res.cloudinary.com/raymons/image/upload/w_900/q_auto,f_auto/{{ . | urlize }}" alt="">
-		</noscript>
-
-		{{ end }} {{end}}
-	</div>
-
-	<section class="post__summary">
-		{{ .Summary }} {{ if .Truncated }} {{ end }}
-	</section>
-	<footer class="post__footer">
-		<a class="post__readmore button" href="{{ .Permalink }}">Read more</a>
-	</footer>
+	<p class="post__item-meta">
+		<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time> <span class="meta__divider">-</span>
+		{{ range .Params.categories }}
+			<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}" class="post__item-category">{{ . }}</a>
+		{{end}}
+	</p>
+	<h2 class="post__item-title">
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+	</h2>
 </article>

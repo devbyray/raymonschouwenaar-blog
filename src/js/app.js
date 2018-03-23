@@ -21,6 +21,15 @@ import 'intersection-observer';
         }
     }
 
+    const colorSwitch = document.querySelector('#colorSwitch');
+    const mainContent = document.querySelector('.container');
+    const root = document.querySelector(':root');
+
+    colorSwitch.addEventListener('click', event => {
+        console.log('event: ', event.srcElement.checked);
+        mainContent.classList.toggle('dark--mode');
+    });
+
     window.onload = function() {
 
         const intersectionObserverOptions = {

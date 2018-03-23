@@ -1,89 +1,50 @@
-.content {
-  h1 {
-    font-weight: 900;
-  }
-  p,
-  ol,
-  ul {
-    margin: 0 0 1rem 0;
-  }
-}
-.post-single__title {
-  font-size: 2rem;
-}
-.post__content-grid {
-  display: grid;
-  grid-column-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "postSidebar postSidebar"
-    "postTitle postTitle"
-    "postSingleTableContents postSingleTableContents"
-    "postContent postContent"
-    "postComment postComment"
-  ;
-}
-.post-single__content > p:first-of-type {
-  font-weight: 700;
-  font-size: 1.2em;
-}
 .post-single__content {
-  grid-area: postContent;
+  margin: 0 auto;
+  max-width: calc(var(--max-single-content-width) - 4rem);
+  padding: 0 1rem;
 }
-.post__comments {
-  grid-area: postComment;
-}
-.post__sidebar {
-  grid-area: postSidebar;
+@media screen and (min-width: 50em) {
+  .post-single__content {
+    padding: 0 0;
+  }
 }
 .post-single__header {
-  grid-area: postTitle;
-}
-.post-single__container {
-  grid-area: postSingleContainer;
-  margin-bottom: 2rem;
-  /* font-size: 2rem; */
-}
-.post__content,
-.post__summary {
-  word-wrap: break-word;
-}
-.post__summary {
-  margin-bottom: 2rem;
-}
-
-.post-single__image img {
-  display: block;
-}
-.post-single__author {
-  background: color(#333333 lightness(30%));
-  font-style: italic;
-  font-size: 95%;
-  padding: .5rem 1rem;
-  color: #fff;
-}
-
-.categories__nav {
-  margin-bottom: 1rem;
-}
-.post__title a {
-  text-decoration: none;
-}
-.post-single__container {
-  padding: 2rem 2rem 0;
-}
-.disqus-button {
-  padding: 1rem;
-  background: #fc6621;
   text-align: center;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 50em) {
   .post-single__title {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
+    line-height: 1.2;
   }
-  .post-single__container {
-    grid-area: postSingleContainer;
-    max-width: 900px;
-    margin: 0 auto 2rem auto;
+}
+.content h1 {
+  font-weight: 900;
+}
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  .content:first-child::first-letter {
+    initial-letter: 2;
+    -webkit-initial-letter: 2;
+    font-family: "Abhaya Libre", serif;
+    margin-right: 1em;
   }
+}
+.content p,
+.content ol,
+.content ul {
+  margin: 0 0 1rem 0;
+}
+.content h2 {
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.content h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+  margin-bottom: 0.5rem;
 }

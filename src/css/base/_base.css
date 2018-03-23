@@ -1,21 +1,54 @@
 /*
   Define your resets here or use something like Normalize.css if you like
  */
-/* latin */
+/* sinhala */
+/* sinhala */
 @font-face {
-  font-family: 'Delius Unicase';
+  font-family: 'Abhaya Libre';
   font-style: normal;
   font-weight: 400;
-  src: local('Delius Unicase'), local('DeliusUnicase-Regular'), url(https://fonts.gstatic.com/s/deliusunicase/v10/b2sKujV3Q48RV2PQ0k1vqv98_kAUwJGj6teDConhbbU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  src: local('Abhaya Libre Regular'), local('AbhayaLibre-Regular'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3tmeuGtX-Co5MNzeAOqinEQYUnXgPRE4r80.woff2) format('woff2');
+  unicode-range: U+0964-0965, U+0D82-0DF4, U+200C-200D, U+25CC;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abhaya Libre Regular'), local('AbhayaLibre-Regular'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3tmeuGtX-Co5MNzeAOqinEQcknXgPRE4r80.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Delius Unicase';
+  font-family: 'Abhaya Libre';
   font-style: normal;
-  font-weight: 700;
-  src: local('Delius Unicase Bold'), local('DeliusUnicase-Bold'), url(https://fonts.gstatic.com/s/deliusunicase/v10/7FTMTITcb4dxUp99FAdTqO0uhk-CS6w391fecjzIklY.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  font-weight: 400;
+  src: local('Abhaya Libre Regular'), local('AbhayaLibre-Regular'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3tmeuGtX-Co5MNzeAOqinEQfEnXgPRE4g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* sinhala */
+@font-face {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Abhaya Libre ExtraBold'), local('AbhayaLibre-ExtraBold'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3t5euGtX-Co5MNzeAOqinEY22_CsNZJyIU9Ba0c.woff2) format('woff2');
+  unicode-range: U+0964-0965, U+0D82-0DF4, U+200C-200D, U+25CC;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Abhaya Libre ExtraBold'), local('AbhayaLibre-ExtraBold'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3t5euGtX-Co5MNzeAOqinEY22_Co9ZJyIU9Ba0c.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Abhaya Libre ExtraBold'), local('AbhayaLibre-ExtraBold'), url(https://fonts.gstatic.com/s/abhayalibre/v3/e3t5euGtX-Co5MNzeAOqinEY22_CrdZJyIU9BQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html,
@@ -25,22 +58,17 @@ body{
 }
 body{
   font-family: "Verdana", sans-serif;
-  /* font-weight: 300; */
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
-  color: #262626;
-  background: rgb(237, 237, 237);
-  border: .5rem solid #fc6621;
 }
-body, a {
-  color: #262626;
+body, a,
+.post-single__content,
+.rss__postslist {
+  color: var(--blackish);
 }
-@media screen and (min-width: 500px) {
-  body {
-    font-size: 120%;
-  }
+.container {
+  background: var(--white)
 }
-
 pre, code {
   font-size: 1rem;
 }
@@ -57,22 +85,23 @@ pre {
   padding: 1rem 1rem 1rem 0;
 }
 h1, h2, h3, h4, h5, h6, .site__logo {
-  font-family: "Delius Unicase", sans-serif;
+  font-family: 'Abhaya Libre', serif;
   font-weight: 700;
+  line-height: 1.2;
 }
 h1, h2, h3, h4, h5, h6, blockquote {
   margin: 0 0 1rem 0;
 }
 blockquote {
   padding: .5rem 1rem .5rem 2rem;
-  border-left: .5rem #fc6621 solid;
+  border-left: .5rem var(--blackish) solid;
   font-style: italic;
   font-family: "Verdana", sans-serif;
   background: #ccc;
 }
 .content h2 {
-  margin-top: 3rem;
-  border-bottom: .5rem solid #f98f5f;
+  /* margin-top: 3rem; */
+  /* border-bottom: .5rem solid #f98f5f; */
 }
 
 img {
@@ -87,6 +116,7 @@ img {
   position: relative;
   overflow: hidden;
   display: block;
+  max-height: var(--max-header-image-height);
 }
 
 .placeholder img {
@@ -105,8 +135,11 @@ img {
 .placeholder img.large-loaded {
   position: static;
   top: auto; left: auto;
-  width: auto;
+  width: 100%;
   max-width: 100%;
+  max-height: var(--max-header-image-height);
+  object-fit: cover;
+  display: block
 }
 .placeholder .spacer {
   padding-bottom: 66.6%;

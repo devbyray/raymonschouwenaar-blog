@@ -7,7 +7,7 @@
 {{ if $has_headers }}
  <div class="table-of-contents toc bd-callout">
      <!-- TOC header -->
-     <h4 class="text-muted">Table of Contents</h4>
+     <strong class="text-muted">Table of Contents</strong>
      {{ range $headers }}
          {{ $header := . }}
          {{ range first 1 (findRE "<h[1-6]" $header 1) }}
@@ -15,7 +15,7 @@
                  {{ $next_heading := (int .) }}
                  <!-- generate li array of the proper depth -->
                  {{ range seq $next_heading }}
-                     <ul class="toc-h{{ . }}">
+                     <ul class="toc__list toc__list--h{{ . }}">
                  {{end}}
                  {{ $base := ($.Page.File.LogicalName) }}
                  {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}

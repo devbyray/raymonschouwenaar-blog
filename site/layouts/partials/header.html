@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.LanguageCode | default " en-us " }}">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{ .Title }} by Raymon Schouwenaar</title>
-	<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}" property="og:description">	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+	<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}"
+	 property="og:description"> {{ with .Site.Params.author }}
+	<meta name="author" content="{{ . }}">{{ end }} {{ if .RSSLink -}}
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//res.cloudinary.com">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">
@@ -22,52 +25,60 @@
 	<link rel="mask-icon" href="{{ .Site.BaseURL }}images/safari-pinned-tab.svg" color="#333333">
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico">
 	<meta name="msapplication-config" content="{{ .Site.BaseURL }}images/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-
-	{{ template "_internal/opengraph.html" . }}
-	{{ template "_internal/schema.html" . }}
+	<meta name="theme-color" content="#ffffff"> {{ template "_internal/opengraph.html" . }} {{ template "_internal/schema.html" . }}
 	<!-- {{ template "_internal/twitter_cards.html" . }} -->
 	<meta name="twitter:site" content="@{{ .Site.Params.twitterName}}">
-	<meta name="twitter:creator" content="@{{ .Site.Params.twitterName}}">
-	{{ if .IsPage }}
-		<meta name="twitter:description" content="{{ .Summary }}" />
-		<meta name="twitter:title" content="{{ .Title }}" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:image" content="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ .Params.featured_image }}" />
-	{{ else }}
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:image" content="hhttps://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/rays-frontend-bytes" />
-		<meta name="twitter:title" content="{{ .Site.Title }}" />
-		<meta name="twitter:description" content="{{ .Description }}" />
-	{{ end }}
-	{{ .Hugo.Generator }}
+	<meta name="twitter:creator" content="@{{ .Site.Params.twitterName}}"> {{ if .IsPage }}
+	<meta name="twitter:description" content="{{ .Summary }}" />
+	<meta name="twitter:title" content="{{ .Title }}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/{{ .Params.featured_image }}"
+	/> {{ else }}
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="hhttps://res.cloudinary.com/raymons/image/upload/w_750/q_auto,f_auto/rays-frontend-bytes"
+	/>
+	<meta name="twitter:title" content="{{ .Site.Title }}" />
+	<meta name="twitter:description" content="{{ .Description }}" /> {{ end }} {{ .Hugo.Generator }}
 </head>
+
 <body>
-	{{if .IsHome}}
-	<div class="container--homepage">
-	{{else}}
-	<div class="container">
-	{{end}}
-		<header class="rss__header">
-			<span class="site__logo">
-				<h1 style="display:none;"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-				<a href="{{ .Site.BaseURL }}">
-					<!-- <img src="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" alt="RAYs{FRONTEND}BYTES" /> -->
-					<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/rays-frontend-bytes">
-						<div class="spacer"></div>
-					</div>
-				</a>
+	<header class="rss__header">
+		<button class="nav__button">
+			<span class="nav__icon-wrapper">
+				{{ partial "nav-icon.svg" . }}
 			</span>
-			<nav class="rss__nav">
-				<ul>
-					{{ range .Site.Menus.main }}
-					<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-					{{ end }}
-				</ul>
-			</nav>
-		</header>
+		</button>
+		<span class="site__logo">
+			<h1 style="display:none;">
+				<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+			</h1>
+			<a href="{{ .Site.BaseURL }}">
+				<!-- <img src="https://res.cloudinary.com/raymons/image/upload/w_400/q_auto,f_auto/rays-frontend-bytes" alt="RAYs{FRONTEND}BYTES" /> -->
+				<div class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_400/e_colorize,co_white,q_auto,f_auto/rays-frontend-bytes"
+				 data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/rays-frontend-bytes">
+					<div class="spacer"></div>
+				</div>
+			</a>
+		</span>
+		<div class="color__switch">
+			<label class="switch nav__color-switcher" for="colorSwitch">
+				<input type="checkbox" id="colorSwitch">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<nav class="rss__nav">
+			<ul>
+				{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
 		{{if .IsHome}}
-		<section class="rss__intro">
+		<!-- <section class="rss__intro">
 			<article class="introduction">
 				<div class="intro__photo">
 					<span class="progressive-loader placeholder" data-large="https://res.cloudinary.com/raymons/image/upload/w_800,h_800,c_crop,c_lfill,g_north,r_max/w_400/q_auto,f_auto/ray.png" data-small="https://res.cloudinary.com/raymons/image/upload/w_10/q_20,f_auto/ray">
@@ -78,5 +89,5 @@
 					<p>{{ partial "tagline.html" . }}</p>
 				</div>
 			</article>
-		</section>
+		</section> -->
 		{{end}}
