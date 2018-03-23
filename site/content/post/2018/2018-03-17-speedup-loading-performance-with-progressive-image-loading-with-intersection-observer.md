@@ -5,7 +5,7 @@ type: post
 date: 2018-03-17T21:32:08+00:00
 url: /lazy-loading-images-intersection-observer/
 featured_image: ES2015-set.jpg
-draft: false
+draft: true
 categories:
   - Javascript
 ---
@@ -25,7 +25,7 @@ Loading images with the normal `<img>` tag, let's the browser wait for being rea
 
 Especially if you have a website with a lot of images, it can take maybe up till 10 seconds before the user has a interactive page.
 
-On mobile connections that can even worse. With bad or slow connections your user sometimes will wait for tens of seconds or even minutes. 
+On mobile connections that can even worse. With bad or slow connections your user sometimes will wait for tens of seconds or even minutes.
 
 But we all know that those users want to wait that long! They will leave after a few seconds!
 
@@ -41,8 +41,8 @@ So if we avoid the normal `<img>` tags, our pages will load a lot faster. There 
 Create a `<div>` tag with the image url's in a `data-attribute`. So initially there will be no `<img>` tag. But with JavaScript we can detect if this image is in the visible part of the page.
 
 ```html
-	<div class="lazy-image" 
-		data-large="https://loadyourimages.nl/image-nam.jpg" 
+	<div class="lazy-image"
+		data-large="https://loadyourimages.nl/image-nam.jpg"
 		data-small="https://loadyourimages.nl/very-small-images.jpg">
 		<div class="spacer"></div>
 	</div>
@@ -62,7 +62,7 @@ With this API we can listen of a element is in the viewport or is intersecting w
 ### How to create an intersection observer
 We have a few options in configuring the observer.
 
-- `root`: Here you define the element that will be set as the viewport.  
+- `root`: Here you define the element that will be set as the viewport.
 - `rootMargin`:
 
 ```javascript
