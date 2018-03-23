@@ -5,7 +5,7 @@ type: post
 date: 2018-03-23T20:59:08+00:00
 url: /managing-web-development-project-with-multiple-teams-on-github/
 featured_image: ES2015-set.jpg
-draft: false
+draft: true
 categories:
   - Project management
 ---
@@ -30,6 +30,8 @@ When creating a PR you can also attach it to a Milestone. So you can have a fast
 
 ### Use projects for Scrum-board
 
+The Github project boards are ideal for giving fast ideas of the progress. Beside that it's possible to order stories in a certain order to indicate the priority.
+
 #### Organisation board
 
 On the organisation level we can also create a scrum-board. This is super handy for projectmanagment before the team is gonna plan on the features.
@@ -50,6 +52,8 @@ When everything is prepared by the team it can be assigned to a sprint (mileston
 When it is the point of starting the sprint, the user-stories inside it can be picked-up.
 
 In the project boards you have columns for
+- Product Backlog
+- Sprint Backlog
 - Todo
 - In progress
 - Review
@@ -60,11 +64,34 @@ And if you need more steps you can make them yourself!
 
 ### Use issues for stories or tasks
 
+- **Epic**: Epic RSS 009: As a User I want to search for products, categories, gender, colors
 - **Story**: Story RSS-109: As a User I want to put a product in the shopping-cart in order to buy a product
 - **Task**: Task from RSS-109: Create add to bucket button
 
+A Epic in Github needs to have:
+- A label assigned for the status: Todo, In progress, Review or Done
+- Have a label Epic
+- Assigned to the projectboard
+
+A Story in Github needs to have:
+- A label assigned for the status: Todo, In progress, Review or Done
+- Have a label User-story
+- Assigned to a Milestone
+- Assigned to the teamboard and projectboard
+
+A Task in Github needs to have:
+- A label assigned for the status: Todo, In progress, Review, Impediment or Done
+- Have a label Task
+- Assigned to a Milestone
+- Assigned to the teamboard and projectboard
+
+
 ### Use labels for status
 
+Epic:
+- Epic
+
+Stories/Tasks:
 - Todo
 - In progress
 - Review
