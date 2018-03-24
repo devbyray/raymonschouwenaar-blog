@@ -1,9 +1,17 @@
 {
   "extends": "airbnb-base",
   "env": {
-    browser: true
+    "browser": true
   },
   "parser": "babel-eslint",
+  "rules": {
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ]
+  },
   "plugins": [ "import" ],
   "globals": {
     "__dirname": true,
