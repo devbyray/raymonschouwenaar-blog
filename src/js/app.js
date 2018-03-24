@@ -8,7 +8,7 @@ import 'intersection-observer';
     if('serviceWorker' in navigator) {
         if (navigator.serviceWorker.controller) {
 
-            console.log('[PWA Builder] active service worker found, no need to register')
+                console.log('[PWA Builder] active service worker found, no need to register')
 
         } else {
 
@@ -37,6 +37,7 @@ import 'intersection-observer';
             rootMargin: '0px',
             threshold: 1.0
         };
+        newVar = true;
         const io = new IntersectionObserver(entries => {
             // console.log('entries: ', entries);
             entries.forEach(entry => {
