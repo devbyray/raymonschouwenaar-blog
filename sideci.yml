@@ -4,3 +4,8 @@ linter:
     dir: src/js
     options:
       config: '.eslintrc'
+
+stylelint:
+    root_dir: 'src/css'
+    options:
+      glob: '**/*.css'
