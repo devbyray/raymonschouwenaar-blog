@@ -3,8 +3,8 @@ import 'intersection-observer';
 
 (() => {
     console.log('I hope you like the 🚀 loading of  RAYs{FRONTEND}BYTES! If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
-
-//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+    testVarForEsLint = 'this should cause an error!';
+    //Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
     if('serviceWorker' in navigator) {
         if (navigator.serviceWorker.controller) {
 
@@ -93,4 +93,6 @@ import 'intersection-observer';
 
     }
 
+
 })();
+
