@@ -1,95 +1,75 @@
 // JS Goes here - ES6 supported
 import 'intersection-observer';
+import Lazzzy from './utils/lazzzy'
 
 (() => {
   console.info('I hope you like the 🚀 loading of  RAYs{FRONTEND}BYTES!');
-  console.info('If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
+	console.info('If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
   // Add this below content to your HTML page,
   // or add the js file to your page at the very top to register sercie worker
-  if ('serviceWorker' in navigator) {
-    if (navigator.serviceWorker.controller) {
-      console.info('[PWA Builder] active service worker found, no need to register');
-    } else {
-      // Register the ServiceWorker
-      navigator.serviceWorker
-        .register('sw-custom.js', {
-          scope: './',
-        })
-        .then((reg) => {
-          console.info(`Service worker has been registered for scope: ${reg.scope}`);
-        });
-    }
-  }
+  // if ('serviceWorker' in navigator) {
+  //   if (navigator.serviceWorker.controller) {
+  //     console.info('[PWA Builder] active service worker found, no need to register');
+  //   } else {
+  //     // Register the ServiceWorker
+  //     navigator.serviceWorker
+  //       .register('sw-custom.js', {
+  //         scope: './',
+  //       })
+  //       .then((reg) => {
+  //         console.info(`Service worker has been registered for scope: ${reg.scope}`);
+  //       });
+  //   }
+  // }
 
-  const colorSwitch = document.querySelector('#colorSwitch');
-  const mainContent = document.querySelector('.container');
 
-  colorSwitch.addEventListener('click', () => {
-    mainContent.classList.toggle('dark--mode');
-  });
+	function toggleDarkMode(element, checkbox) {
+		if(checkbox) {
+			element.classList.add('dark--mode');
+		} else {
+			element.classList.remove('dark--mode');
+		}
+		localStorage.setItem('darkMode', checkbox);
+	}
+
 
   window.onload = () => {
-    const intersectionObserverOptions = {
+		const colorSwitch = document.querySelector('#colorSwitch');
+		const mainContent = document.querySelector('.container');
+
+		if(localStorage.getItem('darkMode') === 'true') {
+			colorSwitch.checked = true;
+			mainContent.classList.add('dark--mode');
+		} else {
+			colorSwitch.checked = false;
+			mainContent.classList.remove('dark--mode');
+		}
+
+		colorSwitch.addEventListener('change', (event) => {
+			toggleDarkMode(mainContent, event.target.checked);
+		});
+
+		const intersectionObserverOptions = {
       root: document.querySelector('body'),
       rootMargin: '0px',
       threshold: 1.0
-    };
+		};
+
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          progressiveImageLoading(entry.target);
+					const lazyImage = new Lazzzy(entry.target);
+          lazyImage.progressiveImageLoading();
           io.unobserve(entry.target);
         }
       });
     });
 
-    [...document.querySelectorAll('.progressive-loader')].map((progressiveImage) => {
+    [...document.querySelectorAll('.progressive-loader')].forEach((progressiveImage) => {
         io.observe(progressiveImage);
     });
 
-    // For each image loop maken
-    function progressiveImageLoading(progressiveImageInput) {
-      let imagePlaceholder = progressiveImageInput;
-      let placholderSpacer = progressiveImageInput.querySelector('.spacer');
+	};
 
-      // 1: load small image and show it
-      if (!imagePlaceholder.classList.contains('image--loaded')) {
-        loadImage(imagePlaceholder, 'small').then((smallImage) => {
-          imagePlaceholder.appendChild(smallImage);
-          loadImage(imagePlaceholder, 'large').then((placeholderImage) => {
-              imagePlaceholder.appendChild(placeholderImage);
-            })
-            .then(() => {
-              imagePlaceholder.removeChild(placholderSpacer);
-              imagePlaceholder.removeChild(
-                imagePlaceholder.querySelector('.small-loaded')
-              );
-              imagePlaceholder.classList.add('image--loaded');
-            });
-        });
-      }
-    }
-
-    function loadImage(imageSelector, typeImage) {
-      return new Promise((resolve, reject) => {
-        var img = new Image();
-        img.src =
-          typeImage === 'small'
-            ? imageSelector.dataset.small
-            : imageSelector.dataset.large;
-        img.onload = () => {
-          // console.log('Loaded!!: ', img);
-          let imageClass =
-            typeImage === 'small' ? 'small-loaded' : 'large-loaded';
-          img.classList.add(imageClass);
-          resolve(img);
-        };
-        img.onerror = () => {
-          console.error('Image could not be loaded: ', img);
-          reject(img);
-        };
-      });
-    }
-  };
 })();
