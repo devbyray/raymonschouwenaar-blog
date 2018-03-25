@@ -38,14 +38,17 @@ gulp.task("css", () =>
   gulp
     .src("./src/css/*.css")
     .pipe(postcss([
-      cssvariables(),
+      cssvariables({
+				warnings: false
+			}),
       cssImport({from: "./src/css/main.css"}),
       cssnext({
         features: {
           rem: false,
           customProperties: {
             preserve: true,
-            appendVariables: true
+            appendVariables: true,
+						warnings: false
           }
         }
       }),
