@@ -23,7 +23,7 @@ export default class Lazzzy {
 		}
 	}
 
-	static loadImage(imageSelector, typeImage) {
+	loadImage(imageSelector, typeImage) {
 		// Object destructering
 		// https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Operatoren/Destructuring_assignment
 		const { dataset: { small: smallImg, large: largeImg } } = imageSelector;
