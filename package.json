@@ -7,7 +7,6 @@
   "scripts": {
     "hugo": "gulp hugo",
     "build": "gulp build",
-    "prebuild": "npm run lint",
     "postbuild": "gulp critical",
     "build-preview": "gulp build-preview",
     "start": "gulp server",
