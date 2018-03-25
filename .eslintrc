@@ -10,14 +10,9 @@
       {
         "allow": ["warn", "error", "info"]
       }
-    ]
+    ],
+    "indent": ["warn", "tab"],
+    "no-tabs": 0
   },
-  "plugins": [ "import" ],
-  "globals": {
-    "__dirname": true,
-    "require": true,
-    "process": true,
-    "ENV": true,
-    "module": true
-  }
+  "plugins": [ "import" ]
 }
