@@ -52,15 +52,6 @@
 		<div class="content">
 			{{ .Content }}
 		</div>
-		<hr>
-		<nav class="categories__nav">
-			{{ range .Params.categories }}
-			<a class="categories__link button--small" href="{{" /categories/ " | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-			{{ end }}
-		</nav>
 	</section>
-	<!-- <footer class="post__comments post-single__comments">
-		{{ partial "disqus.html" . }}
-	</footer> -->
 </main>
-{{ partial "readmore.html" . }} {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
