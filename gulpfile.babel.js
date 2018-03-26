@@ -45,7 +45,8 @@ gulp.task("css", () =>
           rem: false,
           customProperties: {
             preserve: true,
-            appendVariables: true
+            appendVariables: true,
+						warnings: false
           }
         }
       }),

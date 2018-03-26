@@ -5,3 +5,4 @@ dist/
 site/.DS_Store
 .DS_Store
 yarn.lock
+.vscode
