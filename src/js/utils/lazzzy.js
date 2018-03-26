@@ -9,10 +9,10 @@ export default class Lazzzy {
 
 		// 1: load small image and show it
 		if (!imagePlaceholder.classList.contains('image--loaded')) {
-			this.loadImage(imagePlaceholder, 'small').then((smallImage) => {
+			this.loadImage('small').then((smallImage) => {
 				imagePlaceholder.appendChild(smallImage);
 
-				this.loadImage(imagePlaceholder, 'large').then((placeholderImage) => {
+				this.loadImage('large').then((placeholderImage) => {
 					imagePlaceholder.appendChild(placeholderImage);
 				}).then(() => {
 					imagePlaceholder.removeChild(placholderSpacer);
@@ -23,10 +23,10 @@ export default class Lazzzy {
 		}
 	}
 
-	loadImage(imageSelector, typeImage) {
+	loadImage(typeImage) {
 		// Object destructering
 		// https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Operatoren/Destructuring_assignment
-		const { dataset: { small: smallImg, large: largeImg } } = imageSelector;
+		const { dataset: { small: smallImg, large: largeImg } } = this.imageInput;
 
 		return new Promise((resolve, reject) => {
 			const img = new Image();
