@@ -5,7 +5,9 @@
   padding-bottom: 3rem
 }
 .post__item-title {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1.2;
 }
 .post__item-meta {
   font-size: .9rem;

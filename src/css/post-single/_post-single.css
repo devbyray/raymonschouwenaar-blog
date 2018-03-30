@@ -11,14 +11,17 @@
 .post-single__header {
   text-align: center;
 }
+.post-single__title {
+  font-weight: 100;
+}
 @media screen and (min-width: 50em) {
+  .post-single__header {
+    margin: 0 -10rem;
+  }
   .post-single__title {
     font-size: 5.5rem;
     line-height: 1.2;
   }
-}
-.content h1 {
-  font-weight: 900;
 }
 @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
   .content:first-child::first-letter {
@@ -41,10 +44,20 @@
   font-size: 2rem;
   margin-top: 2rem;
 }
+.content h4 {
+  font-size: 1.7rem;
+}
+.content h5 {
+  font-size: 1.5rem;
+}
+.content h6 {
+  font-size: 1.3rem;
+}
 .content h1,
 .content h2,
 .content h3,
 .content h4,
-.content h5 {
-  margin-bottom: 0.5rem;
+.content h5,
+.content h6 {
+  margin-bottom: 0;
 }

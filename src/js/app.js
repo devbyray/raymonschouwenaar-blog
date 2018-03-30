@@ -21,6 +21,14 @@ import Lazzzy from './utils/lazzzy';
 	//       });
 	//   }
 	// }
+	const navigationToggleButton = document.querySelector('.nav__button');
+	const navigationWrapper = document.querySelector('.rss__nav');
+
+	navigationToggleButton.addEventListener('click', toggleNavigation);
+
+	function toggleNavigation() {
+		navigationWrapper.classList.toggle('nav--active');
+	}
 
 	function toggleDarkMode(element, checkbox) {
 		if (checkbox) {
@@ -55,6 +63,7 @@ import Lazzzy from './utils/lazzzy';
 
 		const io = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
+				console.log('entry: ', entry);
 				if (entry.intersectionRatio > 0) {
 					const lazyImage = new Lazzzy(entry.target);
 					lazyImage.progressiveImageLoading();

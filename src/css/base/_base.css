@@ -75,6 +75,9 @@ pre, code {
 .highlight code {
   padding-right: 1rem;
 }
+.highlight, .cp_embed_wrapper, blockquote{
+  margin: 0 -6rem 2rem;
+}
 pre {
   color: #fff;
   margin-bottom: 1rem;
@@ -86,10 +89,10 @@ pre {
 }
 h1, h2, h3, h4, h5, h6, .site__logo {
   font-family: 'Abhaya Libre', serif;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
-h1, h2, h3, h4, h5, h6, blockquote {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
 }
 blockquote {
@@ -98,10 +101,6 @@ blockquote {
   font-style: italic;
   font-family: "Verdana", sans-serif;
   background: #ccc;
-}
-.content h2 {
-  /* margin-top: 3rem; */
-  /* border-bottom: .5rem solid #f98f5f; */
 }
 
 img {

@@ -3,7 +3,9 @@
   background: var(--blackish);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 0 var(--nav-icon-size);
 }
 .site__logo {
