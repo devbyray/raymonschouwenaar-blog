@@ -41,10 +41,11 @@
 	{{ end }}	<header class="post-single__header">
 		<h1 class="post-single__title">{{ .Title }}</h1>
 		<p class="post__item-meta">
-			<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time> <span class="meta__divider">-</span>
-			{{ range .Params.categories }}
+			<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time>
+			<!-- <span class="meta__divider">-</span> -->
+			<!-- {{ range .Params.categories }}
 				<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}" class="post__item-category">{{ . }}</a>
-			{{end}}
+			{{end}} -->
 		</p>
 	</header>
 	<section class="post__content post-single__content">
