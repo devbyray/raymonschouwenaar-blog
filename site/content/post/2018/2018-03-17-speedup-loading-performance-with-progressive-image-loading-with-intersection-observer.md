@@ -177,6 +177,4 @@ Let's checkout the example. Scroll the view with images down so you can see for 
 
 ## Thanks
 
-In my o
-
 If you learned something or have other ways to loop over a NodeList Object from the querySelectorAll, please let me know on twitter 😉: [@rsschouwenaar](https://twitter.com/rsschouwenaar)
