@@ -75,8 +75,13 @@ pre, code {
 .highlight code {
   padding-right: 1rem;
 }
-.highlight, .cp_embed_wrapper, blockquote{
-  margin: 0 -6rem 2rem;
+.highlight, .cp_embed_wrapper, blockquote {
+  margin: 0 0 1rem 0;
+}
+@media screen and (min-width: 70em) {
+  .highlight, .cp_embed_wrapper, blockquote{
+    margin: 0 -6rem 2rem;
+  }
 }
 pre {
   color: #fff;
@@ -97,10 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 blockquote {
   padding: .5rem 1rem .5rem 2rem;
-  border-left: .5rem var(--blackish) solid;
   font-style: italic;
   font-family: "Verdana", sans-serif;
-  background: #ccc;
+  background: var(--white);
+  color: var(--blackish);
+  border: 1px solid var(--blackish);
+  border-left: .5rem var(--blackish) solid;
 }
 
 img {

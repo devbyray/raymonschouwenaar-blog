@@ -3,18 +3,19 @@
   max-width: calc(var(--max-single-content-width) - 4rem);
   padding: 0 1rem;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 70em) {
   .post-single__content {
     padding: 0 0;
   }
 }
 .post-single__header {
   text-align: center;
+  padding-top: 2rem
 }
 .post-single__title {
   font-weight: 100;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 70em) {
   .post-single__header {
     margin: 0 -10rem;
   }
