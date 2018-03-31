@@ -34,9 +34,9 @@ On the terminal you start writing your commit message as usual. But now you add 
  > Co-authored-by: Name2 <username2@users.noreply.github.com>"
 ```
 
-For every co-author you need a name, that can be a first and lastname or a name of choice. After the name you add a email adress of that user between the `<>` arrows. 
+For every co-author you need a name, that can be a first and lastname or a name of choice. After the name you add a email address of that user between the `<>` arrows. 
 
-If a co-author wil keep his/her emailadress private you can simply use the github noreply email adress "githubusername@users.noreply.github.com". 
+If a co-author wil keep his/her emailadress private you can simply use the github noreply emailadress "githubusername@users.noreply.github.com". 
 
 ### Git GUI and via Github website
 
