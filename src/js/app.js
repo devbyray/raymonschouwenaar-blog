@@ -3,37 +3,36 @@ import 'intersection-observer';
 import Lazzzy from './utils/lazzzy';
 
 (() => {
-	console.info('I hope you like the 🚀 loading of  RAYs{FRONTEND}BYTES!');
-	console.info('If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
-	// Add this below content to your HTML page,
-	// or add the js file to your page at the very top to register sercie worker
-	// if ('serviceWorker' in navigator) {
-	//   if (navigator.serviceWorker.controller) {
-	//     console.info('[PWA Builder] active service worker found, no need to register');
-	//   } else {
-	//     // Register the ServiceWorker
-	//     navigator.serviceWorker
-	//       .register('sw-custom.js', {
-	//         scope: './',
-	//       })
-	//       .then((reg) => {
-	//         console.info(`Service worker has been registered for scope: ${reg.scope}`);
-	//       });
-	//   }
-	// }
-
-	function toggleDarkMode(element, checkbox) {
-		if (checkbox) {
-			element.classList.add('dark--mode');
-		} else {
-			element.classList.remove('dark--mode');
-		}
-		localStorage.setItem('darkMode', checkbox);
-	}
 
 	window.onload = () => {
+		const navigationToggleButton = document.querySelector('.nav__button');
+		const navigationWrapper = document.querySelector('.rss__nav');
 		const colorSwitch = document.querySelector('#colorSwitch');
 		const mainContent = document.querySelector('.container');
+
+		const intersectionObserverOptions = {
+			root: document.querySelector('body'),
+			rootMargin: '0px',
+			threshold: 1.0,
+		};
+
+		console.info('I hope you like the 🚀 loading of  RAYs{FRONTEND}BYTES!');
+		console.info('If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
+
+		function toggleNavigation() {
+			navigationWrapper.classList.toggle('nav--active');
+		}
+
+		navigationToggleButton.addEventListener('click', toggleNavigation);
+
+		function toggleDarkMode(element, checkbox) {
+			if (checkbox) {
+				element.classList.add('dark--mode');
+			} else {
+				element.classList.remove('dark--mode');
+			}
+			localStorage.setItem('darkMode', checkbox);
+		}
 
 		if (localStorage.getItem('darkMode') === 'true') {
 			colorSwitch.checked = true;
@@ -46,12 +45,6 @@ import Lazzzy from './utils/lazzzy';
 		colorSwitch.addEventListener('change', (event) => {
 			toggleDarkMode(mainContent, event.target.checked);
 		});
-
-		const intersectionObserverOptions = {
-			root: document.querySelector('body'),
-			rootMargin: '0px',
-			threshold: 1.0,
-		};
 
 		const io = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {

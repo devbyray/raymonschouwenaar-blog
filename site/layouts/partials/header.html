@@ -67,9 +67,9 @@
 			</label>
 		</div>
 		<nav class="rss__nav">
-			<ul>
+			<ul class="nav__list">
 				{{ range .Site.Menus.main }}
-				<li>
+				<li class="nav__item">
 					<a href="{{ .URL | relURL }}">{{ .Name }}</a>
 				</li>
 				{{ end }}

@@ -57,8 +57,9 @@ body{
   padding: 0;
 }
 body{
-  font-family: "Verdana", sans-serif;
-  font-size: 1.2rem;
+  /* font-family: "Verdana", sans-serif; */
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 body, a,
@@ -71,9 +72,19 @@ body, a,
 }
 pre, code {
   font-size: 1rem;
+  color: var(--blackish);
+  background: var(--white)
 }
 .highlight code {
   padding-right: 1rem;
+}
+.highlight, .cp_embed_wrapper, blockquote {
+  margin: 0 0 1rem 0;
+}
+@media screen and (min-width: 70em) {
+  .highlight, .cp_embed_wrapper, blockquote{
+    margin: 0 -6rem 2rem;
+  }
 }
 pre {
   color: #fff;
@@ -85,23 +96,20 @@ pre {
   padding: 1rem 1rem 1rem 0;
 }
 h1, h2, h3, h4, h5, h6, .site__logo {
-  font-family: 'Abhaya Libre', serif;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
-h1, h2, h3, h4, h5, h6, blockquote {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
 }
 blockquote {
   padding: .5rem 1rem .5rem 2rem;
-  border-left: .5rem var(--blackish) solid;
   font-style: italic;
-  font-family: "Verdana", sans-serif;
-  background: #ccc;
-}
-.content h2 {
-  /* margin-top: 3rem; */
-  /* border-bottom: .5rem solid #f98f5f; */
+  /* font-family: "Verdana", sans-serif; */
+  background: var(--white);
+  color: var(--blackish);
+  border: 1px solid var(--blackish);
+  border-left: .5rem var(--blackish) solid;
 }
 
 img {

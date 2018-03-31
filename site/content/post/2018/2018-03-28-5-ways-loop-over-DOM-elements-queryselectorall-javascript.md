@@ -19,20 +19,20 @@ Let's start with defining a piece of HTML and a const variable that is searching
 **HTML**
 
 ```html
-<div class="container" id="myContainer">
-	<div class="fake-image">
-	  <h2>Fake image</h2>
+	<div class="container" id="myContainer">
+		<div class="fake-image">
+		  <h2>Fake image</h2>
+		</div>
+		<div class="fake-image">
+		  <h2>Fake image</h2>
+		</div>
+		<div class="fake-image">
+		  <h2>Fake image</h2>
+		</div>
+		<div class="fake-image">
+		  <h2>Fake image</h2>
+		</div>
 	</div>
-	<div class="fake-image">
-	  <h2>Fake image</h2>
-	</div>
-	<div class="fake-image">
-	  <h2>Fake image</h2>
-	</div>
-	<div class="fake-image">
-	  <h2>Fake image</h2>
-	</div>
-</div>
 ```
 
 **JavaScript**

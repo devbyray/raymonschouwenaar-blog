@@ -1,9 +1,10 @@
 <article class="post__item">
 	<p class="post__item-meta">
-		<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time> <span class="meta__divider">-</span>
-		{{ range .Params.categories }}
+		<time class="post__item-time">{{ .Date.Format "02.01.2006" }}</time>
+		<!-- <span class="meta__divider">-</span> -->
+		<!-- {{ range .Params.categories }}
 			<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}" class="post__item-category">{{ . }}</a>
-		{{end}}
+		{{end}} -->
 	</p>
 	<h2 class="post__item-title">
 		<a href="{{ .Permalink }}">{{ .Title }}</a>

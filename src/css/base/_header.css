@@ -3,8 +3,11 @@
   background: var(--blackish);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 var(--nav-icon-size);
+  align-items: center;
+  padding: 0 90px;
+  height: 60px;
 }
 .site__logo {
   margin: 3px 0;
