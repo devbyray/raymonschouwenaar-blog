@@ -57,8 +57,9 @@ body{
   padding: 0;
 }
 body{
-  font-family: "Verdana", sans-serif;
-  font-size: 1.2rem;
+  /* font-family: "Verdana", sans-serif; */
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 body, a,
@@ -71,6 +72,8 @@ body, a,
 }
 pre, code {
   font-size: 1rem;
+  color: var(--blackish);
+  background: var(--white)
 }
 .highlight code {
   padding-right: 1rem;
@@ -93,7 +96,6 @@ pre {
   padding: 1rem 1rem 1rem 0;
 }
 h1, h2, h3, h4, h5, h6, .site__logo {
-  font-family: 'Abhaya Libre', serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -103,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 blockquote {
   padding: .5rem 1rem .5rem 2rem;
   font-style: italic;
-  font-family: "Verdana", sans-serif;
+  /* font-family: "Verdana", sans-serif; */
   background: var(--white);
   color: var(--blackish);
   border: 1px solid var(--blackish);
