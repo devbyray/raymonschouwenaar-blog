@@ -2,7 +2,7 @@
 title: Commit together with multiple users on Github
 author: Raymon Schouwenaar
 type: post
-date: 2018-04-02T08:32:08+00:00
+date: 2018-03-31T08:32:08+00:00
 url: /commit-together-multiple-users-github/
 featured_image: co-author-commit-github
 draft: false
@@ -20,7 +20,7 @@ Off-course I had to check that out! And it seems pretty easy. In this blog I wan
 
 ## Add an co-author to your commit
 
-I'm a fan of using the terminal for git instead of a GUI. But adding a co-author can be done on both. 
+I'm a fan of using the terminal for git instead of a GUI. But adding a co-author can be done on both.
 
 ### Terminal
 
@@ -34,9 +34,9 @@ On the terminal you start writing your commit message as usual. But now you add 
  > Co-authored-by: Name2 <username2@users.noreply.github.com>"
 ```
 
-For every co-author you need a name, that can be a first and lastname or a name of choice. After the name you add a email address of that user between the `<>` arrows. 
+For every co-author you need a name, that can be a first and lastname or a name of choice. After the name you add a email address of that user between the `<>` arrows.
 
-If a co-author wil keep his/her emailadress private you can simply use the github noreply emailadress "githubusername@users.noreply.github.com". 
+If a co-author wil keep his/her emailadress private you can simply use the github noreply emailadress "githubusername@users.noreply.github.com".
 
 ### Git GUI and via Github website
 
@@ -46,8 +46,8 @@ Then just put in the same message as in the terminal.
 
 ```text
 	Your commit message
-	
-	
+
+
 	Co-authored-by: Name <username@users.noreply.github.com>
 	Co-authored-by: Name2 <username2@users.noreply.github.com>"
 ```
