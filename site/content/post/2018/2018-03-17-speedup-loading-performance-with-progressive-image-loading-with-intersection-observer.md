@@ -10,11 +10,11 @@ categories:
   - Javascript
 ---
 
+Lazy loading has always been a popular toppic on the web! But with the Intersection Observer that will all be so much better than it was!
+
 Last year I tried to focus more and more on the performance of websites and web-apps. It’s quite a challenge in the world of all the big frameworks and libraries.
 
 Hopefully, you know that loading images can cost even more time and data. But lucky that we are, there is a technique called lazy-loading images.
-
-<!--more-->
 
 ## Loading images
 Loading images with the normal `<img>` tag, let’s the browser wait for being ready until all of the images are loaded.
