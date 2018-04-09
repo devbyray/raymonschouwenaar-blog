@@ -1,0 +1,16 @@
+all:
+  exclude:
+    - 'spec/**/*'
+# exclude files for single runner
+eslint:
+  include:
+    - 'src/**/*.js'
+github:
+  slug: raymonschouwenaar/raymonschouwenaar-blog
+  api_endpoint: https://api.github.com/
+  web_endpoint: https://github.com/
+github_pr:
+  format: "%{runner} - %{msg}"
+max_warnings: 150
+verbose: false
+ESLINT_CONFIG: './.eslintrc'

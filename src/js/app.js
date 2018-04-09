@@ -2,6 +2,8 @@
 import 'intersection-observer';
 import Lazzzy from './utils/lazzzy';
 
+var a = 'a';
+
 (() => {
 
 	window.onload = () => {
