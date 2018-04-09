@@ -9,4 +9,3 @@ github_pr:
   format: "%{runner} - %{msg}"
 max_warnings: 150
 verbose: false
-ESLINT_CONFIG: './.eslintrc'
