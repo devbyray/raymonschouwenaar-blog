@@ -72,8 +72,12 @@ body, a,
 }
 pre, code {
   font-size: 1rem;
-  color: var(--blackish);
-  background: var(--white)
+  padding: .3rem .4rem;
+  font-weight: 600;
+}
+p code {
+  color: #f8f8f2;
+  background-color: #272822;
 }
 .highlight code {
   padding-right: 1rem;
@@ -100,7 +104,9 @@ h1, h2, h3, h4, h5, h6, .site__logo {
   line-height: 1.2;
 }
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1rem 0;
+  /* margin: 0 0 1rem 0; */
+  font-weight: 800;
+  text-align: center;
 }
 blockquote {
   padding: .5rem 1rem .5rem 2rem;
@@ -158,9 +164,4 @@ img {
   filter: blur(50px);
   /* this is needed so Safari keeps sharp edges */
   transform: scale(1);
-}
-p code {
-  background: #ccc;
-  padding: .3rem .4rem;
-  font-weight: 600;
 }
