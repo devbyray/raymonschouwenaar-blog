@@ -1,88 +1,65 @@
 // JS Goes here - ES6 supported
 import 'intersection-observer';
+import Lazzzy from './utils/lazzzy';
+
+var a = 'a';
 
 (() => {
-    console.log('Welcome to RAYs{FRONTEND}BYTES! Hopefully you like the 🚀 loading! If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
 
-//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
-    if (navigator.serviceWorker.controller) {
+	window.onload = () => {
+		const navigationToggleButton = document.querySelector('.nav__button');
+		const navigationWrapper = document.querySelector('.rss__nav');
+		const colorSwitch = document.querySelector('#colorSwitch');
+		const mainContent = document.querySelector('.container');
 
-        console.log('[PWA Builder] active service worker found, no need to register')
+		const intersectionObserverOptions = {
+			root: document.querySelector('body'),
+			rootMargin: '0px',
+			threshold: 1.0,
+		};
 
-    } else {
+		console.info('I hope you like the 🚀 loading of  RAYs{FRONTEND}BYTES!');
+		console.info('If you have any trouble with it? Please hit me on https://twitter.com/rsschouwenaar');
 
-        //Register the ServiceWorker
-        navigator.serviceWorker.register('sw-custom.js', {
-            scope: './'
-        }).then(function(reg) {
-            console.log('Service worker has been registered for scope:'+ reg.scope);
-        });
-    }
-    window.onload = function() {
-        console.log('onload');
+		function toggleNavigation() {
+			navigationWrapper.classList.toggle('nav--active');
+		}
 
-        const intersectionObserverOptions = {
-            root: document.querySelector('body'),
-            rootMargin: '0px',
-            threshold: 1.0
-        };
-        const io = new IntersectionObserver(entries => {
-            // console.log('entries: ', entries);
-            entries.forEach(entry => {
-                if (entry.intersectionRatio > 0) {
-                  console.log('in the view: ', entry);
-                  progressiveImageLoading(entry.target);
-                  io.unobserve(entry.target);
-                } else {
-                  console.log('out of view: ', entry);
-                }
-            });
-        });
+		navigationToggleButton.addEventListener('click', toggleNavigation);
 
-        [...document.querySelectorAll('.progressive-loader')].map(progressiveImage => {
-            io.observe(progressiveImage);
-        });
+		function toggleDarkMode(element, checkbox) {
+			if (checkbox) {
+				element.classList.add('dark--mode');
+			} else {
+				element.classList.remove('dark--mode');
+			}
+			localStorage.setItem('darkMode', checkbox);
+		}
 
-        // For each image loop maken
-        function progressiveImageLoading(progressiveImageInput) {
-            let imagePlaceholder = progressiveImageInput;
-            let placholderSpacer = progressiveImageInput.querySelector('.spacer');
-            // console.log('progressiveImageInput: ', progressiveImageInput.querySelector('.placeholder'));
-            // 1: load small image and show it
-            if(!imagePlaceholder.classList.contains('image--loaded')) {
-                loadImage(imagePlaceholder, 'small').then(smallImage => {
-                    imagePlaceholder.appendChild(smallImage);
-                    loadImage(imagePlaceholder, 'large').then(placeholderImage => {
-                        // console.log('placeholderImage: ', placeholderImage)
-                        // console.log('imagePlaceholder: ', imagePlaceholder)
-                        imagePlaceholder.appendChild(placeholderImage);
-                        // placeholderImage.classList.add('large-loaded');
-                    }).then(() => {
-                        imagePlaceholder.removeChild(placholderSpacer);
-                        imagePlaceholder.removeChild(imagePlaceholder.querySelector('.small-loaded'));
-                        imagePlaceholder.classList.add('image--loaded');
-                    });
-                });
-            }
-        }
+		if (localStorage.getItem('darkMode') === 'true') {
+			colorSwitch.checked = true;
+			mainContent.classList.add('dark--mode');
+		} else {
+			colorSwitch.checked = false;
+			mainContent.classList.remove('dark--mode');
+		}
 
-        function loadImage(imageSelector, typeImage) {
-            return new Promise((resolve, reject) => {
-                var img = new Image();
-                img.src = typeImage === 'small' ? imageSelector.dataset.small : imageSelector.dataset.large;
-                img.onload = () => {
-                    // console.log('Loaded!!: ', img);
-                    let imageClass = typeImage === 'small' ? 'small-loaded' : 'large-loaded';
-                    img.classList.add(imageClass);
-                    resolve(img);
-                };
-                img.onerror = () => {
-                    console.error('Image could not be loaded: ', img);
-                    reject(img);
-                }
-            });
-        }
+		colorSwitch.addEventListener('change', (event) => {
+			toggleDarkMode(mainContent, event.target.checked);
+		});
 
-    }
+		const io = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.intersectionRatio > 0) {
+					const lazyImage = new Lazzzy(entry.target);
+					lazyImage.progressiveImageLoading();
+					io.unobserve(entry.target);
+				}
+			});
+		}, intersectionObserverOptions);
 
+		[...document.querySelectorAll('.progressive-loader')].forEach((progressiveImage) => {
+			io.observe(progressiveImage);
+		});
+	};
 })();

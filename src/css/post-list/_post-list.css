@@ -1,29 +1,6 @@
-.rss__postslist,
-.post__list {
-  grid-column: 1/4;
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
-}
-.rss__postList {
-  grid-area: rssPostList;
-}
-.post__list {
-  grid-area: postList;
-}
+.post__list,
 .rss__postslist {
-  grid-area: rssPostList;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-@media screen and (min-width: 800px) {
-  .rss__postslist {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 3rem;
-  }
-  .rss__postslist,
-  .post__list {
-    grid-column: 2;
-  }
+  margin: 0 auto;
+  max-width: calc(var(--max-content-witdth) - 4rem);
+  padding: 94px 2rem 0;
 }

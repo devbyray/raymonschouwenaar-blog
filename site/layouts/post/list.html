@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-	<main class="rss__postslist">
+	<main class="rss__postslist" id="mainContent">
 		{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 		{{ range $paginator.Pages }}
 			{{ partial "summary.html" . }}

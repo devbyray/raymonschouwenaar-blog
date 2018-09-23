@@ -1,12 +1,19 @@
 .rss__header {
   text-align: center;
-  grid-area: rssHeader;
+  background: var(--blackish);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 90px;
+  height: 60px;
 }
 .site__logo {
-  margin: 1rem 0;
+  margin: 3px 0;
   text-align: center;
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: 400px;
-  max-height: 64px;
+  max-height: 54px;
 }
