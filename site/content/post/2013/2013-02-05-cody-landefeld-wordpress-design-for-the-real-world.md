@@ -15,4 +15,4 @@ Cody Landefeld: WordPress Design for the Real World
 
 <a href="http://wordpress.tv/2013/02/03/cody-landefeld-wordpress-design-for-the-real-world/" title="Cody Landefeld: WordPress Design for the Real World" target="_blank">Read the article</a>
 
- [1]: http://i0.wp.com/videos.videopress.com/mCvLNShV/video-94e7a1e04e_dvd.original.jpg
+ [1]: https://i0.wp.com/videos.videopress.com/mCvLNShV/video-94e7a1e04e_dvd.original.jpg

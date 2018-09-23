@@ -15,7 +15,7 @@
   "author": "Raymon Schouwenaar",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^8.2.2",
     "babel-loader": "^7.0.0",
     "babel-minify-webpack-plugin": "^0.2.0",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
@@ -34,6 +34,7 @@
     "event-stream": "^3.3.4",
     "exports-loader": "^0.6.3",
     "file-loader": "^0.11.1",
+    "global": "^4.3.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cloudinary": "^0.0.1",
